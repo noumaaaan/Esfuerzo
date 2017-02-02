@@ -20,6 +20,10 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func NextButtonTapped(_ sender: Any) {
+        tabBarController?.selectedIndex = 1;
+        
+    }
 
 }
 

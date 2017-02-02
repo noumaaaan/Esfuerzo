@@ -15,6 +15,7 @@
 		2A787AB91E42A9C000B82E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */; };
 		2A787AC41E42A9C000B82E6E /* efuerzoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AC31E42A9C000B82E6E /* efuerzoTests.swift */; };
 		2A787ACF1E42A9C000B82E6E /* efuerzoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787ACE1E42A9C000B82E6E /* efuerzoUITests.swift */; };
+		2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2A787ACA1E42A9C000B82E6E /* efuerzoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = efuerzoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A787ACE1E42A9C000B82E6E /* efuerzoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = efuerzoUITests.swift; sourceTree = "<group>"; };
 		2A787AD01E42A9C000B82E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				2A787AB51E42A9C000B82E6E /* Assets.xcassets */,
 				2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */,
 				2A787ABA1E42A9C000B82E6E /* Info.plist */,
+				2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */,
 			);
 			path = efuerzo;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */,
 				2A787AB11E42A9C000B82E6E /* SecondViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
 				2A787AAF1E42A9C000B82E6E /* FirstViewController.swift in Sources */,

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A4012381E44FE3800BD48CB /* connection.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A4012371E44FE3800BD48CB /* connection.php */; };
 		2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */; };
 		2A787AAF1E42A9C000B82E6E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AAE1E42A9C000B82E6E /* FirstViewController.swift */; };
 		2A787AB11E42A9C000B82E6E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AB01E42A9C000B82E6E /* SecondViewController.swift */; };
@@ -16,6 +17,8 @@
 		2A787AC41E42A9C000B82E6E /* efuerzoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AC31E42A9C000B82E6E /* efuerzoTests.swift */; };
 		2A787ACF1E42A9C000B82E6E /* efuerzoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787ACE1E42A9C000B82E6E /* efuerzoUITests.swift */; };
 		2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */; };
+		2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787ADE1E435F5C00B82E6E /* RegisterViewController.swift */; };
+		2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A4012371E44FE3800BD48CB /* connection.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = connection.php; sourceTree = "<group>"; };
 		2A787AA91E42A9C000B82E6E /* efuerzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = efuerzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A787AAE1E42A9C000B82E6E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		2A787ACE1E42A9C000B82E6E /* efuerzoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = efuerzoUITests.swift; sourceTree = "<group>"; };
 		2A787AD01E42A9C000B82E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2A787ADE1E435F5C00B82E6E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A4012361E44FDEF00BD48CB /* php scripts */ = {
+			isa = PBXGroup;
+			children = (
+				2A4012371E44FE3800BD48CB /* connection.php */,
+			);
+			name = "php scripts";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		2A787AA01E42A9C000B82E6E = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +116,7 @@
 		2A787AAB1E42A9C000B82E6E /* efuerzo */ = {
 			isa = PBXGroup;
 			children = (
+				2A4012361E44FDEF00BD48CB /* php scripts */,
 				2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */,
 				2A787AAE1E42A9C000B82E6E /* FirstViewController.swift */,
 				2A787AB01E42A9C000B82E6E /* SecondViewController.swift */,
@@ -109,6 +125,8 @@
 				2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */,
 				2A787ABA1E42A9C000B82E6E /* Info.plist */,
 				2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */,
+				2A787ADE1E435F5C00B82E6E /* RegisterViewController.swift */,
+				2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */,
 			);
 			path = efuerzo;
 			sourceTree = "<group>";
@@ -241,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A4012381E44FE3800BD48CB /* connection.php in Resources */,
 				2A787AB91E42A9C000B82E6E /* LaunchScreen.storyboard in Resources */,
 				2A787AB61E42A9C000B82E6E /* Assets.xcassets in Resources */,
 				2A787AB41E42A9C000B82E6E /* Main.storyboard in Resources */,
@@ -269,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */,
+				2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */,
+				2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */,
 				2A787AB11E42A9C000B82E6E /* SecondViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
 				2A787AAF1E42A9C000B82E6E /* FirstViewController.swift in Sources */,
@@ -520,6 +541,7 @@
 				2A787AD51E42A9C000B82E6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A787AD61E42A9C000B82E6E /* Build configuration list for PBXNativeTarget "efuerzoTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +550,7 @@
 				2A787AD81E42A9C000B82E6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A787AD91E42A9C000B82E6E /* Build configuration list for PBXNativeTarget "efuerzoUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +559,7 @@
 				2A787ADB1E42A9C000B82E6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

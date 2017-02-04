@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,14 +19,51 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="problue-without-text" translatesAutoresizingMaskIntoConstraints="NO" id="6UO-x1-kDG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ESFUERZO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9f-ap-92J">
+                                <rect key="frame" x="50" y="154" width="313" height="115"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="62"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Nouman Mehmood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqu-Kj-l1Q">
+                                <rect key="frame" x="52" y="281" width="310" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="iwe-4v-R6c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6UO-x1-kDG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="51Z-2J-ouD"/>
+                            <constraint firstItem="6UO-x1-kDG" firstAttribute="centerX" secondItem="c9f-ap-92J" secondAttribute="centerX" id="9xp-qa-Vx6"/>
+                            <constraint firstItem="c9f-ap-92J" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="134" id="Arg-Xh-HIg"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="bqu-Kj-l1Q" secondAttribute="bottom" constant="434" id="M8f-b2-Guv"/>
+                            <constraint firstItem="6UO-x1-kDG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="RfK-Su-TPx"/>
+                            <constraint firstItem="6UO-x1-kDG" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="bj8-g7-1Pg"/>
+                            <constraint firstItem="bqu-Kj-l1Q" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="32" id="cNP-CD-KiA"/>
+                            <constraint firstItem="c9f-ap-92J" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="30" id="eKO-8T-rBH"/>
+                            <constraint firstAttribute="trailing" secondItem="6UO-x1-kDG" secondAttribute="trailing" id="nD4-ot-gdF"/>
+                            <constraint firstItem="bqu-Kj-l1Q" firstAttribute="top" secondItem="c9f-ap-92J" secondAttribute="bottom" constant="12" id="pr2-SY-Avw"/>
+                            <constraint firstItem="c9f-ap-92J" firstAttribute="centerX" secondItem="bqu-Kj-l1Q" secondAttribute="centerX" id="srz-GX-C6a"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="problue-without-text" width="1280" height="800"/>
+    </resources>
 </document>

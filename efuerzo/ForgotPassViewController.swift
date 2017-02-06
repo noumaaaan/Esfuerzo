@@ -12,43 +12,78 @@ import MessageUI
 
 // http://stackoverflow.com/questions/28963514/sending-email-with-swift
 
-class ForgotPassViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class ForgotPassViewController: UIViewController {
 
-    @IBAction func sendEmailButtonTapped(sender: AnyObject) {
-        let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            self.showSendMailErrorAlert()
+    // Initialise the variables
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var memorableTextField: UITextField!
+    
+    // Function to reset the password
+    @IBAction func resetButtonTapped(_ sender: Any) {
+        
+        let email = emailTextField.text!
+        let memorable = memorableTextField.text!
+        
+        // Display alert message if empty
+        if (email.isEmpty) || (memorable.isEmpty){
+            return;
         }
-    }
-    
-    func configuredMailComposeViewController() -> MFMailComposeViewController {
-        let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
-        mailComposerVC.setToRecipients(["nurdin@gmail.com"])
-        mailComposerVC.setSubject("Sending you an in-app e-mail...")
-        mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
+        // If everything is okay, send details to the server
+        let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/userForgot.php");
+        let request = NSMutableURLRequest(url:myUrl as! URL)
+        request.httpMethod = "POST";
         
-        return mailComposerVC
-    }
-    
-    func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-        sendMailErrorAlert.show()
-    }
-    
-    // MARK: MFMailComposeViewControllerDelegate
-    
-    func mailComposeController(_ controller: MFMailComposeViewController!, didFinishWith result: MFMailComposeResult, error: Error!) {
-        controller.dismiss(animated: true, completion: nil)
+        let postString = "email=\(email)&memorable=\(memorable)";
+        request.httpBody = postString.data(using: String.Encoding.utf8);
         
-    }
+        let task = URLSession.shared.dataTask(with: request as URLRequest){
+            data, response, error in
+            
+            if error != nil {
+                print("error=\(error)")
+                return
+            }
+            
+            var err: NSError?
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                
+                if let parseJSON = json {
+                    let resultValue:String = parseJSON["status"] as! String;
+                    let resultMessage:String = parseJSON["message"] as! String;
+                    let resultUser:String = parseJSON["user"] as! String;
+                    
+                    print("result: \(resultValue)");
+                    print("result: \(resultMessage)");
+                    print("result: \(resultUser)");
+                    
+                    DispatchQueue.main.async{
+                        // Display alert with the confirmation
+                        let theAlert = UIAlertController(title:"Alert", message: "FAM EMAIL SENT", preferredStyle: UIAlertControllerStyle.alert)
+                        
+                        let okAction = UIAlertAction(title:"OK", style:UIAlertActionStyle.default){
+                            action in
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                        
+                        theAlert.addAction(okAction);
+                        self.present(theAlert, animated: true, completion: nil)
+                    }
+                }
+                
+            } catch let error as NSError {
+                err = error
+                print(err!);
+            }
+        }
+        task.resume();    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ForgotPassViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
 

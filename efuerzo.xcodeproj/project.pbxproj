@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CA1E4943B50084327F /* TimetableViewController.swift */; };
+		2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */; };
+		2A3140CF1E4943CC0084327F /* ExamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CE1E4943CC0084327F /* ExamsViewController.swift */; };
+		2A3140D11E4944190084327F /* userLogin.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D01E4944190084327F /* userLogin.php */; };
+		2A3140D31E49444D0084327F /* userForgot.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D21E49444D0084327F /* userForgot.php */; };
+		2A3140D51E4944650084327F /* userRegister.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D41E4944650084327F /* userRegister.php */; };
 		2A4012381E44FE3800BD48CB /* connection.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A4012371E44FE3800BD48CB /* connection.php */; };
 		2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */; };
-		2A787AAF1E42A9C000B82E6E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AAE1E42A9C000B82E6E /* FirstViewController.swift */; };
-		2A787AB11E42A9C000B82E6E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AB01E42A9C000B82E6E /* SecondViewController.swift */; };
 		2A787AB41E42A9C000B82E6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB21E42A9C000B82E6E /* Main.storyboard */; };
 		2A787AB61E42A9C000B82E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB51E42A9C000B82E6E /* Assets.xcassets */; };
 		2A787AB91E42A9C000B82E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */; };
@@ -39,11 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A3140CA1E4943B50084327F /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlinesViewController.swift; sourceTree = "<group>"; };
+		2A3140CE1E4943CC0084327F /* ExamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamsViewController.swift; sourceTree = "<group>"; };
+		2A3140D01E4944190084327F /* userLogin.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userLogin.php; sourceTree = "<group>"; };
+		2A3140D21E49444D0084327F /* userForgot.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userForgot.php; sourceTree = "<group>"; };
+		2A3140D41E4944650084327F /* userRegister.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userRegister.php; sourceTree = "<group>"; };
 		2A4012371E44FE3800BD48CB /* connection.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = connection.php; sourceTree = "<group>"; };
 		2A787AA91E42A9C000B82E6E /* efuerzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = efuerzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A787AAE1E42A9C000B82E6E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		2A787AB01E42A9C000B82E6E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2A787AB31E42A9C000B82E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A787AB51E42A9C000B82E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A787AB81E42A9C000B82E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				2A4012371E44FE3800BD48CB /* connection.php */,
+				2A3140D01E4944190084327F /* userLogin.php */,
+				2A3140D21E49444D0084327F /* userForgot.php */,
+				2A3140D41E4944650084327F /* userRegister.php */,
 			);
 			name = "php scripts";
 			path = ..;
@@ -117,16 +128,17 @@
 			isa = PBXGroup;
 			children = (
 				2A4012361E44FDEF00BD48CB /* php scripts */,
-				2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */,
-				2A787AAE1E42A9C000B82E6E /* FirstViewController.swift */,
-				2A787AB01E42A9C000B82E6E /* SecondViewController.swift */,
-				2A787AB21E42A9C000B82E6E /* Main.storyboard */,
-				2A787AB51E42A9C000B82E6E /* Assets.xcassets */,
 				2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */,
+				2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */,
+				2A787AB21E42A9C000B82E6E /* Main.storyboard */,
 				2A787ABA1E42A9C000B82E6E /* Info.plist */,
+				2A787AB51E42A9C000B82E6E /* Assets.xcassets */,
 				2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */,
 				2A787ADE1E435F5C00B82E6E /* RegisterViewController.swift */,
 				2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */,
+				2A3140CA1E4943B50084327F /* TimetableViewController.swift */,
+				2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */,
+				2A3140CE1E4943CC0084327F /* ExamsViewController.swift */,
 			);
 			path = efuerzo;
 			sourceTree = "<group>";
@@ -260,9 +272,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A4012381E44FE3800BD48CB /* connection.php in Resources */,
+				2A3140D11E4944190084327F /* userLogin.php in Resources */,
 				2A787AB91E42A9C000B82E6E /* LaunchScreen.storyboard in Resources */,
 				2A787AB61E42A9C000B82E6E /* Assets.xcassets in Resources */,
+				2A3140D31E49444D0084327F /* userForgot.php in Resources */,
 				2A787AB41E42A9C000B82E6E /* Main.storyboard in Resources */,
+				2A3140D51E4944650084327F /* userRegister.php in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,11 +303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */,
+				2A3140CF1E4943CC0084327F /* ExamsViewController.swift in Sources */,
 				2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */,
+				2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */,
 				2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */,
-				2A787AB11E42A9C000B82E6E /* SecondViewController.swift in Sources */,
+				2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
-				2A787AAF1E42A9C000B82E6E /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

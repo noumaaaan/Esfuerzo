@@ -52,7 +52,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Deadlines" id="kyI-Ka-wqR"/>
+                    <navigationItem key="navigationItem" title="Deadlines" id="kyI-Ka-wqR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="juv-Ec-8kW"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,13 +73,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Exams" id="XkZ-co-RLj"/>
+                    <navigationItem key="navigationItem" title="Exams" id="XkZ-co-RLj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tum-ed-6wz"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pG8-U9-8Sb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2596" y="-510"/>
         </scene>
-        <!--View Controller-->
+        <!--Log-->
         <scene sceneID="tIQ-yH-vvu">
             <objects>
                 <viewController id="6D6-OE-vge" sceneMemberID="viewController">
@@ -90,16 +94,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="13F-3Z-rpL"/>
+                    <navigationItem key="navigationItem" title="Log" id="13F-3Z-rpL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Kz-oH-h4A"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFr-Ga-Scl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2596" y="241"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="LDi-N8-gDz">
             <objects>
-                <viewController id="0xw-tT-Knb" sceneMemberID="viewController">
+                <viewController id="0xw-tT-Knb" customClass="HomePageViewController" customModule="efuerzo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wv8-Mm-CCb"/>
                         <viewControllerLayoutGuide type="bottom" id="oNv-oT-2oa"/>
@@ -109,8 +115,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="arM-kk-VJU">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="sGv-0K-Lz9"/>
+                    <navigationItem key="navigationItem" title="Home" id="arM-kk-VJU">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="sGv-0K-Lz9">
+                            <connections>
+                                <action selector="LogoutButtonTapped:" destination="0xw-tT-Knb" id="rwQ-3T-uxG"/>
+                                <segue destination="syR-d4-rfW" kind="presentation" id="sch-YD-Ail"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1Y-DG-SwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -120,7 +131,7 @@
         <!--Login View Controller-->
         <scene sceneID="FwA-Uf-8YQ">
             <objects>
-                <viewController id="syR-d4-rfW" customClass="LoginViewController" customModule="efuerzo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="syR-d4-rfW" customClass="LoginViewController" customModule="efuerzo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WnS-cp-rVe"/>
                         <viewControllerLayoutGuide type="bottom" id="fvD-gc-MZN"/>
@@ -825,6 +836,6 @@
         <image name="Sorting Options-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WoF-op-eyx"/>
+        <segue reference="sch-YD-Ail"/>
     </inferredMetricsTieBreakers>
 </document>

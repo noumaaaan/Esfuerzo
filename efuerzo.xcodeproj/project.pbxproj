@@ -13,6 +13,8 @@
 		2A3140D11E4944190084327F /* userLogin.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D01E4944190084327F /* userLogin.php */; };
 		2A3140D31E49444D0084327F /* userForgot.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D21E49444D0084327F /* userForgot.php */; };
 		2A3140D51E4944650084327F /* userRegister.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D41E4944650084327F /* userRegister.php */; };
+		2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140D61E49466D0084327F /* HomePageViewController.swift */; };
+		2A3140DB1E4958C60084327F /* class.phpmailer.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140DA1E4958C60084327F /* class.phpmailer.php */; };
 		2A4012381E44FE3800BD48CB /* connection.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A4012371E44FE3800BD48CB /* connection.php */; };
 		2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */; };
 		2A787AB41E42A9C000B82E6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB21E42A9C000B82E6E /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		2A3140D01E4944190084327F /* userLogin.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userLogin.php; sourceTree = "<group>"; };
 		2A3140D21E49444D0084327F /* userForgot.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userForgot.php; sourceTree = "<group>"; };
 		2A3140D41E4944650084327F /* userRegister.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userRegister.php; sourceTree = "<group>"; };
+		2A3140D61E49466D0084327F /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		2A3140DA1E4958C60084327F /* class.phpmailer.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = class.phpmailer.php; sourceTree = "<group>"; };
 		2A4012371E44FE3800BD48CB /* connection.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = connection.php; sourceTree = "<group>"; };
 		2A787AA91E42A9C000B82E6E /* efuerzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = efuerzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				2A3140D01E4944190084327F /* userLogin.php */,
 				2A3140D21E49444D0084327F /* userForgot.php */,
 				2A3140D41E4944650084327F /* userRegister.php */,
+				2A3140DA1E4958C60084327F /* class.phpmailer.php */,
 			);
 			name = "php scripts";
 			path = ..;
@@ -139,6 +144,7 @@
 				2A3140CA1E4943B50084327F /* TimetableViewController.swift */,
 				2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */,
 				2A3140CE1E4943CC0084327F /* ExamsViewController.swift */,
+				2A3140D61E49466D0084327F /* HomePageViewController.swift */,
 			);
 			path = efuerzo;
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 				2A3140D31E49444D0084327F /* userForgot.php in Resources */,
 				2A787AB41E42A9C000B82E6E /* Main.storyboard in Resources */,
 				2A3140D51E4944650084327F /* userRegister.php in Resources */,
+				2A3140DB1E4958C60084327F /* class.phpmailer.php in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +313,7 @@
 				2A3140CF1E4943CC0084327F /* ExamsViewController.swift in Sources */,
 				2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */,
 				2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */,
+				2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */,
 				2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */,
 				2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,

@@ -51,20 +51,28 @@ class ForgotPassViewController: UIViewController {
                 
                 if let parseJSON = json {
                     let resultValue:String = parseJSON["status"] as! String;
-                    let resultMessage:String = parseJSON["message"] as! String;
-                    let resultUser:String = parseJSON["user"] as! String;
                     
-                    print("result: \(resultValue)");
-                    print("result: \(resultMessage)");
-                    print("result: \(resultUser)");
+                    if (resultValue == "success"){
+                        DispatchQueue.main.async{
+                            // Display alert with the confirmation
+                            let theAlert = UIAlertController(title:"Reset Successful", message: "An email has been sent to \(email) with details about your account.", preferredStyle: UIAlertControllerStyle.alert)
+                            
+                            let okAction = UIAlertAction(title:"Dismiss", style:UIAlertActionStyle.default){
+                                action in
+                                self.dismiss(animated: true, completion: nil)
+                            }
+                            
+                            theAlert.addAction(okAction);
+                            self.present(theAlert, animated: true, completion: nil)
+                        }
                     
-                    DispatchQueue.main.async{
-                        // Display alert with the confirmation
-                        let theAlert = UIAlertController(title:"Alert", message: "FAM EMAIL SENT", preferredStyle: UIAlertControllerStyle.alert)
+                    // Incase the email reset was not successful
+                    } else {
+                        let theAlert = UIAlertController(title:"Failed", message: "The Email and memorable word combination was incorrect.", preferredStyle: UIAlertControllerStyle.alert)
                         
-                        let okAction = UIAlertAction(title:"OK", style:UIAlertActionStyle.default){
+                        let okAction = UIAlertAction(title:"Try Again", style:UIAlertActionStyle.default){
                             action in
-                            self.dismiss(animated: true, completion: nil)
+                            return
                         }
                         
                         theAlert.addAction(okAction);

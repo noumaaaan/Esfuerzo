@@ -12,8 +12,6 @@ class RegisterViewController: UIViewController {
 
     // Initalise the outlets from register view
     @IBOutlet weak var ScrollView: UIScrollView!
-    
-    
     @IBOutlet weak var FullNameTextField: UITextField!
     @IBOutlet weak var UniversityTextField: UITextField!
     @IBOutlet weak var CourseTextField: UITextField!

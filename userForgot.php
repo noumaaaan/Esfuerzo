@@ -35,7 +35,7 @@ if (empty($email) || empty($memorable)) {
         }
         
         // update the database with the new password
-        $password = "sfkjn6823r";
+        $password = "sfkjn6823r"; // in production, this will be a randomly generated string, it is only declared atm for testing
         $update = "UPDATE users SET password='".md5($password)."' WHERE username='".$user."'";
         $query = query_mysql($update);
         

@@ -8,9 +8,6 @@
 
 import Foundation
 import UIKit
-import MessageUI
-
-// http://stackoverflow.com/questions/28963514/sending-email-with-swift
 
 class ForgotPassViewController: UIViewController {
 

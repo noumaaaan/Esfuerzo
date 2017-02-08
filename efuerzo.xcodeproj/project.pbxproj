@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0FFAE81E4AA4D400160785 /* IncompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */; };
+		2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */; };
 		2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CA1E4943B50084327F /* TimetableViewController.swift */; };
 		2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */; };
 		2A3140CF1E4943CC0084327F /* ExamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CE1E4943CC0084327F /* ExamsViewController.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
+		2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
 		2A3140CA1E4943B50084327F /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlinesViewController.swift; sourceTree = "<group>"; };
 		2A3140CE1E4943CC0084327F /* ExamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamsViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */,
 				2A3140CE1E4943CC0084327F /* ExamsViewController.swift */,
 				2A3140D61E49466D0084327F /* HomePageViewController.swift */,
+				2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */,
+				2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */,
 			);
 			path = efuerzo;
 			sourceTree = "<group>";
@@ -314,9 +320,11 @@
 				2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */,
 				2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */,
 				2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */,
+				2A0FFAE81E4AA4D400160785 /* IncompleteDeadlinesViewController.swift in Sources */,
 				2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */,
 				2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
+				2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,21 +34,27 @@ class RegisterViewController: UIViewController {
         let confirmPassword = ConfirmPasswordTextField.text!
         let memorable = MemorableTextField.text!
 
-        // Check that none of the field are empty
+        // Check that none of the fields are empty
         if (fullName.isEmpty) || (uniName.isEmpty) || (uniCourse.isEmpty) || (username.isEmpty) || (password.isEmpty) || (confirmPassword.isEmpty) {
-    
-            // Generate an alert meessage prompting user that all of the fields are required
             displayAlertMessage(userMessage: "All of the fields are required")
             return;
         }
 
+        // Check that the provided passwords match
         if (password != confirmPassword){
-            
-            // Generate an alert if the two passwords do not match
-            displayAlertMessage(userMessage: "The passwords do not match")
+            displayAlertMessage(userMessage: "The passwords do not match!")
             return;
         }
-
+        
+        // Check that the email is in correct format
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx);
+        let emailCheck = emailTest.evaluate(with: email)
+        if (!emailCheck){
+            displayAlertMessage(userMessage: "The email address provided is not valid")
+            return;
+        }
+        
         // If everything is okay, send details to the server
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/userRegister.php");
         let request = NSMutableURLRequest(url:myUrl as! URL)
@@ -71,31 +77,32 @@ class RegisterViewController: UIViewController {
                 
                 if let parseJSON = json {
                     let resultValue:String = parseJSON["status"] as! String;
+                    let UserValueStatus: String = (parseJSON["user_check"] as? String)!;
+ 
+                    print("Result: \(resultValue)");
+                    print("User check returned: \(UserValueStatus)");
                     
-                    print("result: \(resultValue)");
+                    // If the username already exists, return to the appication
+//                    if (UserValueStatus == "Failed"){
+//                        self.displayAlertMessage(userMessage: "The provided username already exists")
+//                        return;
+//                    }
                     
-                    var isUserRegistered:Bool = false;
+                    // Check that email is not already registered
+                    
                     if(resultValue == "Success") {
-                        isUserRegistered = true;
-                    }
-                    
-                    var messageToDisplay:String = parseJSON["message"] as! String!
-                    if(!isUserRegistered){
-                        messageToDisplay = parseJSON["message"] as! String!
-                    }
-                    print(messageToDisplay)
-                    
-                    DispatchQueue.main.async{
-                        // Display alert with the confirmation
-                        let theAlert = UIAlertController(title:"Alert", message: "Registration completed successfully", preferredStyle: UIAlertControllerStyle.alert)
-                        
-                        let okAction = UIAlertAction(title:"OK", style:UIAlertActionStyle.default){
-                            action in
-                            self.dismiss(animated: true, completion: nil)
+                        DispatchQueue.main.async{
+                            // Display alert with the confirmation
+                            let theAlert = UIAlertController(title:"Alert", message: "Registration completed successfully", preferredStyle: UIAlertControllerStyle.alert)
+                            
+                            let okAction = UIAlertAction(title:"Take me to Login", style:UIAlertActionStyle.default){
+                                action in
+                                self.dismiss(animated: true, completion: nil)
+                            }
+                            
+                            theAlert.addAction(okAction);
+                            self.present(theAlert, animated: true, completion: nil)
                         }
-                        
-                        theAlert.addAction(okAction);
-                        self.present(theAlert, animated: true, completion: nil)
                     }
                 }
                 
@@ -105,17 +112,6 @@ class RegisterViewController: UIViewController {
             }
         }
         task.resume();
-        
-        // Once registration is successful, send the user to the login screen
-        let theAlert = UIAlertController(title:"Alert", message: "Registration completed successfully", preferredStyle: UIAlertControllerStyle.alert)
-        
-        let okAction = UIAlertAction(title:"OK", style:UIAlertActionStyle.default){
-            action in
-            self.dismiss(animated: true, completion: nil)
-        }
-        
-        theAlert.addAction(okAction);
-        self.present(theAlert, animated: true, completion: nil)
     }
     
     // This is the generic function to display an alert message

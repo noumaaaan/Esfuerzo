@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		2A0FFAE81E4AA4D400160785 /* IncompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */; };
 		2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */; };
+		2A26E57B1E50E2950030E05B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */; };
+		2A26E5851E511F880030E05B /* xcdatamodeld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A26E5821E511D760030E05B /* xcdatamodeld.xcdatamodeld */; };
 		2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CA1E4943B50084327F /* TimetableViewController.swift */; };
 		2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */; };
-		2A3140CF1E4943CC0084327F /* ExamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CE1E4943CC0084327F /* ExamsViewController.swift */; };
 		2A3140D11E4944190084327F /* userLogin.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D01E4944190084327F /* userLogin.php */; };
 		2A3140D31E49444D0084327F /* userForgot.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D21E49444D0084327F /* userForgot.php */; };
 		2A3140D51E4944650084327F /* userRegister.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D41E4944650084327F /* userRegister.php */; };
 		2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140D61E49466D0084327F /* HomePageViewController.swift */; };
 		2A3140DB1E4958C60084327F /* class.phpmailer.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140DA1E4958C60084327F /* class.phpmailer.php */; };
 		2A4012381E44FE3800BD48CB /* connection.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A4012371E44FE3800BD48CB /* connection.php */; };
+		2A55BFD71E5257A900555670 /* ManageAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */; };
 		2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */; };
 		2A787AB41E42A9C000B82E6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB21E42A9C000B82E6E /* Main.storyboard */; };
 		2A787AB61E42A9C000B82E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB51E42A9C000B82E6E /* Assets.xcassets */; };
@@ -49,15 +51,17 @@
 /* Begin PBXFileReference section */
 		2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
 		2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
+		2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		2A26E5831E511D760030E05B /* xcdatamodeld.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = xcdatamodeld.xcdatamodel; sourceTree = "<group>"; };
 		2A3140CA1E4943B50084327F /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlinesViewController.swift; sourceTree = "<group>"; };
-		2A3140CE1E4943CC0084327F /* ExamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamsViewController.swift; sourceTree = "<group>"; };
 		2A3140D01E4944190084327F /* userLogin.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userLogin.php; sourceTree = "<group>"; };
 		2A3140D21E49444D0084327F /* userForgot.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userForgot.php; sourceTree = "<group>"; };
 		2A3140D41E4944650084327F /* userRegister.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userRegister.php; sourceTree = "<group>"; };
 		2A3140D61E49466D0084327F /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		2A3140DA1E4958C60084327F /* class.phpmailer.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = class.phpmailer.php; sourceTree = "<group>"; };
 		2A4012371E44FE3800BD48CB /* connection.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = connection.php; sourceTree = "<group>"; };
+		2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageAccountViewController.swift; sourceTree = "<group>"; };
 		2A787AA91E42A9C000B82E6E /* efuerzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = efuerzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A787AB31E42A9C000B82E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */,
 				2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */,
 				2A787AB21E42A9C000B82E6E /* Main.storyboard */,
+				2A26E5821E511D760030E05B /* xcdatamodeld.xcdatamodeld */,
 				2A787ABA1E42A9C000B82E6E /* Info.plist */,
 				2A787AB51E42A9C000B82E6E /* Assets.xcassets */,
 				2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */,
@@ -147,10 +152,11 @@
 				2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */,
 				2A3140CA1E4943B50084327F /* TimetableViewController.swift */,
 				2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */,
-				2A3140CE1E4943CC0084327F /* ExamsViewController.swift */,
 				2A3140D61E49466D0084327F /* HomePageViewController.swift */,
 				2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */,
 				2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */,
+				2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */,
+				2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */,
 			);
 			path = efuerzo;
 			sourceTree = "<group>";
@@ -315,16 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A26E5851E511F880030E05B /* xcdatamodeld.xcdatamodeld in Sources */,
 				2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */,
-				2A3140CF1E4943CC0084327F /* ExamsViewController.swift in Sources */,
 				2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */,
 				2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */,
 				2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */,
 				2A0FFAE81E4AA4D400160785 /* IncompleteDeadlinesViewController.swift in Sources */,
+				2A26E57B1E50E2950030E05B /* PreferencesViewController.swift in Sources */,
 				2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */,
 				2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
 				2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */,
+				2A55BFD71E5257A900555670 /* ManageAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +485,7 @@
 				DEVELOPMENT_TEAM = D949FXATB8;
 				INFOPLIST_FILE = efuerzo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.noumanmehmood.efuerzo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noumanmehmood.esfuerzo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -490,7 +498,7 @@
 				DEVELOPMENT_TEAM = D949FXATB8;
 				INFOPLIST_FILE = efuerzo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.noumanmehmood.efuerzo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noumanmehmood.esfuerzo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -594,6 +602,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2A26E5821E511D760030E05B /* xcdatamodeld.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2A26E5831E511D760030E05B /* xcdatamodeld.xcdatamodel */,
+			);
+			currentVersion = 2A26E5831E511D760030E05B /* xcdatamodeld.xcdatamodel */;
+			path = xcdatamodeld.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2A787AA11E42A9C000B82E6E /* Project object */;
 }

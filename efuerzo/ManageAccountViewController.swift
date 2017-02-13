@@ -1,17 +1,15 @@
 //
-//  CompleteDeadlinesViewController.swift
+//  ManageAccountViewController.swift
 //  efuerzo
 //
-//  Created by Nouman Mehmood on 08/02/2017.
+//  Created by Nouman Mehmood on 13/02/2017.
 //  Copyright © 2017 Nouman Mehmood. All rights reserved.
 //
 
 import UIKit
 
-class CompleteDeadlinesViewController: UIViewController {
+class ManageAccountViewController: UIViewController {
 
-    @IBOutlet weak var completeWelcomeMessage: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

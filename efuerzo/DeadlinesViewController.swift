@@ -17,17 +17,16 @@ class DeadlinesViewController: UIViewController {
         
 
         if sender.selectedSegmentIndex == 0 {
-            UIView.animate(withDuration: 0.1, animations: {
+            UIView.animate(withDuration: 0, animations: {
                 self.completeView.alpha = 0
                 self.IncompleteView.alpha = 1
             })
         } else {
-            UIView.animate(withDuration: 0.1, animations: {
+            UIView.animate(withDuration: 0, animations: {
                 self.completeView.alpha = 1
                 self.IncompleteView.alpha = 0
             })
         }
-
     }
     
     override func viewDidLoad() {

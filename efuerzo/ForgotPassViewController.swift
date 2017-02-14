@@ -88,17 +88,11 @@ class ForgotPassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ForgotPassViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
     }
 
 }

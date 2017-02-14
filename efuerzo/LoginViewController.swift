@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
         
         // If the fields are empty, display an alert and return
         if (username.isEmpty || password.isEmpty) {
-            displayAlertMessage(alertAction: "Return", userMessage: "Complete all the fields")
+            displayAlertMessage(userTitle: "Empty", userMessage: "All of the fields must be completed", alertAction: "Return to Login")
             return;
         }
         
@@ -50,13 +50,22 @@ class LoginViewController: UIViewController {
                 
                     let resultValue:String = parseJSON["status"] as! String;
                     
+                    print(resultValue)
+                    
                     // If there is an error, display an alert message and return
                     if (resultValue == "Error"){
-                        let theAlert = UIAlertController(title:"Alert", message: "Credentials not found", preferredStyle: UIAlertControllerStyle.alert)
-                        let okAction = UIAlertAction(title:"Try again", style:UIAlertActionStyle.default)
-                        theAlert.addAction(okAction);
-                        self.present(theAlert, animated: true, completion: nil)
-                        return
+                        DispatchQueue.main.async{
+                            self.displayAlertMessage(userTitle: "Error", userMessage: "The credentials entered were not found", alertAction: "Try again")
+                            return
+                        }
+                    }
+                    
+                    // If the user types in the incorrect username and password combination
+                    if (resultValue == "Failed"){
+                        DispatchQueue.main.async{
+                            self.displayAlertMessage(userTitle: "Failed", userMessage: "The user and pass combination do not match", alertAction: "Try again")
+                            return
+                        }
                     }
                 
                     // If successful, initiate session and satore all the fields into an array
@@ -92,21 +101,17 @@ class LoginViewController: UIViewController {
     // Once the view loads, by default call dismiss keyboard to hide keyboard once the screen is tapped
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
+        self.hideKeyboardWhenTappedAround()
+        self.dismissKeyboard()
     }
     
-    // Generic function to display an alert message
-    // Takes parameters for the action to the alert and the message of the alert
-    func displayAlertMessage(alertAction:String, userMessage:String){
-        let theAlert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+    // Function to display an alert message parameters for the title, message and action type
+    func displayAlertMessage(userTitle: String, userMessage:String, alertAction:String){
+        let theAlert = UIAlertController(title: userTitle, message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: alertAction, style:UIAlertActionStyle.default, handler:nil)
         theAlert.addAction(okAction)
         self.present(theAlert, animated: true, completion: nil)
     }
-    
-    // End keyboard editing
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
 }
+
+

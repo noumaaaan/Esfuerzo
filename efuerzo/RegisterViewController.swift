@@ -126,17 +126,10 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ScrollView.contentSize.height = 1000;
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
     }
     
 }

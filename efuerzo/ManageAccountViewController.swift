@@ -10,26 +10,37 @@ import UIKit
 
 class ManageAccountViewController: UIViewController {
 
+    // Initialise the outlets of the view
+    @IBOutlet weak var fullNameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var universityNameTextField: UITextField!
+    @IBOutlet weak var courseNameTextField: UITextField!
+    
+    // Function once the login button is tapped
+    @IBAction func submitButtonTapped(_ sender: Any) {
+    
+        
+        
+        
+    
+    }
+    
+    // Display the current saved session information into the outlets
+    func displayUserInformation(){
+        let UserDetails = UserDefaults.standard.stringArray(forKey: "UserDetailsArray") ?? [String]()
+        fullNameTextField.text = UserDetails[1]
+        universityNameTextField.text = UserDetails[2]
+        courseNameTextField.text = UserDetails[3]
+        emailTextField.text = UserDetails[4]
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        displayUserInformation();
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

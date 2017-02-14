@@ -10,10 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    // Storyboard outlet declaration
+    // Initialise storyboard outlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // Function once login button is pressed
     @IBAction func LoginButtonTapped(_ sender: Any) {
@@ -21,31 +20,20 @@ class LoginViewController: UIViewController {
         let username = usernameTextField.text!
         let password = passwordTextField.text!
         
-        /*
-         * Input validations for the username and password text fields
-         * Check if the fields are empty and compare with current array to see if username is taken
-         */
-        
         // If the fields are empty, display an alert and return
         if (username.isEmpty || password.isEmpty) {
             displayAlertMessage(alertAction: "Return", userMessage: "Complete all the fields")
             return;
         }
         
-        /*
-         * Begin a POST request to the PHP Script
-         * Begin a task to send the request
-         */
+        // If not empty, do a post request to the server with the details
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/userLogin.php");
         let request = NSMutableURLRequest(url:myUrl as! URL)
         
-        // POST request
-        activityIndicator.startAnimating();
         request.httpMethod = "POST";
         let postString = "username=\(username)&password=\(password)";
         request.httpBody = postString.data(using: String.Encoding.utf8);
         
-        // Start a task to send the request
         let task = URLSession.shared.dataTask(with: request as URLRequest){
             data, response, error in
 
@@ -54,43 +42,37 @@ class LoginViewController: UIViewController {
                 return
             }
             
-            /*
-             * Parse the results of the JSON request 
-             * If the result fails, display error message and return
-             * If successful, navigate to main
-             */
-            
-        
+            // Parse the results of the JSON result and naivigate to app if success
             var err: NSError?
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                 if let parseJSON = json {
                 
                     let resultValue:String = parseJSON["status"] as! String;
-//                    if (resultValue == "Error"){
-//                        self.displayAlertMessage(alertAction: "Try again", userMessage: "Credentials not found")
-//                        return
-//                    }
                     
-                    /*
-                     * If the result is successful, save all of the fields into an array
-                     * Save this array using User Defaults to user storage
-                     * Navigate to the main tab of application
-                     */
-                    
+                    // If there is an error, display an alert message and return
+                    if (resultValue == "Error"){
+                        let theAlert = UIAlertController(title:"Alert", message: "Credentials not found", preferredStyle: UIAlertControllerStyle.alert)
+                        let okAction = UIAlertAction(title:"Try again", style:UIAlertActionStyle.default)
+                        theAlert.addAction(okAction);
+                        self.present(theAlert, animated: true, completion: nil)
+                        return
+                    }
+                
+                    // If successful, initiate session and satore all the fields into an array
                     if (resultValue == "Success"){
                         
                         let storedUsername: String = parseJSON["username"] as! String;
                         let storedFullName: String = parseJSON["full_name"] as! String;
                         let storedUniName: String = parseJSON["uni_name"] as! String;
                         let storedUniCourse: String = parseJSON["uni_course"] as! String;
-                        let array = [storedUsername, storedFullName, storedUniName, storedUniCourse];
+                        let storedEmail: String = parseJSON["email"] as! String;
+                        
+                        let array = [storedUsername, storedFullName, storedUniName, storedUniCourse, storedEmail];
                         
                         UserDefaults.standard.set(array, forKey: "UserDetailsArray");
                         UserDefaults.standard.set(true, forKey: "isUserLoggedIn");
                         UserDefaults.standard.synchronize();
-                        
-                        self.activityIndicator.stopAnimating()
                         
                         DispatchQueue.main.async{
                             let mainTabBar = self.storyboard?.instantiateViewController(withIdentifier: "mainTabBar") as! UITabBarController;
@@ -105,15 +87,17 @@ class LoginViewController: UIViewController {
             }
         }
         task.resume();
-        
     }
 
+    // Once the view loads, by default call dismiss keyboard to hide keyboard once the screen is tapped
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     
+    // Generic function to display an alert message
+    // Takes parameters for the action to the alert and the message of the alert
     func displayAlertMessage(alertAction:String, userMessage:String){
         let theAlert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: alertAction, style:UIAlertActionStyle.default, handler:nil)
@@ -121,12 +105,8 @@ class LoginViewController: UIViewController {
         self.present(theAlert, animated: true, completion: nil)
     }
     
+    // End keyboard editing
     func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
 }

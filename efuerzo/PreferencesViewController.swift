@@ -14,7 +14,7 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var welcomeMessageLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    // The saveed user details which is an arrya
+    // The saveed user details which is an array
     let UserDetails = UserDefaults.standard.stringArray(forKey: "UserDetailsArray") ?? [String]()
     
     // Creating two arrays to display within the table

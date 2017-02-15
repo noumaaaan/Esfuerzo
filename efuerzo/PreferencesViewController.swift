@@ -20,7 +20,7 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
     // Creating two arrays to display within the table
     
     let prefArray1 = ["Add Subjects", "Add Instructors", "Add Locations", "Days of the week", "Notification Settings"]
-    let prefArray2 = ["Manage Account", "Contact Us", "Privacy Policy", "About Esfuerzo"]
+    let prefArray2 = ["Manage Account", "Contact Us", "Privacy Policy", "About Esfuerzo", "Like us on Facebook"]
     
     // Log out of the application once the logout button has been tapped
     @IBAction func LogoutButtonTapped(_ sender: Any) {
@@ -92,7 +92,13 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
             self.performSegue(withIdentifier: segueIdentifier, sender: self)
             
         } else {
-            switch indexPath.row {
+            
+            if(indexPath.row == 4){
+                let facebookPage = URL(string: "https://www.facebook.com/EsfuerzoApp/")!
+                UIApplication.shared.open(facebookPage)
+
+            } else {
+                switch indexPath.row {
                 case 0:
                     segueIdentifier = "changeDetailsView"
                 case 1:
@@ -103,8 +109,9 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
                     segueIdentifier = "aboutEsfuerzoView"
                 default:
                     segueIdentifier = "aboutEsfuerzoView"
+                }
+                self.performSegue(withIdentifier: segueIdentifier, sender: self)
             }
-            self.performSegue(withIdentifier: segueIdentifier, sender: self)
         }
     }
 }

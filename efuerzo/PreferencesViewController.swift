@@ -22,6 +22,13 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
     let prefArray1 = ["Add Subjects", "Add Instructors", "Add Locations", "Days of the week", "Notification Settings"]
     let prefArray2 = ["Manage Account", "Contact Us", "Privacy Policy", "About Esfuerzo"]
     
+    // Log out of the application once the logout button has been tapped
+    @IBAction func LogoutButtonTapped(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "isUserLoggedIn");
+        UserDefaults.standard.synchronize();
+        self.performSegue(withIdentifier: "LoginViewController", sender: self);
+    }
+    
     override func viewDidLoad() {
         setWelcomeMessage()
         super.viewDidLoad()

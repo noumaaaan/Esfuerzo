@@ -10,7 +10,7 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-    // Initalise the outlets from register view
+    // Initalise storyboard outlets
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var FullNameTextField: UITextField!
     @IBOutlet weak var UniversityTextField: UITextField!
@@ -21,10 +21,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var ConfirmPasswordTextField: UITextField!
     @IBOutlet weak var MemorableTextField: UITextField!
     
-    // Function run when reguister button clicked
+    // Function run when reguister button pressed
     @IBAction func RegisterButtonTapped(_ sender: Any) {
         
-        // Store the outlets as constants as they dont change
         let fullName = FullNameTextField.text!
         let uniName = UniversityTextField.text!
         let uniCourse = CourseTextField.text!
@@ -36,22 +35,22 @@ class RegisterViewController: UIViewController {
 
         // Check that none of the fields are empty
         if (fullName.isEmpty) || (uniName.isEmpty) || (uniCourse.isEmpty) || (username.isEmpty) || (password.isEmpty) || (confirmPassword.isEmpty) {
-            displayAlertMessage(userMessage: "All of the fields are required")
+            displayAlertMessage(userTitle: "Error", userMessage: "All of the fields are required", alertAction: "Return")
             return;
         }
 
         // Check that the provided passwords match
         if (password != confirmPassword){
-            displayAlertMessage(userMessage: "The passwords do not match!")
+            displayAlertMessage(userTitle: "Password Error", userMessage: "The password combination does not match!", alertAction: "Return")
             return;
         }
         
         // Check that the email is in correct format
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx);
+        let regularExpressions = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", regularExpressions);
         let emailCheck = emailTest.evaluate(with: email)
         if (!emailCheck){
-            displayAlertMessage(userMessage: "The email address provided is not valid")
+            displayAlertMessage(userTitle: "Not a Valid Email", userMessage: "The email address provided is not a real email!", alertAction: "Return")
             return;
         }
         
@@ -76,30 +75,37 @@ class RegisterViewController: UIViewController {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                 
                 if let parseJSON = json {
-                    let resultValue:String = parseJSON["status"] as! String;
-                    let UserValueStatus: String = (parseJSON["user_check"] as? String)!;
- 
-                    print("Result: \(resultValue)");
-                    print("User check returned: \(UserValueStatus)");
+                    let resultValue:String = parseJSON["status"] as! String
+                    let UserValueStatus: String = (parseJSON["user_check"] as? String)!
+                    let EmailValueStatus: String = (parseJSON["email_check"] as? String)!
+                    
+                    print(UserValueStatus)
                     
                     // If the username already exists, return to the appication
-//                    if (UserValueStatus == "Failed"){
-//                        self.displayAlertMessage(userMessage: "The provided username already exists")
-//                        return;
-//                    }
+                    if (UserValueStatus == "Failed"){
+                        DispatchQueue.main.async{
+                            self.displayAlertMessage(userTitle: "Error", userMessage: "The chosen username already exists", alertAction: "Try again")
+                            return;
+                        }
+                    }
                     
                     // Check that email is not already registered
+                    if (EmailValueStatus == "Email error"){
+                        DispatchQueue.main.async{
+                            self.displayAlertMessage(userTitle: "Error", userMessage: "This email is alrady registered. Use another email", alertAction: "Try again")
+                            return;
+                        }
+                    }
                     
                     if(resultValue == "Success") {
                         DispatchQueue.main.async{
                             // Display alert with the confirmation
-                            let theAlert = UIAlertController(title:"Alert", message: "Registration completed successfully", preferredStyle: UIAlertControllerStyle.alert)
+                            let theAlert = UIAlertController(title:"Complete", message: "Registration completed successfully", preferredStyle: UIAlertControllerStyle.alert)
                             
                             let okAction = UIAlertAction(title:"Take me to Login", style:UIAlertActionStyle.default){
                                 action in
                                 self.dismiss(animated: true, completion: nil)
                             }
-                            
                             theAlert.addAction(okAction);
                             self.present(theAlert, animated: true, completion: nil)
                         }
@@ -114,11 +120,10 @@ class RegisterViewController: UIViewController {
         task.resume();
     }
     
-    // This is the generic function to display an alert message
-    func displayAlertMessage(userMessage:String){
-        
-        let theAlert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title:"OK", style:UIAlertActionStyle.default, handler:nil)
+    // Function to display an alert message parameters for the title, message and action type
+    func displayAlertMessage(userTitle: String, userMessage:String, alertAction:String){
+        let theAlert = UIAlertController(title: userTitle, message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: alertAction, style:UIAlertActionStyle.default, handler:nil)
         theAlert.addAction(okAction)
         self.present(theAlert, animated: true, completion: nil)
     }
@@ -126,11 +131,8 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ScrollView.contentSize.height = 1000;
+        self.hideKeyboardWhenTappedAround()
+        self.dismissKeyboard()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
 }
 

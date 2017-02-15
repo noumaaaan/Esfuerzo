@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ForgotPassViewController: UIViewController {
-
+    
     // Initialise the variables
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var memorableTextField: UITextField!
@@ -89,10 +89,4 @@ class ForgotPassViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }

@@ -1,17 +1,15 @@
 //
-//  CompleteDeadlinesViewController.swift
+//  walkthroughViewController.swift
 //  efuerzo
 //
-//  Created by Nouman Mehmood on 08/02/2017.
+//  Created by Nouman Mehmood on 15/02/2017.
 //  Copyright © 2017 Nouman Mehmood. All rights reserved.
 //
 
 import UIKit
 
-class CompleteDeadlinesViewController: UIViewController {
+class walkthroughViewController: UIViewController {
 
-    @IBOutlet weak var completeWelcomeMessage: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

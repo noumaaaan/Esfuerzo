@@ -25,6 +25,8 @@ class ManageAccountViewController: UIViewController {
     
     }
     
+    
+    
     // Display the current saved session information into the outlets
     func displayUserInformation(){
         let UserDetails = UserDefaults.standard.stringArray(forKey: "UserDetailsArray") ?? [String]()

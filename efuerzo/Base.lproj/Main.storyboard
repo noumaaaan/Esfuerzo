@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -176,7 +175,7 @@
                     <navigationItem key="navigationItem" id="kyI-Ka-wqR">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="XPc-a6-DcL">
-                            <rect key="frame" x="124.5" y="7" width="165" height="30"/>
+                            <rect key="frame" x="125" y="7" width="165" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Incomplete"/>
@@ -245,7 +244,7 @@
                                 <rect key="frame" x="20" y="81" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.21176470588235294" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="adjust your settings here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJe-tu-f9z">
@@ -269,6 +268,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="Obe-YG-E3Q">
                             <connections>
                                 <action selector="LogoutButtonTapped:" destination="LPd-YI-aae" id="HQU-0k-gYM"/>
+                                <segue destination="syR-d4-rfW" kind="presentation" id="uDH-Gi-LR7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -284,6 +284,7 @@
                         <segue destination="WfC-Zu-pld" kind="show" identifier="makeSuggestView" id="cG8-Nx-p2f"/>
                         <segue destination="cwh-Of-vAL" kind="show" identifier="privacyPolicyView" id="wRD-rj-IRH"/>
                         <segue destination="ogR-9g-0IQ" kind="show" identifier="aboutEsfuerzoView" id="gKw-0s-WGw"/>
+                        <segue destination="c4X-lc-aW4" kind="show" identifier="walkthroughShow" id="cyc-CM-3Iv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pG8-U9-8Sb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -484,20 +485,111 @@
         <!--Privacy Policy-->
         <scene sceneID="lbg-gh-PJo">
             <objects>
-                <viewController title="Privacy Policy" id="cwh-Of-vAL" sceneMemberID="viewController">
+                <viewController title="Privacy Policy" id="cwh-Of-vAL" customClass="PrivacyPolicyViewController" customModule="efuerzo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Acf-ET-jlb"/>
                         <viewControllerLayoutGuide type="bottom" id="1BI-IZ-kib"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0mt-qY-2CN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BRP-AB-Yqc">
+                                <rect key="frame" x="0.0" y="64" width="414" height="2887"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWr-6E-Fpy">
+                                        <rect key="frame" x="8" y="-64" width="398" height="2887"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Your privacy means a lot to me, and since my final year project uses parts of this website, it's important for me to tell you what information I take, the security measures that I have in place, and the rights that you have. There are strict policies in place to ensure the data you submit to this website is handled correctly and securely.
+
+This privacy policy has been compiled to better serve those who are concerned with how their 'Personally Identifiable Information' (PII) is being used online. PII, as described in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.
+
+What personal information is collected from the people that visit this website or app?
+We do not collect information from visitors of our site. Location or other details to help you with your experience.
+
+
+Is any information collected? And when so?
+We collect information from you when you fill out the form on our site. Other than the fields that are clearly visible on the form, we also check the location from where you are sending the message. This measure is in place to reduce the number of spam messages that we recieve and also validate the user who submits the form.
+
+
+How is your information used?
+We may use the information that you provide in the following ways:
+
+To improve our website in order to better serve you
+To allow us to better service you in responding to your customer service requests
+To ask for ratings and reviews of services or products
+To follow up with them after correspondence (live chat, email or phone inquiries)
+
+How is the information that you provide protected?
+We do not use vulnerability scanning and/or scanning to PCI standards.We only provide articles and information. We never ask for credit card numbers.Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.We implement a variety of security measures when a user enters, submits, or accesses their information to maintain the safety of your personal information.
+
+
+Do we use 'cookies'?
+We do not use cookies for tracking purposes. You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser settings. Since browser is a little different, look at your browser's Help Menu to learn the correct way to modify your cookies.
+
+
+Third-party disclosure
+We do not sell, trade, or otherwise transfer to outside parties your Personally Identifiable Information.
+
+
+Third-party links
+WWe do not include or offer third-party products or services on our website.
+
+
+Google
+Google's advertising requirements can be summed up by Google's Advertising Principles. They are put in place to provide a positive experience for users. https://support.google.com/adwordspolicy/answer/1316548?hl=en. We do not use Google AdSense Advertising on our website. We, along with third-party vendors such as Google use first-party cookies (such as the Google Analytics cookies) and third-party cookies (such as the DoubleClick cookie) or other third-party identifiers together to compile data regarding user interactions with ad impressions and other ad service functions as they relate to our website.
+
+
+Opting out:
+Users can set preferences for how Google advertises to you using the Google Ad Settings page. Alternatively, you can opt out by visiting the Network Advertising Initiative Opt Out page or by using the Google Analytics Opt Out Browser add on.
+
+
+CalOPPA is the first state law in the nation to require commercial websites and online services to post a privacy policy. The law's reach stretches well beyond California to require any person or company in the United States (and conceivably the world) that operates websites collecting Personally Identifiable Information from California consumers to post a conspicuous privacy policy on its website stating exactly the information being collected and those individuals or companies with whom it is being shared. - See more at: http://consumercal.org/california-online-privacy-protection-act-caloppa/#sthash.0FdRbT51.dpuf 
+
+According to CalOPPA, we agree to the following: Users can visit our site anonymously. Once this privacy policy is created, we will add a link to it on our home page or as a minimum, on the first significant page after entering our website. Our Privacy Policy link includes the word 'Privacy' and can easily be found on the page specified above. 
+
+You will be notified of any Privacy Policy changes On our Privacy Policy Page and you Can change your personal information By emailing 
+
+How does our site handle Do Not Track signals?
+We honor Do Not Track signals and Do Not Track, plant cookies, or use advertising when a Do Not Track (DNT) browser mechanism is in place.
+
+
+Does our site allow third-party behavioral tracking?
+It's also important to note that we allow third-party behavioral tracking
+
+
+COPPA (Children Online Privacy Protection Act)
+When it comes to the collection of personal information from children under the age of 13 years old, the Children's Online Privacy Protection Act (COPPA) puts parents in control. The Federal Trade Commission, United States' consumer protection agency, enforces the COPPA Rule, which spells out what operators of websites and online services must do to protect children's privacy and safety online.
+
+
+Fair Information Practices
+The Fair Information Practices Principles form the backbone of privacy law in the United States and the concepts they include have played a significant role in the development of data protection laws around the globe. Understanding the Fair Information Practice Principles and how they should be implemented is critical to comply with the various privacy laws that protect personal information.
+
+In order to be in line with Fair Information Practices we will take the following responsive action, should a data breach occur: We will notify you via email within 7 working days
+
+
+We also agree to the Individual Redress Principle which requires that individuals have the right to legally pursue enforceable rights against data collectors and processors who fail to adhere to the law. This principle requires not only that individuals have enforceable rights against data users, but also that individuals have recourse to courts or government agencies to investigate and/or prosecute non-compliance by data processors.
+
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="3000"/>
+                    <connections>
+                        <outlet property="ScrollView" destination="BRP-AB-Yqc" id="tib-l6-wKp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ED-iL-vHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="3488"/>
+            <point key="canvasLocation" x="155.07246376811597" y="3607.3369565217395"/>
         </scene>
         <!--About Esfuerzo-->
         <scene sceneID="9QQ-El-YDh">
@@ -516,6 +608,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Boj-L9-dzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1075" y="3414"/>
+        </scene>
+        <!--How to Use this app-->
+        <scene sceneID="ZU4-xq-PLA">
+            <objects>
+                <viewController title="How to Use this app" id="1MQ-4A-UIB" customClass="walkthroughViewController" customModule="efuerzo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7DP-Pf-4CE"/>
+                        <viewControllerLayoutGuide type="bottom" id="kig-xD-Lbi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2hy-Yy-IzK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ol2-WC-isT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3720" y="3155"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="sAh-wF-uEu">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="c4X-lc-aW4" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="1MQ-4A-UIB" kind="show" id="GQu-d9-vgk"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvD-Ax-8Wn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3041" y="3155"/>
         </scene>
         <!--Contact us-->
         <scene sceneID="chG-Qf-u03">
@@ -692,77 +814,36 @@
                                 <rect key="frame" x="20" y="283" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0039215686274509803" green="0.12156862745098039" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jzj-ez-ug4">
                                 <rect key="frame" x="20" y="371" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0039215686274509803" green="0.12156862745098039" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwf-iA-rp4">
                                 <rect key="frame" x="20" y="243" width="78" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
-                                <color key="textColor" red="0.16078431372549018" green="0.21176470588235294" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.0" green="0.35686274509803922" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkt-bd-ZWj">
-                                <rect key="frame" x="20" y="339" width="78" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
-                                <color key="textColor" red="0.16078431372549018" green="0.21176470588235294" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMx-uC-3f3">
-                                <rect key="frame" x="67.666666666666686" y="409" width="276" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
-                                <color key="tintColor" red="0.96862745098039216" green="0.11764705882352941" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Forgot your username or password?">
-                                    <color key="titleColor" red="0.32549019607843138" green="0.36862745098039218" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.32549019607843138" green="0.36862745098039218" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="MkE-de-HlX" kind="show" id="djl-uj-skT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpy-Lb-24H">
                                 <rect key="frame" x="74.666666666666686" y="667" width="264" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                                 <state key="normal" title="Not got an account? Register here">
-                                    <color key="titleColor" red="0.16078431372549018" green="0.21176470588235294" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.35686274509803922" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="QF9-fz-MIS" kind="show" id="Ctv-BM-CxL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ESFUERZO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYQ-JE-ERA">
-                                <rect key="frame" x="-17" y="73" width="445" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="75"/>
-                                <color key="textColor" red="0.011764705882352941" green="0.086274509803921567" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ENDEAVOUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he9-3S-u51">
-                                <rect key="frame" x="151.66666666666669" y="55" width="108.00000000000006" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="20"/>
-                                <color key="textColor" red="0.16078431372549018" green="0.21176470588235294" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWO-qN-VQd">
-                                <rect key="frame" x="170.66666666666666" y="182" width="71" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="25"/>
-                                <color key="textColor" red="0.16078431372549018" green="0.21176470588235294" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBm-2d-eVY">
                                 <rect key="frame" x="166.66666666666666" y="453" width="81" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -775,6 +856,33 @@
                                     <action selector="LoginButtonTapped:" destination="syR-d4-rfW" eventType="touchUpInside" id="pGo-CC-rkf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWO-qN-VQd">
+                                <rect key="frame" x="142" y="119" width="128" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="47"/>
+                                <color key="textColor" red="0.16078431372549018" green="0.21176470588235294" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMx-uC-3f3">
+                                <rect key="frame" x="85" y="409" width="243" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
+                                <color key="tintColor" red="0.96862745098039216" green="0.11764705882352941" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Forgot your username or password?">
+                                    <color key="titleColor" red="0.39215686274509803" green="0.59215686274509804" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.011764705882352941" green="0.22352941176470587" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MkE-de-HlX" kind="show" id="djl-uj-skT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkt-bd-ZWj">
+                                <rect key="frame" x="20" y="339" width="78" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.35686274509803922" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -785,9 +893,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pG-PA-HeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5781" y="-177"/>
+            <point key="canvasLocation" x="-5781.1594202898559" y="-177.71739130434784"/>
         </scene>
-        <!--Forgot your login details?-->
+        <!--Forgot Login Details?-->
         <scene sceneID="tlh-oX-P8P">
             <objects>
                 <viewController id="ZFg-9U-lGx" customClass="ForgotPassViewController" customModule="efuerzo" customModuleProvider="target" sceneMemberID="viewController">
@@ -800,52 +908,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="PVz-nB-RkZ">
-                                <rect key="frame" x="14" y="313" width="368" height="30"/>
+                                <rect key="frame" x="20" y="313" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz5-ZU-vUP">
-                                <rect key="frame" x="14" y="282" width="41" height="23"/>
+                                <rect key="frame" x="20" y="282" width="41" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
-                                <color key="textColor" red="0.59215686274509804" green="0.11764705882352941" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.011764705882352941" green="0.22352941176470587" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Memorable word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVc-LW-d3D">
-                                <rect key="frame" x="14" y="358" width="122" height="23"/>
+                                <rect key="frame" x="20" y="376" width="122" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
-                                <color key="textColor" red="0.59215686274509804" green="0.11764705882352941" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.011764705882352941" green="0.22352941176470587" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you have forgotten your login details, please" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfI-Nq-mgf">
-                                <rect key="frame" x="48" y="101" width="319" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you have forgotten your login details, please type in the email address that you registered with, and your memorable word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfI-Nq-mgf">
+                                <rect key="frame" x="20" y="101" width="374" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
-                                <color key="textColor" red="0.21568627450980393" green="0.11764705882352941" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.011764705882352941" green="0.22352941176470587" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="memorable word below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofe-0U-beZ">
-                                <rect key="frame" x="128" y="148" width="159" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="goD-dA-Are">
+                                <rect key="frame" x="20" y="407" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A reset password email will be sent to you " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UF8-u4-h7v">
+                                <rect key="frame" x="61" y="186" width="293" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
-                                <color key="textColor" red="0.21568627450980393" green="0.11764705882352941" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You will recieve an email detailing how to access" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgA-4M-IPc">
-                                <rect key="frame" x="40" y="191" width="334" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
-                                <color key="textColor" red="0.59215686274509804" green="0.11764705882352941" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.35686274509803922" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQb-ML-eDr">
-                                <rect key="frame" x="168" y="456" width="80" height="110"/>
+                                <rect key="frame" x="163" y="489" width="89" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.7803921568627451" green="0.11764705882352941" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="backgroundColor" red="0.27058823529411763" green="0.35686274509803922" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -854,31 +962,10 @@
                                     <action selector="resetButtonTapped:" destination="ZFg-9U-lGx" eventType="touchUpInside" id="Z0C-u4-g8w"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="type in the email that you registered with and your" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-Ek-ENZ">
-                                <rect key="frame" x="33" y="125" width="349" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
-                                <color key="textColor" red="0.2156862745" green="0.1176470588" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="your account upon submission" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZu-uv-oaA">
-                                <rect key="frame" x="97" y="213" width="208" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
-                                <color key="textColor" red="0.59215686270000001" green="0.1176470588" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="goD-dA-Are">
-                                <rect key="frame" x="14" y="389" width="368" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Forgot your login details?" id="hBn-36-8hb">
+                    <navigationItem key="navigationItem" title="Forgot Login Details?" id="hBn-36-8hb">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wPz-qB-UQj">
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="p1h-Bp-B6i" id="upy-ik-x5x"/>
@@ -893,7 +980,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1h-Bp-B6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4852" y="695"/>
+            <point key="canvasLocation" x="-4852.1739130434789" y="694.56521739130437"/>
         </scene>
         <!--Register for an account-->
         <scene sceneID="wKw-fw-8df">
@@ -904,141 +991,179 @@
                         <viewControllerLayoutGuide type="bottom" id="aRY-9O-Kff"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ehR-iM-G8S">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Z0-lT-shY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1050"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Z0-lT-shY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciS-d6-IE3">
-                                        <rect key="frame" x="16" y="121" width="98" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="98" id="Qia-9s-Nlr"/>
-                                            <constraint firstAttribute="height" constant="30" id="dKJ-xR-Tw7"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KtQ-km-bIC">
-                                        <rect key="frame" x="16" y="310" width="343" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="gEn-Re-bx2">
+                                        <rect key="frame" x="21" y="912" width="372" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select your University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4om-Mz-rGH">
-                                        <rect key="frame" x="16" y="196" width="204" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="TqW-w4-2Zj"/>
-                                            <constraint firstAttribute="width" constant="204" id="dIB-mX-bmV"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="gEn-Re-bx2">
-                                        <rect key="frame" x="16" y="644" width="343" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="QtK-Cc-V8b">
+                                        <rect key="frame" x="21" y="702" width="372" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What is your degree?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klJ-WK-6u8">
-                                        <rect key="frame" x="16" y="272" width="204" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="bt4-cc-ffN"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="J0w-L7-nDe">
-                                        <rect key="frame" x="16" y="392" width="343" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="t66-PK-hqT">
+                                        <rect key="frame" x="21" y="1028" width="372" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose a username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K25-1J-Z4B">
-                                        <rect key="frame" x="16" y="438" width="204" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="KIO-re-Jy3"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8b-GF-0uq">
+                                        <rect key="frame" x="21" y="12" width="372" height="119"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Esfuerzo is designed to help you manage your time more efficiently, keep track of your classes, assignments and be more productive. Designed for University students, and as part of a final year Computer Science project</string>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.35686274509803922" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="N1M-UI-grr">
-                                        <rect key="frame" x="16" y="229" width="343" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please complete ALL of the fields below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfR-GZ-cOE">
+                                        <rect key="frame" x="67" y="139" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="15"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPG-8V-izx">
+                                        <rect key="frame" x="21" y="178" width="72" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
+                                        <color key="textColor" red="0.011764705882352941" green="0.22352941176470587" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="9xn-lc-2CK">
+                                        <rect key="frame" x="21" y="209" width="372" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kyR-37-aSi">
-                                        <rect key="frame" x="16" y="151" width="343" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7C-0U-sJM">
+                                        <rect key="frame" x="21" y="270" width="64" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
+                                        <color key="textColor" red="0.01176470588" green="0.22352941179999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kyR-37-aSi">
+                                        <rect key="frame" x="21" y="301" width="372" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1u-j4-fzR">
-                                        <rect key="frame" x="16" y="354" width="204" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="RrW-r5-26q"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select your University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uX0-tT-0G8">
+                                        <rect key="frame" x="21" y="365" width="158" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
+                                        <color key="textColor" red="0.01176470588" green="0.22352941179999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose a password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUp-Jm-90G">
-                                        <rect key="frame" x="16" y="520" width="204" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="c71-sL-3md"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What degree are you undertaking?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0Z-aX-GZv">
+                                        <rect key="frame" x="21" y="461" width="252" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
+                                        <color key="textColor" red="0.01176470588" green="0.22352941179999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="QtK-Cc-V8b">
-                                        <rect key="frame" x="16" y="476" width="343" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KtQ-km-bIC">
+                                        <rect key="frame" x="21" y="492" width="372" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Repeat Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-Gz-RXm">
-                                        <rect key="frame" x="16" y="603" width="204" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="2M0-xw-xXF"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfh-U4-tru">
+                                        <rect key="frame" x="21" y="555" width="101" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
+                                        <color key="textColor" red="0.01176470588" green="0.22352941179999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IFP-Ec-DZV">
-                                        <rect key="frame" x="16" y="558" width="343" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="J0w-L7-nDe">
+                                        <rect key="frame" x="21" y="586" width="372" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="t66-PK-hqT">
-                                        <rect key="frame" x="16" y="723" width="343" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hh-Hu-mDd">
+                                        <rect key="frame" x="21" y="650" width="142" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
+                                        <color key="textColor" red="0.01176470588" green="0.22352941179999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This has to be unique and at least 6 characters long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-I1-nXt">
+                                        <rect key="frame" x="21" y="681" width="305" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="13"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hr0-Rc-bg1">
+                                        <rect key="frame" x="21" y="768" width="139" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
+                                        <color key="textColor" red="0.01176470588" green="0.22352941179999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IFP-Ec-DZV">
+                                        <rect key="frame" x="21" y="820" width="372" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Memorable word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di1-P3-zmi">
-                                        <rect key="frame" x="16" y="686" width="204" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="tV3-hV-gfP"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Must be at least 6 characters long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PN-IP-pk6">
+                                        <rect key="frame" x="21" y="793" width="201" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="13"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vR-dK-3Gg">
-                                        <rect key="frame" x="138" y="793" width="99" height="38"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repeat your password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khn-XD-yl2">
+                                        <rect key="frame" x="21" y="881" width="160" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
+                                        <color key="textColor" red="0.01176470588" green="0.22352941179999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a memorable word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbx-29-qb0">
+                                        <rect key="frame" x="21" y="970" width="193" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
+                                        <color key="textColor" red="0.01176470588" green="0.22352941179999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is for your account security. Do not forget this!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbO-3a-B8x">
+                                        <rect key="frame" x="21" y="1001" width="303" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="13"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="N1M-UI-grr">
+                                        <rect key="frame" x="21" y="396" width="372" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vR-dK-3Gg">
+                                        <rect key="frame" x="158" y="1105" width="99" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="enl-n5-5al"/>
-                                            <constraint firstAttribute="width" constant="99" id="jw2-zh-9kA"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1048,114 +1173,10 @@
                                             <action selector="RegisterButtonTapped:" destination="iWx-W2-4Iu" eventType="touchUpInside" id="UpZ-e3-NoM"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Esfuerzo is an iOS application designed to help students manage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnq-kS-1AV">
-                                        <rect key="frame" x="13" y="10" width="348" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="cS3-CP-USZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="their time more efficiently, keep track of their daily classes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukd-x8-6nl">
-                                        <rect key="frame" x="13" y="28" width="348" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="JMd-YT-m6g"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="and be more productive!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5c-RO-Yhj">
-                                        <rect key="frame" x="13" y="46" width="348" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Complete all of the fields below to register for an account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8b-GF-0uq">
-                                        <rect key="frame" x="13" y="80" width="348" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="wYi-Gf-xJB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="klJ-WK-6u8" firstAttribute="trailing" secondItem="Y1u-j4-fzR" secondAttribute="trailing" id="1PT-ZN-VWn"/>
-                                    <constraint firstItem="ukd-x8-6nl" firstAttribute="leading" secondItem="a5c-RO-Yhj" secondAttribute="leading" id="1eo-NV-EgS"/>
-                                    <constraint firstItem="ukd-x8-6nl" firstAttribute="trailing" secondItem="a5c-RO-Yhj" secondAttribute="trailing" id="3Bp-RA-cJj"/>
-                                    <constraint firstItem="f8b-GF-0uq" firstAttribute="top" secondItem="a5c-RO-Yhj" secondAttribute="bottom" constant="13" id="48d-Y2-Fnn"/>
-                                    <constraint firstItem="jUp-Jm-90G" firstAttribute="trailing" secondItem="Ujp-Gz-RXm" secondAttribute="trailing" id="68i-A6-VW1"/>
-                                    <constraint firstItem="J0w-L7-nDe" firstAttribute="leading" secondItem="K25-1J-Z4B" secondAttribute="leading" id="746-rM-Seb"/>
-                                    <constraint firstAttribute="bottom" secondItem="3vR-dK-3Gg" secondAttribute="bottom" constant="105" id="7q4-Mb-Z7M"/>
-                                    <constraint firstItem="Di1-P3-zmi" firstAttribute="leading" secondItem="t66-PK-hqT" secondAttribute="leading" id="8gm-9v-yYx"/>
-                                    <constraint firstItem="jUp-Jm-90G" firstAttribute="top" secondItem="QtK-Cc-V8b" secondAttribute="bottom" constant="14" id="8tR-uO-pg7"/>
-                                    <constraint firstItem="N1M-UI-grr" firstAttribute="leading" secondItem="klJ-WK-6u8" secondAttribute="leading" id="9Ex-Pr-dMq"/>
-                                    <constraint firstItem="Y1u-j4-fzR" firstAttribute="top" secondItem="KtQ-km-bIC" secondAttribute="bottom" constant="14" id="AqB-CT-L66"/>
-                                    <constraint firstItem="gEn-Re-bx2" firstAttribute="top" secondItem="Ujp-Gz-RXm" secondAttribute="bottom" constant="8" symbolic="YES" id="Arb-4K-GJF"/>
-                                    <constraint firstItem="KtQ-km-bIC" firstAttribute="top" secondItem="klJ-WK-6u8" secondAttribute="bottom" constant="8" symbolic="YES" id="Cnd-Hd-GAW"/>
-                                    <constraint firstItem="Qnq-kS-1AV" firstAttribute="trailing" secondItem="ukd-x8-6nl" secondAttribute="trailing" id="D7T-PO-yYD"/>
-                                    <constraint firstItem="f8b-GF-0uq" firstAttribute="top" secondItem="ukd-x8-6nl" secondAttribute="bottom" constant="31" id="EWx-Tk-o86"/>
-                                    <constraint firstItem="3vR-dK-3Gg" firstAttribute="top" secondItem="t66-PK-hqT" secondAttribute="bottom" constant="39" id="GFf-NR-Etg"/>
-                                    <constraint firstItem="kyR-37-aSi" firstAttribute="top" secondItem="ciS-d6-IE3" secondAttribute="bottom" id="GGj-La-0x2"/>
-                                    <constraint firstItem="Y1u-j4-fzR" firstAttribute="trailing" secondItem="K25-1J-Z4B" secondAttribute="trailing" id="Gza-u8-Gqa"/>
-                                    <constraint firstItem="4om-Mz-rGH" firstAttribute="leading" secondItem="N1M-UI-grr" secondAttribute="leading" id="HPK-7b-s8H"/>
-                                    <constraint firstItem="J0w-L7-nDe" firstAttribute="top" secondItem="Y1u-j4-fzR" secondAttribute="bottom" constant="8" symbolic="YES" id="JPg-Ux-g4C"/>
-                                    <constraint firstItem="K25-1J-Z4B" firstAttribute="trailing" secondItem="jUp-Jm-90G" secondAttribute="trailing" id="JvA-1l-wwM"/>
-                                    <constraint firstItem="K25-1J-Z4B" firstAttribute="leading" secondItem="QtK-Cc-V8b" secondAttribute="leading" id="KWE-Ai-34q"/>
-                                    <constraint firstItem="K25-1J-Z4B" firstAttribute="top" secondItem="J0w-L7-nDe" secondAttribute="bottom" constant="16" id="Kk6-nu-c4P"/>
-                                    <constraint firstItem="J0w-L7-nDe" firstAttribute="trailing" secondItem="QtK-Cc-V8b" secondAttribute="trailing" id="LSK-Ki-kJA"/>
-                                    <constraint firstItem="KtQ-km-bIC" firstAttribute="trailing" secondItem="J0w-L7-nDe" secondAttribute="trailing" id="LdY-mW-3sV"/>
-                                    <constraint firstItem="KtQ-km-bIC" firstAttribute="leading" secondItem="Y1u-j4-fzR" secondAttribute="leading" id="MUw-hz-c87"/>
-                                    <constraint firstItem="Qnq-kS-1AV" firstAttribute="leading" secondItem="9Z0-lT-shY" secondAttribute="leading" constant="13" id="Mbb-c3-CDz"/>
-                                    <constraint firstItem="Qnq-kS-1AV" firstAttribute="top" secondItem="9Z0-lT-shY" secondAttribute="top" constant="74" id="OXk-Zo-zLl"/>
-                                    <constraint firstItem="IFP-Ec-DZV" firstAttribute="top" secondItem="jUp-Jm-90G" secondAttribute="bottom" constant="8" symbolic="YES" id="On5-R6-Rmy"/>
-                                    <constraint firstItem="Ujp-Gz-RXm" firstAttribute="leading" secondItem="gEn-Re-bx2" secondAttribute="leading" id="OyD-Qx-YMs"/>
-                                    <constraint firstItem="kyR-37-aSi" firstAttribute="leading" secondItem="4om-Mz-rGH" secondAttribute="leading" id="P6z-hW-rca"/>
-                                    <constraint firstItem="IFP-Ec-DZV" firstAttribute="trailing" secondItem="gEn-Re-bx2" secondAttribute="trailing" id="RAJ-8A-VPQ"/>
-                                    <constraint firstItem="ciS-d6-IE3" firstAttribute="leading" secondItem="9Z0-lT-shY" secondAttribute="leading" constant="16" id="RKJ-Wf-rzA"/>
-                                    <constraint firstAttribute="trailing" secondItem="Qnq-kS-1AV" secondAttribute="trailing" constant="14" id="Rev-Tg-vfP"/>
-                                    <constraint firstItem="klJ-WK-6u8" firstAttribute="top" secondItem="N1M-UI-grr" secondAttribute="bottom" constant="15" id="SQP-HZ-I4X"/>
-                                    <constraint firstItem="N1M-UI-grr" firstAttribute="top" secondItem="4om-Mz-rGH" secondAttribute="bottom" constant="1" id="TD3-Wu-51l"/>
-                                    <constraint firstItem="a5c-RO-Yhj" firstAttribute="top" secondItem="Qnq-kS-1AV" secondAttribute="bottom" constant="15" id="URt-yS-tvo"/>
-                                    <constraint firstItem="gEn-Re-bx2" firstAttribute="trailing" secondItem="t66-PK-hqT" secondAttribute="trailing" id="WDC-Ut-ql7"/>
-                                    <constraint firstItem="t66-PK-hqT" firstAttribute="top" secondItem="Di1-P3-zmi" secondAttribute="bottom" constant="8" symbolic="YES" id="X7o-zc-Ivf"/>
-                                    <constraint firstItem="QtK-Cc-V8b" firstAttribute="trailing" secondItem="IFP-Ec-DZV" secondAttribute="trailing" id="aii-dP-bVS"/>
-                                    <constraint firstItem="N1M-UI-grr" firstAttribute="trailing" secondItem="KtQ-km-bIC" secondAttribute="trailing" id="bFy-HT-GcW"/>
-                                    <constraint firstItem="4om-Mz-rGH" firstAttribute="top" secondItem="kyR-37-aSi" secondAttribute="bottom" constant="15" id="bIL-dl-8vN"/>
-                                    <constraint firstItem="Qnq-kS-1AV" firstAttribute="centerX" secondItem="9Z0-lT-shY" secondAttribute="centerX" id="d8N-ZZ-CYY"/>
-                                    <constraint firstItem="ciS-d6-IE3" firstAttribute="leading" secondItem="kyR-37-aSi" secondAttribute="leading" id="eew-7C-VGB"/>
-                                    <constraint firstItem="Ujp-Gz-RXm" firstAttribute="trailing" secondItem="Di1-P3-zmi" secondAttribute="trailing" id="ep5-Sy-gpQ"/>
-                                    <constraint firstItem="jUp-Jm-90G" firstAttribute="leading" secondItem="IFP-Ec-DZV" secondAttribute="leading" id="fdJ-q1-jde"/>
-                                    <constraint firstItem="klJ-WK-6u8" firstAttribute="leading" secondItem="KtQ-km-bIC" secondAttribute="leading" id="gfW-Ng-Uiy"/>
-                                    <constraint firstItem="f8b-GF-0uq" firstAttribute="centerX" secondItem="kyR-37-aSi" secondAttribute="centerX" id="jp2-a0-Auw"/>
-                                    <constraint firstItem="ciS-d6-IE3" firstAttribute="top" secondItem="f8b-GF-0uq" secondAttribute="bottom" constant="20" id="kZI-EA-i1m"/>
-                                    <constraint firstItem="Y1u-j4-fzR" firstAttribute="leading" secondItem="J0w-L7-nDe" secondAttribute="leading" id="lKe-1m-DXN"/>
-                                    <constraint firstItem="IFP-Ec-DZV" firstAttribute="leading" secondItem="Ujp-Gz-RXm" secondAttribute="leading" id="mbI-s3-29N"/>
-                                    <constraint firstItem="gEn-Re-bx2" firstAttribute="leading" secondItem="Di1-P3-zmi" secondAttribute="leading" id="mgp-Gx-ls9"/>
-                                    <constraint firstItem="kyR-37-aSi" firstAttribute="trailing" secondItem="N1M-UI-grr" secondAttribute="trailing" id="n3M-0h-XeF"/>
-                                    <constraint firstItem="t66-PK-hqT" firstAttribute="centerX" secondItem="3vR-dK-3Gg" secondAttribute="centerX" id="pfv-7c-HLe"/>
-                                    <constraint firstItem="a5c-RO-Yhj" firstAttribute="leading" secondItem="f8b-GF-0uq" secondAttribute="leading" id="r7q-5N-DRR"/>
-                                    <constraint firstItem="Ujp-Gz-RXm" firstAttribute="top" secondItem="IFP-Ec-DZV" secondAttribute="bottom" constant="15" id="rXe-ZN-Hk7"/>
-                                    <constraint firstItem="a5c-RO-Yhj" firstAttribute="trailing" secondItem="f8b-GF-0uq" secondAttribute="trailing" id="tVP-3c-Mpz"/>
-                                    <constraint firstItem="Di1-P3-zmi" firstAttribute="top" secondItem="gEn-Re-bx2" secondAttribute="bottom" constant="15" id="thY-u1-Ski"/>
-                                    <constraint firstItem="Qnq-kS-1AV" firstAttribute="leading" secondItem="ukd-x8-6nl" secondAttribute="leading" id="x0p-Ap-YlM"/>
-                                    <constraint firstItem="4om-Mz-rGH" firstAttribute="trailing" secondItem="klJ-WK-6u8" secondAttribute="trailing" id="xXC-ZO-0yD"/>
-                                    <constraint firstItem="ukd-x8-6nl" firstAttribute="top" secondItem="9Z0-lT-shY" secondAttribute="top" constant="92" id="yIK-Qx-Wz6"/>
-                                    <constraint firstItem="QtK-Cc-V8b" firstAttribute="leading" secondItem="jUp-Jm-90G" secondAttribute="leading" id="yQl-xW-J1R"/>
-                                    <constraint firstItem="QtK-Cc-V8b" firstAttribute="top" secondItem="K25-1J-Z4B" secondAttribute="bottom" constant="8" symbolic="YES" id="zbp-i2-pRf"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9Z0-lT-shY" firstAttribute="top" secondItem="ehR-iM-G8S" secondAttribute="top" id="DAo-Mv-3WY"/>
-                            <constraint firstAttribute="trailing" secondItem="9Z0-lT-shY" secondAttribute="trailing" id="INN-5b-D3K"/>
-                            <constraint firstItem="9Z0-lT-shY" firstAttribute="leading" secondItem="ehR-iM-G8S" secondAttribute="leading" id="ZZa-e5-cxN"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="9Z0-lT-shY" secondAttribute="bottom" constant="-50" id="nmi-0t-T1S"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Register for an account" id="XBb-Vo-yKW">
                         <barButtonItem key="backBarButtonItem" title="Back" id="D2W-LV-0dW"/>
@@ -1166,22 +1187,23 @@
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="414" height="1250"/>
                     <connections>
                         <outlet property="ConfirmPasswordTextField" destination="gEn-Re-bx2" id="WfZ-SU-irw"/>
                         <outlet property="CourseTextField" destination="KtQ-km-bIC" id="dcI-vt-RhZ"/>
                         <outlet property="EmailTextField" destination="J0w-L7-nDe" id="D95-dC-cwC"/>
-                        <outlet property="FullNameTextField" destination="kyR-37-aSi" id="dYn-mr-tY1"/>
+                        <outlet property="FirstnameTextField" destination="9xn-lc-2CK" id="sip-ia-Vf2"/>
                         <outlet property="MemorableTextField" destination="t66-PK-hqT" id="UwK-RN-2BH"/>
                         <outlet property="PasswordTextField" destination="IFP-Ec-DZV" id="6TR-In-3V3"/>
                         <outlet property="ScrollView" destination="9Z0-lT-shY" id="Wmb-vh-u9D"/>
-                        <outlet property="UniversityTextField" destination="N1M-UI-grr" id="Uha-jB-vkm"/>
+                        <outlet property="SelectUniversityTextField" destination="N1M-UI-grr" id="gMX-Bm-2pm"/>
+                        <outlet property="SurnameTextField" destination="kyR-37-aSi" id="7wf-n7-e6u"/>
                         <outlet property="usernameTextField" destination="QtK-Cc-V8b" id="cNJ-T9-ho4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmi-oa-B68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4295" y="-1172"/>
+            <point key="canvasLocation" x="-4297.1014492753629" y="-1172.2826086956522"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1419,6 +1441,6 @@
         <image name="Sorting Options-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dgw-IS-weW"/>
+        <segue reference="zE9-5I-k8r"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -30,6 +30,8 @@
 		2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */; };
 		2A7AC3381E543C0C00AB3966 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC3361E543C0C00AB3966 /* CoreDataModel.xcdatamodeld */; };
 		2A7AC33A1E54538500AB3966 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */; };
+		2ADCDA471E5468EA0084B09A /* walkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */; };
+		2ADCDA491E5486A90084B09A /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		2A7AC3371E543C0C00AB3966 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = walkthroughViewController.swift; sourceTree = "<group>"; };
+		2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */,
 				2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */,
 				2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */,
+				2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */,
+				2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */,
 			);
 			name = "Preferences Tab";
 			sourceTree = "<group>";
@@ -375,6 +381,8 @@
 				2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */,
 				2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
+				2ADCDA471E5468EA0084B09A /* walkthroughViewController.swift in Sources */,
+				2ADCDA491E5486A90084B09A /* PrivacyPolicyViewController.swift in Sources */,
 				2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */,
 				2A55BFD71E5257A900555670 /* ManageAccountViewController.swift in Sources */,
 			);

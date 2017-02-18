@@ -1,19 +1,20 @@
 //
-//  CompleteDeadlinesViewController.swift
+//  PrivacyPolicyViewController.swift
 //  efuerzo
 //
-//  Created by Nouman Mehmood on 08/02/2017.
+//  Created by Nouman Mehmood on 15/02/2017.
 //  Copyright © 2017 Nouman Mehmood. All rights reserved.
 //
 
 import UIKit
 
-class CompleteDeadlinesViewController: UIViewController {
+class PrivacyPolicyViewController: UIViewController {
 
-    @IBOutlet weak var completeWelcomeMessage: UILabel!
-    
+    @IBOutlet weak var ScrollView: UIScrollView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        ScrollView.contentSize.height = 30000;
 
         // Do any additional setup after loading the view.
     }
@@ -22,5 +23,4 @@ class CompleteDeadlinesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }

@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
         
         // If the fields are empty, display an alert and return
         if (username.isEmpty || password.isEmpty) {
+            print("Error: All of the fields must be completed")
             displayAlertMessage(userTitle: "Empty", userMessage: "All of the fields must be completed", alertAction: "Return to Login")
             return;
         }
@@ -50,10 +51,9 @@ class LoginViewController: UIViewController {
                 
                     let resultValue:String = parseJSON["status"] as! String;
                     
-                    print(resultValue)
-                    
                     // If there is an error, display an alert message and return
                     if (resultValue == "Error"){
+                        print("Error: The fields passed were not found in the DB")
                         DispatchQueue.main.async{
                             self.displayAlertMessage(userTitle: "Error", userMessage: "The credentials entered were not found", alertAction: "Try again")
                             return
@@ -62,6 +62,7 @@ class LoginViewController: UIViewController {
                     
                     // If the user types in the incorrect username and password combination
                     if (resultValue == "Failed"){
+                        print("Error: The combination of username and password is wrong")
                         DispatchQueue.main.async{
                             self.displayAlertMessage(userTitle: "Failed", userMessage: "The user and pass combination do not match", alertAction: "Try again")
                             return
@@ -70,6 +71,7 @@ class LoginViewController: UIViewController {
                 
                     // If successful, initiate session and satore all the fields into an array
                     if (resultValue == "Success"){
+                        print("Successfully logged in..")
                         
                         let storedUsername: String = parseJSON["username"] as! String;
                         let storedFullName: String = parseJSON["full_name"] as! String;

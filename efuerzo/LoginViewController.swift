@@ -68,18 +68,28 @@ class LoginViewController: UIViewController {
                             return
                         }
                     }
+                    
+                    // If the credentials are correct, however the email is not verified
+                    if (resultValue == "Unverified"){
+                        print("Error: The email associated with this account has not yet been verified")
+                        DispatchQueue.main.async{
+                            self.displayAlertMessage(userTitle: "Failed", userMessage: "The email associated with this account has not yet been verified", alertAction: "Return")
+                            return
+                        }
+                    }
                 
                     // If successful, initiate session and satore all the fields into an array
                     if (resultValue == "Success"){
                         print("Successfully logged in..")
                         
                         let storedUsername: String = parseJSON["username"] as! String;
-                        let storedFullName: String = parseJSON["full_name"] as! String;
+                        let storedFirstname: String = parseJSON["firstname"] as! String;
+                        let storedSurname: String = parseJSON["surname"] as! String;
                         let storedUniName: String = parseJSON["uni_name"] as! String;
                         let storedUniCourse: String = parseJSON["uni_course"] as! String;
                         let storedEmail: String = parseJSON["email"] as! String;
                         
-                        let array = [storedUsername, storedFullName, storedUniName, storedUniCourse, storedEmail];
+                        let array = [storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail];
                         
                         UserDefaults.standard.set(array, forKey: "UserDetailsArray");
                         UserDefaults.standard.set(true, forKey: "isUserLoggedIn");

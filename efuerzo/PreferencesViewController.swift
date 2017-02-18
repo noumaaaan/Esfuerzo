@@ -34,7 +34,8 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
     // Log out of the application once the logout button has been tapped
     @IBAction func LogoutButtonTapped(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "isUserLoggedIn");
-        // Need to remove the User default array for the details of the user that is logged in
+        UserDefaults.standard.removeObject(forKey: "UserDetailsArray")
+
         UserDefaults.standard.synchronize();
         self.performSegue(withIdentifier: "LoginViewController", sender: self);
     }

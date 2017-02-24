@@ -8,27 +8,24 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var activityController: UIActivityIndicatorView!
+class HomePageViewController: UIViewController {
     
-    let UserDetails = UserDefaults.standard.stringArray(forKey: "UserDetailsArray") ?? [String]()
-    let homeArray = ["Add Subjects", "Add Instructors", "Days of the week",  "","Change my details", "About"]
+    @IBOutlet weak var DateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return UserDetails.count
-    }
-
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = UserDetails[indexPath.row]
-        return cell
+        DisplayTheDate()
     }
     
-    
+    // Function to display the date at start
+    func DisplayTheDate(){
+        
+        let currentDate = NSDate()
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "en_GB") as Locale!
+        dateFormatter.dateStyle = DateFormatter.Style.full
+        let convertedDate = dateFormatter.string(from: currentDate as Date)
+        DateLabel.text = convertedDate;
+    }
     
 }

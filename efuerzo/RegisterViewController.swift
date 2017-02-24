@@ -59,7 +59,7 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var ConfirmPasswordTextField: UITextField!
     @IBOutlet weak var MemorableTextField: UITextField!
     
-    // Function run when reguister button pressed
+    // Function run when register button pressed
     @IBAction func RegisterButtonTapped(_ sender: Any) {
         
         let firstname = FirstnameTextField.text!
@@ -153,9 +153,9 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                         
                         DispatchQueue.main.async{
                             // Display alert with the confirmation
-                            let theAlert = UIAlertController(title:"Complete", message: "Registration completed successfully", preferredStyle: UIAlertControllerStyle.alert)
+                            let theAlert = UIAlertController(title:"Complete", message: "Registration complete. Check your email", preferredStyle: UIAlertControllerStyle.alert)
                             
-                            let okAction = UIAlertAction(title:"Take me to Login", style:UIAlertActionStyle.default){
+                            let okAction = UIAlertAction(title:"Verify your email", style:UIAlertActionStyle.default){
                                 action in
                                 self.dismiss(animated: true, completion: nil)
                             }

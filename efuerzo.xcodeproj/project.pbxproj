@@ -17,10 +17,10 @@
 		2A3140D51E4944650084327F /* userRegister.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D41E4944650084327F /* userRegister.php */; };
 		2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140D61E49466D0084327F /* HomePageViewController.swift */; };
 		2A3140DB1E4958C60084327F /* class.phpmailer.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140DA1E4958C60084327F /* class.phpmailer.php */; };
+		2A368EA01E5E26FF004BFD25 /* ExistingTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368E9F1E5E26FF004BFD25 /* ExistingTimetableViewController.swift */; };
 		2A4012381E44FE3800BD48CB /* connection.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A4012371E44FE3800BD48CB /* connection.php */; };
 		2A55BFD71E5257A900555670 /* ManageAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */; };
 		2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */; };
-		2A787AB41E42A9C000B82E6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB21E42A9C000B82E6E /* Main.storyboard */; };
 		2A787AB61E42A9C000B82E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB51E42A9C000B82E6E /* Assets.xcassets */; };
 		2A787AB91E42A9C000B82E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */; };
 		2A787AC41E42A9C000B82E6E /* efuerzoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AC31E42A9C000B82E6E /* efuerzoTests.swift */; };
@@ -28,10 +28,14 @@
 		2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */; };
 		2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787ADE1E435F5C00B82E6E /* RegisterViewController.swift */; };
 		2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */; };
-		2A7AC3381E543C0C00AB3966 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC3361E543C0C00AB3966 /* CoreDataModel.xcdatamodeld */; };
 		2A7AC33A1E54538500AB3966 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */; };
+		2AB4C7921E60EC7A00B3C3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB4C7901E60EC7900B3C3CA /* Main.storyboard */; };
 		2ADCDA471E5468EA0084B09A /* walkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */; };
 		2ADCDA491E5486A90084B09A /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */; };
+		2AFA69EB1E59B89300A61FA9 /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA69EA1E59B89300A61FA9 /* SubjectsViewController.swift */; };
+		2AFA69EC1E5A754400A61FA9 /* efuerzo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC3361E543C0C00AB3966 /* efuerzo.xcdatamodeld */; };
+		2AFA69EF1E5A75AC00A61FA9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFA69EE1E5A75AC00A61FA9 /* CoreData.framework */; };
+		2AFA6A2E1E5C651300A61FA9 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA6A2D1E5C651300A61FA9 /* PasswordChangeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,11 +66,11 @@
 		2A3140D41E4944650084327F /* userRegister.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userRegister.php; sourceTree = "<group>"; };
 		2A3140D61E49466D0084327F /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		2A3140DA1E4958C60084327F /* class.phpmailer.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = class.phpmailer.php; sourceTree = "<group>"; };
+		2A368E9F1E5E26FF004BFD25 /* ExistingTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingTimetableViewController.swift; sourceTree = "<group>"; };
 		2A4012371E44FE3800BD48CB /* connection.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = connection.php; sourceTree = "<group>"; };
 		2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageAccountViewController.swift; sourceTree = "<group>"; };
 		2A787AA91E42A9C000B82E6E /* efuerzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = efuerzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A787AB31E42A9C000B82E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A787AB51E42A9C000B82E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A787AB81E42A9C000B82E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A787ABA1E42A9C000B82E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,10 +83,14 @@
 		2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2A787ADE1E435F5C00B82E6E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
-		2A7AC3371E543C0C00AB3966 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		2A7AC3371E543C0C00AB3966 /* efuerzo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = efuerzo.xcdatamodel; sourceTree = "<group>"; };
 		2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		2AB4C7911E60EC7900B3C3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = efuerzo/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = walkthroughViewController.swift; sourceTree = "<group>"; };
 		2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		2AFA69EA1E59B89300A61FA9 /* SubjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
+		2AFA69EE1E5A75AC00A61FA9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2AFA6A2D1E5C651300A61FA9 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AFA69EF1E5A75AC00A61FA9 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,9 +135,12 @@
 		2A55BFD91E52585600555670 /* Preferences Tab */ = {
 			isa = PBXGroup;
 			children = (
+				2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */,
+				2AFA6A2D1E5C651300A61FA9 /* PasswordChangeViewController.swift */,
+				2A368E9F1E5E26FF004BFD25 /* ExistingTimetableViewController.swift */,
 				2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */,
 				2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */,
-				2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */,
+				2AFA69EA1E59B89300A61FA9 /* SubjectsViewController.swift */,
 				2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */,
 				2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */,
 			);
@@ -174,10 +186,12 @@
 		2A787AA01E42A9C000B82E6E = {
 			isa = PBXGroup;
 			children = (
+				2AB4C7901E60EC7900B3C3CA /* Main.storyboard */,
 				2A787AAB1E42A9C000B82E6E /* efuerzo */,
 				2A787AC21E42A9C000B82E6E /* efuerzoTests */,
 				2A787ACD1E42A9C000B82E6E /* efuerzoUITests */,
 				2A787AAA1E42A9C000B82E6E /* Products */,
+				2AFA69ED1E5A75AC00A61FA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,8 +211,7 @@
 				2A4012361E44FDEF00BD48CB /* php scripts */,
 				2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */,
 				2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */,
-				2A7AC3361E543C0C00AB3966 /* CoreDataModel.xcdatamodeld */,
-				2A787AB21E42A9C000B82E6E /* Main.storyboard */,
+				2A7AC3361E543C0C00AB3966 /* efuerzo.xcdatamodeld */,
 				2A787ABA1E42A9C000B82E6E /* Info.plist */,
 				2A787AB51E42A9C000B82E6E /* Assets.xcassets */,
 				2A55BFDA1E52587C00555670 /* Login and Register */,
@@ -226,6 +239,14 @@
 				2A787AD01E42A9C000B82E6E /* Info.plist */,
 			);
 			path = efuerzoUITests;
+			sourceTree = "<group>";
+		};
+		2AFA69ED1E5A75AC00A61FA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AFA69EE1E5A75AC00A61FA9 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,9 +362,9 @@
 				2A4012381E44FE3800BD48CB /* connection.php in Resources */,
 				2A3140D11E4944190084327F /* userLogin.php in Resources */,
 				2A787AB91E42A9C000B82E6E /* LaunchScreen.storyboard in Resources */,
+				2AB4C7921E60EC7A00B3C3CA /* Main.storyboard in Resources */,
 				2A787AB61E42A9C000B82E6E /* Assets.xcassets in Resources */,
 				2A3140D31E49444D0084327F /* userForgot.php in Resources */,
-				2A787AB41E42A9C000B82E6E /* Main.storyboard in Resources */,
 				2A3140D51E4944650084327F /* userRegister.php in Resources */,
 				2A3140DB1E4958C60084327F /* class.phpmailer.php in Resources */,
 			);
@@ -370,15 +391,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AFA69EC1E5A754400A61FA9 /* efuerzo.xcdatamodeld in Sources */,
 				2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */,
 				2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */,
-				2A7AC3381E543C0C00AB3966 /* CoreDataModel.xcdatamodeld in Sources */,
+				2AFA6A2E1E5C651300A61FA9 /* PasswordChangeViewController.swift in Sources */,
 				2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */,
+				2A368EA01E5E26FF004BFD25 /* ExistingTimetableViewController.swift in Sources */,
 				2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */,
 				2A0FFAE81E4AA4D400160785 /* IncompleteDeadlinesViewController.swift in Sources */,
 				2A26E57B1E50E2950030E05B /* PreferencesViewController.swift in Sources */,
 				2A7AC33A1E54538500AB3966 /* ContactUsViewController.swift in Sources */,
 				2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */,
+				2AFA69EB1E59B89300A61FA9 /* SubjectsViewController.swift in Sources */,
 				2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
 				2ADCDA471E5468EA0084B09A /* walkthroughViewController.swift in Sources */,
@@ -420,20 +444,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2A787AB21E42A9C000B82E6E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A787AB31E42A9C000B82E6E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2A787AB81E42A9C000B82E6E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2AB4C7901E60EC7900B3C3CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AB4C7911E60EC7900B3C3CA /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -656,13 +680,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2A7AC3361E543C0C00AB3966 /* CoreDataModel.xcdatamodeld */ = {
+		2A7AC3361E543C0C00AB3966 /* efuerzo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2A7AC3371E543C0C00AB3966 /* CoreDataModel.xcdatamodel */,
+				2A7AC3371E543C0C00AB3966 /* efuerzo.xcdatamodel */,
 			);
-			currentVersion = 2A7AC3371E543C0C00AB3966 /* CoreDataModel.xcdatamodel */;
-			path = CoreDataModel.xcdatamodeld;
+			currentVersion = 2A7AC3371E543C0C00AB3966 /* efuerzo.xcdatamodel */;
+			path = efuerzo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

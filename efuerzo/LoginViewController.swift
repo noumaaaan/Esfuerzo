@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    
     // Initialise storyboard outlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -80,8 +81,8 @@ class LoginViewController: UIViewController {
                 
                     // If successful, initiate session and satore all the fields into an array
                     if (resultValue == "Success"){
-                        print("Successfully logged in..")
                         
+                        let storedUserID: String = parseJSON["user_id"] as! String;
                         let storedUsername: String = parseJSON["username"] as! String;
                         let storedFirstname: String = parseJSON["firstname"] as! String;
                         let storedSurname: String = parseJSON["surname"] as! String;
@@ -89,11 +90,14 @@ class LoginViewController: UIViewController {
                         let storedUniCourse: String = parseJSON["uni_course"] as! String;
                         let storedEmail: String = parseJSON["email"] as! String;
                         
-                        let array = [storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail];
+                        let array = [storedUserID, storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail];
                         
                         UserDefaults.standard.set(array, forKey: "UserDetailsArray");
                         UserDefaults.standard.set(true, forKey: "isUserLoggedIn");
                         UserDefaults.standard.synchronize();
+                        
+                        print("Successfully logged in with:")
+                        print(array)
                         
                         DispatchQueue.main.async{
                             let mainTabBar = self.storyboard?.instantiateViewController(withIdentifier: "mainTabBar") as! UITabBarController;

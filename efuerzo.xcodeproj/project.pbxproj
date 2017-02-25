@@ -186,7 +186,6 @@
 		2A787AA01E42A9C000B82E6E = {
 			isa = PBXGroup;
 			children = (
-				2AB4C7901E60EC7900B3C3CA /* Main.storyboard */,
 				2A787AAB1E42A9C000B82E6E /* efuerzo */,
 				2A787AC21E42A9C000B82E6E /* efuerzoTests */,
 				2A787ACD1E42A9C000B82E6E /* efuerzoUITests */,
@@ -211,6 +210,7 @@
 				2A4012361E44FDEF00BD48CB /* php scripts */,
 				2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */,
 				2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */,
+				2AB4C7901E60EC7900B3C3CA /* Main.storyboard */,
 				2A7AC3361E543C0C00AB3966 /* efuerzo.xcdatamodeld */,
 				2A787ABA1E42A9C000B82E6E /* Info.plist */,
 				2A787AB51E42A9C000B82E6E /* Assets.xcassets */,
@@ -458,6 +458,7 @@
 				2AB4C7911E60EC7900B3C3CA /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

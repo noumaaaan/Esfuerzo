@@ -8,37 +8,47 @@
 
 import UIKit
 
-class SubjectsViewController: UIViewController{
-
-    // Initialise components of the view
-    let UserDetails = UserDefaults.standard.stringArray(forKey: "UserDetailsArray") ?? [String]()
-    @IBOutlet weak var SubjectNameTextField: UITextField!
-    @IBOutlet weak var SubjectTypeTextField: UITextField!
+class SubjectsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    // Function that is called when the view loads
+    var dataDict: [String:AnyObject]?
+    @IBOutlet var tableView: UITableView!
+    let userDetails: [String] = UserDefaults.standard.stringArray(forKey:"UserDetailsArray")!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getSubjects(callback: {(resultValue)-> Void in
-            print(resultValue)
-        })
+        self.dataDict = [String:AnyObject]()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.getSubjects()
     }
     
-    // Function when subjects are added
-    @IBAction func AddSubjectTapped(_ sender: Any) {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    // Function to retieve the subjects for the user
-    func getSubjects(callback: @escaping (NSDictionary)-> Void){
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataDict!.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
+        if let array = self.dataDict?[String(indexPath.row + 1)] as? [String] {
+            cell.textLabel?.text = array[0]
+            cell.detailTextLabel?.text = array[1]
+        }
+        return cell
+    }
+    
+    func getSubjects() {
         
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveSubjects.php");
         let request = NSMutableURLRequest(url:myUrl as! URL)
-        let user_id = UserDetails[0]
+        let user_id = userDetails[0]
         request.httpMethod = "POST";
         let postString = "user_id=\(user_id)";
         request.httpBody = postString.data(using: String.Encoding.utf8);
         
-        let task = URLSession.shared.dataTask(with: request as URLRequest){
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
             if error != nil {
@@ -50,8 +60,11 @@ class SubjectsViewController: UIViewController{
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                 if let parseJSON = json {
-                    let resultValue: NSDictionary = parseJSON["subjects"] as! NSDictionary
-                    callback(resultValue)
+                    let resultValue = parseJSON["subjects"] as! [String:AnyObject]
+                    self.dataDict = resultValue
+                    
+                    print(self.dataDict)
+                    self.tableView.reloadData()
                 }
             } catch let error as NSError {
                 err = error
@@ -60,17 +73,4 @@ class SubjectsViewController: UIViewController{
         }
         task.resume();
     }
-    
-    
-    
-    
-    
-    
 }
-
-
-
-
-
-
-

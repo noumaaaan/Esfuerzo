@@ -95,14 +95,14 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
         if (indexPath.section == 0){
             switch indexPath.row {
                 case 0:
-                    segueIdentifier = "walkthroughView"
+                    segueIdentifier = "appWalkthroughView"
                 case 1:
-                    segueIdentifier = "astonUniTimetableView"
+                    segueIdentifier = "addOwnTimetable"
                 default:
                     segueIdentifier = "aboutEsfuerzoView"
                 
             }
-            self.performSegue(withIdentifier: "walkthroughView", sender: self)
+            self.performSegue(withIdentifier: segueIdentifier, sender: self)
             
         // Timetable specific controls where user can add subjects, locations and instructors
         } else if (indexPath.section == 1){

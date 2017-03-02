@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
     // Function when the view looads
     override func viewDidLoad() {
@@ -17,11 +17,14 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.hideKeyboardWhenTappedAround()
         self.dismissKeyboard()
         
-        // Bind the text field to the picker view
+//         Bind the text field to the picker view
         picker.dataSource = self
         picker.delegate = self
         SelectUniversityTextField.inputView = picker
     }
+
+    
+    @IBOutlet var myTextField : UITextField?
     
     // Create an array for the different Universities in the UK
     let picker = UIPickerView()
@@ -80,6 +83,8 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
         // Check that the provided passwords match
         if (password != confirmPassword){
+//            PasswordTextField.layer.borderColor = UIColor.red.cgColor
+//            PasswordTextField.layer.borderWidth = 1.0
             displayAlertMessage(userTitle: "Password Error", userMessage: "The password combination does not match!", alertAction: "Return")
             return;
         }
@@ -180,6 +185,5 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         theAlert.addAction(okAction)
         self.present(theAlert, animated: true, completion: nil)
     }
-
 }
 

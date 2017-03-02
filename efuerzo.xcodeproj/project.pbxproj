@@ -29,6 +29,7 @@
 		2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787ADE1E435F5C00B82E6E /* RegisterViewController.swift */; };
 		2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */; };
 		2A7AC33A1E54538500AB3966 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */; };
+		2A7F48BB1E64C58E00FC991E /* InstructorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F48BA1E64C58E00FC991E /* InstructorViewController.swift */; };
 		2AB4C7921E60EC7A00B3C3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB4C7901E60EC7900B3C3CA /* Main.storyboard */; };
 		2ADCDA471E5468EA0084B09A /* walkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */; };
 		2ADCDA491E5486A90084B09A /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */; };
@@ -85,6 +86,7 @@
 		2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		2A7AC3371E543C0C00AB3966 /* efuerzo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = efuerzo.xcdatamodel; sourceTree = "<group>"; };
 		2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		2A7F48BA1E64C58E00FC991E /* InstructorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructorViewController.swift; sourceTree = "<group>"; };
 		2AB4C7911E60EC7900B3C3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = efuerzo/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = walkthroughViewController.swift; sourceTree = "<group>"; };
 		2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */,
 				2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */,
 				2AFA69EA1E59B89300A61FA9 /* SubjectsViewController.swift */,
+				2A7F48BA1E64C58E00FC991E /* InstructorViewController.swift */,
 				2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */,
 				2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */,
 			);
@@ -403,6 +406,7 @@
 				2A7AC33A1E54538500AB3966 /* ContactUsViewController.swift in Sources */,
 				2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */,
 				2AFA69EB1E59B89300A61FA9 /* SubjectsViewController.swift in Sources */,
+				2A7F48BB1E64C58E00FC991E /* InstructorViewController.swift in Sources */,
 				2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
 				2ADCDA471E5468EA0084B09A /* walkthroughViewController.swift in Sources */,

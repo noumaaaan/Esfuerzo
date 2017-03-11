@@ -119,6 +119,13 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         self.dismissKeyboard()
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
+        Reach().monitorReachabilityChanges()
+    }
+    
+    func networkStatusChanged(_ notification: Notification) {
+        let int_check = (notification as NSNotification).userInfo
+        print(int_check! as! [String: NSObject])
     }
     
     // Function to display an alert message parameters for the title, message and action type

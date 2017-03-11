@@ -1,4 +1,7 @@
 <?php
+    
+    // comment
+    
     /**
      * PHPMailer - PHP email creation and transport class.
      * PHP Version 5

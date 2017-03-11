@@ -13,14 +13,24 @@
 		2A26E57B1E50E2950030E05B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */; };
 		2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CA1E4943B50084327F /* TimetableViewController.swift */; };
 		2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */; };
-		2A3140D11E4944190084327F /* userLogin.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D01E4944190084327F /* userLogin.php */; };
-		2A3140D31E49444D0084327F /* userForgot.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D21E49444D0084327F /* userForgot.php */; };
-		2A3140D51E4944650084327F /* userRegister.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140D41E4944650084327F /* userRegister.php */; };
 		2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140D61E49466D0084327F /* HomePageViewController.swift */; };
 		2A3140DB1E4958C60084327F /* class.phpmailer.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140DA1E4958C60084327F /* class.phpmailer.php */; };
 		2A368EA01E5E26FF004BFD25 /* ExistingTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368E9F1E5E26FF004BFD25 /* ExistingTimetableViewController.swift */; };
-		2A4012381E44FE3800BD48CB /* connection.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A4012371E44FE3800BD48CB /* connection.php */; };
 		2A55BFD71E5257A900555670 /* ManageAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */; };
+		2A68BFBB1E7495C200B4B7AC /* addInstructors.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFAD1E7495C200B4B7AC /* addInstructors.php */; };
+		2A68BFBC1E7495C200B4B7AC /* addSubjects.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFAE1E7495C200B4B7AC /* addSubjects.php */; };
+		2A68BFBD1E7495C200B4B7AC /* changePassword.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFAF1E7495C200B4B7AC /* changePassword.php */; };
+		2A68BFBE1E7495C200B4B7AC /* class.phpmailer.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB01E7495C200B4B7AC /* class.phpmailer.php */; };
+		2A68BFBF1E7495C200B4B7AC /* connection.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB11E7495C200B4B7AC /* connection.php */; };
+		2A68BFC01E7495C200B4B7AC /* email_verify.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB21E7495C200B4B7AC /* email_verify.php */; };
+		2A68BFC11E7495C200B4B7AC /* removeInstructors.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB31E7495C200B4B7AC /* removeInstructors.php */; };
+		2A68BFC21E7495C200B4B7AC /* removeSubjects.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB41E7495C200B4B7AC /* removeSubjects.php */; };
+		2A68BFC31E7495C200B4B7AC /* retrieveInstructors.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB51E7495C200B4B7AC /* retrieveInstructors.php */; };
+		2A68BFC41E7495C200B4B7AC /* retrieveSubjects.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB61E7495C200B4B7AC /* retrieveSubjects.php */; };
+		2A68BFC51E7495C200B4B7AC /* testfile.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB71E7495C200B4B7AC /* testfile.php */; };
+		2A68BFC61E7495C200B4B7AC /* userForgot.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB81E7495C200B4B7AC /* userForgot.php */; };
+		2A68BFC71E7495C200B4B7AC /* userLogin.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB91E7495C200B4B7AC /* userLogin.php */; };
+		2A68BFC81E7495C200B4B7AC /* userRegister.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFBA1E7495C200B4B7AC /* userRegister.php */; };
 		2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */; };
 		2A787AB61E42A9C000B82E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB51E42A9C000B82E6E /* Assets.xcassets */; };
 		2A787AB91E42A9C000B82E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */; };
@@ -66,14 +76,24 @@
 		2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		2A3140CA1E4943B50084327F /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlinesViewController.swift; sourceTree = "<group>"; };
-		2A3140D01E4944190084327F /* userLogin.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userLogin.php; sourceTree = "<group>"; };
-		2A3140D21E49444D0084327F /* userForgot.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userForgot.php; sourceTree = "<group>"; };
-		2A3140D41E4944650084327F /* userRegister.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = userRegister.php; sourceTree = "<group>"; };
 		2A3140D61E49466D0084327F /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		2A3140DA1E4958C60084327F /* class.phpmailer.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = class.phpmailer.php; sourceTree = "<group>"; };
 		2A368E9F1E5E26FF004BFD25 /* ExistingTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingTimetableViewController.swift; sourceTree = "<group>"; };
-		2A4012371E44FE3800BD48CB /* connection.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = connection.php; sourceTree = "<group>"; };
 		2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageAccountViewController.swift; sourceTree = "<group>"; };
+		2A68BFAD1E7495C200B4B7AC /* addInstructors.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = addInstructors.php; path = ../scripts/addInstructors.php; sourceTree = "<group>"; };
+		2A68BFAE1E7495C200B4B7AC /* addSubjects.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = addSubjects.php; path = ../scripts/addSubjects.php; sourceTree = "<group>"; };
+		2A68BFAF1E7495C200B4B7AC /* changePassword.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = changePassword.php; path = ../scripts/changePassword.php; sourceTree = "<group>"; };
+		2A68BFB01E7495C200B4B7AC /* class.phpmailer.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = class.phpmailer.php; path = ../scripts/class.phpmailer.php; sourceTree = "<group>"; };
+		2A68BFB11E7495C200B4B7AC /* connection.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = connection.php; path = ../scripts/connection.php; sourceTree = "<group>"; };
+		2A68BFB21E7495C200B4B7AC /* email_verify.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = email_verify.php; path = ../scripts/email_verify.php; sourceTree = "<group>"; };
+		2A68BFB31E7495C200B4B7AC /* removeInstructors.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = removeInstructors.php; path = ../scripts/removeInstructors.php; sourceTree = "<group>"; };
+		2A68BFB41E7495C200B4B7AC /* removeSubjects.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = removeSubjects.php; path = ../scripts/removeSubjects.php; sourceTree = "<group>"; };
+		2A68BFB51E7495C200B4B7AC /* retrieveInstructors.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = retrieveInstructors.php; path = ../scripts/retrieveInstructors.php; sourceTree = "<group>"; };
+		2A68BFB61E7495C200B4B7AC /* retrieveSubjects.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = retrieveSubjects.php; path = ../scripts/retrieveSubjects.php; sourceTree = "<group>"; };
+		2A68BFB71E7495C200B4B7AC /* testfile.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = testfile.php; path = ../scripts/testfile.php; sourceTree = "<group>"; };
+		2A68BFB81E7495C200B4B7AC /* userForgot.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = userForgot.php; path = ../scripts/userForgot.php; sourceTree = "<group>"; };
+		2A68BFB91E7495C200B4B7AC /* userLogin.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = userLogin.php; path = ../scripts/userLogin.php; sourceTree = "<group>"; };
+		2A68BFBA1E7495C200B4B7AC /* userRegister.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = userRegister.php; path = ../scripts/userRegister.php; sourceTree = "<group>"; };
 		2A787AA91E42A9C000B82E6E /* efuerzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = efuerzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A787AB51E42A9C000B82E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,10 +150,20 @@
 		2A4012361E44FDEF00BD48CB /* php scripts */ = {
 			isa = PBXGroup;
 			children = (
-				2A4012371E44FE3800BD48CB /* connection.php */,
-				2A3140D01E4944190084327F /* userLogin.php */,
-				2A3140D21E49444D0084327F /* userForgot.php */,
-				2A3140D41E4944650084327F /* userRegister.php */,
+				2A68BFAD1E7495C200B4B7AC /* addInstructors.php */,
+				2A68BFAE1E7495C200B4B7AC /* addSubjects.php */,
+				2A68BFAF1E7495C200B4B7AC /* changePassword.php */,
+				2A68BFB01E7495C200B4B7AC /* class.phpmailer.php */,
+				2A68BFB11E7495C200B4B7AC /* connection.php */,
+				2A68BFB21E7495C200B4B7AC /* email_verify.php */,
+				2A68BFB31E7495C200B4B7AC /* removeInstructors.php */,
+				2A68BFB41E7495C200B4B7AC /* removeSubjects.php */,
+				2A68BFB51E7495C200B4B7AC /* retrieveInstructors.php */,
+				2A68BFB61E7495C200B4B7AC /* retrieveSubjects.php */,
+				2A68BFB71E7495C200B4B7AC /* testfile.php */,
+				2A68BFB81E7495C200B4B7AC /* userForgot.php */,
+				2A68BFB91E7495C200B4B7AC /* userLogin.php */,
+				2A68BFBA1E7495C200B4B7AC /* userRegister.php */,
 				2A3140DA1E4958C60084327F /* class.phpmailer.php */,
 			);
 			name = "php scripts";
@@ -371,14 +401,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A4012381E44FE3800BD48CB /* connection.php in Resources */,
-				2A3140D11E4944190084327F /* userLogin.php in Resources */,
+				2A68BFC11E7495C200B4B7AC /* removeInstructors.php in Resources */,
 				2A787AB91E42A9C000B82E6E /* LaunchScreen.storyboard in Resources */,
+				2A68BFC31E7495C200B4B7AC /* retrieveInstructors.php in Resources */,
+				2A68BFBB1E7495C200B4B7AC /* addInstructors.php in Resources */,
+				2A68BFC61E7495C200B4B7AC /* userForgot.php in Resources */,
+				2A68BFC51E7495C200B4B7AC /* testfile.php in Resources */,
 				2A7F48C01E683DB900FC991E /* Main.storyboard in Resources */,
+				2A68BFBD1E7495C200B4B7AC /* changePassword.php in Resources */,
+				2A68BFC21E7495C200B4B7AC /* removeSubjects.php in Resources */,
+				2A68BFC71E7495C200B4B7AC /* userLogin.php in Resources */,
+				2A68BFC01E7495C200B4B7AC /* email_verify.php in Resources */,
+				2A68BFBC1E7495C200B4B7AC /* addSubjects.php in Resources */,
 				2A787AB61E42A9C000B82E6E /* Assets.xcassets in Resources */,
-				2A3140D31E49444D0084327F /* userForgot.php in Resources */,
-				2A3140D51E4944650084327F /* userRegister.php in Resources */,
 				2A3140DB1E4958C60084327F /* class.phpmailer.php in Resources */,
+				2A68BFC81E7495C200B4B7AC /* userRegister.php in Resources */,
+				2A68BFBE1E7495C200B4B7AC /* class.phpmailer.php in Resources */,
+				2A68BFBF1E7495C200B4B7AC /* connection.php in Resources */,
+				2A68BFC41E7495C200B4B7AC /* retrieveSubjects.php in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

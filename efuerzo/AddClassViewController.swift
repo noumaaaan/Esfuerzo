@@ -36,8 +36,6 @@ class AddClassViewController: UIViewController {
                 return
             }
             
-            // Testing cal view branch commit
-            
             var err: NSError?
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary

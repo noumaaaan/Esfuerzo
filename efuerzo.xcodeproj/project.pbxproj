@@ -50,6 +50,9 @@
 		2AF8083E1E74D2E400AB3E58 /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8083D1E74D2E400AB3E58 /* CellView.xib */; };
 		2AF808401E74DF8C00AB3E58 /* PinkSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */; };
 		2AF808421E74E03D00AB3E58 /* PinkSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF808411E74E03D00AB3E58 /* PinkSectionHeaderView.swift */; };
+		2AF808441E76429D00AB3E58 /* WhiteSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF808431E76429D00AB3E58 /* WhiteSectionHeaderView.xib */; };
+		2AF808461E76430C00AB3E58 /* WhiteSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF808451E76430C00AB3E58 /* WhiteSectionHeaderView.swift */; };
+		2AF808481E77543500AB3E58 /* CurrentEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF808471E77543500AB3E58 /* CurrentEventsViewController.swift */; };
 		2AFA69EB1E59B89300A61FA9 /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA69EA1E59B89300A61FA9 /* SubjectsViewController.swift */; };
 		2AFA69EC1E5A754400A61FA9 /* efuerzo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC3361E543C0C00AB3966 /* efuerzo.xcdatamodeld */; };
 		2AFA69EF1E5A75AC00A61FA9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFA69EE1E5A75AC00A61FA9 /* CoreData.framework */; };
@@ -125,6 +128,9 @@
 		2AF8083D1E74D2E400AB3E58 /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = SOURCE_ROOT; };
 		2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinkSectionHeaderView.xib; sourceTree = "<group>"; };
 		2AF808411E74E03D00AB3E58 /* PinkSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkSectionHeaderView.swift; sourceTree = "<group>"; };
+		2AF808431E76429D00AB3E58 /* WhiteSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhiteSectionHeaderView.xib; sourceTree = "<group>"; };
+		2AF808451E76430C00AB3E58 /* WhiteSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteSectionHeaderView.swift; sourceTree = "<group>"; };
+		2AF808471E77543500AB3E58 /* CurrentEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentEventsViewController.swift; sourceTree = "<group>"; };
 		2AFA69EA1E59B89300A61FA9 /* SubjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
 		2AFA69EE1E5A75AC00A61FA9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2AFA6A2D1E5C651300A61FA9 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
@@ -216,9 +222,12 @@
 			isa = PBXGroup;
 			children = (
 				2A3140CA1E4943B50084327F /* TimetableViewController.swift */,
+				2AF808471E77543500AB3E58 /* CurrentEventsViewController.swift */,
 				2AF8083D1E74D2E400AB3E58 /* CellView.xib */,
 				2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */,
+				2AF808431E76429D00AB3E58 /* WhiteSectionHeaderView.xib */,
 				2AF808411E74E03D00AB3E58 /* PinkSectionHeaderView.swift */,
+				2AF808451E76430C00AB3E58 /* WhiteSectionHeaderView.swift */,
 				2ACCC2881E74A1E10093BA65 /* CellView.swift */,
 				2A06AB961E6E11540025B9AE /* AddClassViewController.swift */,
 			);
@@ -449,6 +458,7 @@
 				2A68BFC01E7495C200B4B7AC /* email_verify.php in Resources */,
 				2AF8083E1E74D2E400AB3E58 /* CellView.xib in Resources */,
 				2A68BFBC1E7495C200B4B7AC /* addSubjects.php in Resources */,
+				2AF808441E76429D00AB3E58 /* WhiteSectionHeaderView.xib in Resources */,
 				2AF808401E74DF8C00AB3E58 /* PinkSectionHeaderView.xib in Resources */,
 				2A787AB61E42A9C000B82E6E /* Assets.xcassets in Resources */,
 				2A3140DB1E4958C60084327F /* class.phpmailer.php in Resources */,
@@ -529,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7F48BD1E683B3700FC991E /* AddTimetableViewController.swift in Sources */,
+				2AF808481E77543500AB3E58 /* CurrentEventsViewController.swift in Sources */,
 				2A06AB971E6E11540025B9AE /* AddClassViewController.swift in Sources */,
 				2AFA69EC1E5A754400A61FA9 /* efuerzo.xcdatamodeld in Sources */,
 				2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */,
@@ -538,6 +549,7 @@
 				2AFA6A2E1E5C651300A61FA9 /* PasswordChangeViewController.swift in Sources */,
 				2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */,
 				2AF808421E74E03D00AB3E58 /* PinkSectionHeaderView.swift in Sources */,
+				2AF808461E76430C00AB3E58 /* WhiteSectionHeaderView.swift in Sources */,
 				2A368EA01E5E26FF004BFD25 /* ExistingTimetableViewController.swift in Sources */,
 				2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */,
 				2A0FFAE81E4AA4D400160785 /* IncompleteDeadlinesViewController.swift in Sources */,

@@ -28,9 +28,7 @@ class TimetableViewController: UIViewController {
         let doubleTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didDoubleTapCollectionView(gesture:)))
         doubleTapGesture.numberOfTapsRequired = 2  // add double tap
         calendarView.addGestureRecognizer(doubleTapGesture)
-        
         calendarView.registerHeaderView(xibFileNames: ["PinkSectionHeaderView"])
-
     }
 
     func didDoubleTapCollectionView(gesture: UITapGestureRecognizer) {
@@ -38,8 +36,12 @@ class TimetableViewController: UIViewController {
         let cellState = calendarView.cellStatus(at: point)
         if (cellState != nil){
             print(cellState!.date)
+            let passingValue: Date = cellState!.date
+            performSegue(withIdentifier: "viewEvents", sender: passingValue)
         }
     }
+    
+
     
     // This sets the height of your header
     func calendar(_ calendar: JTAppleCalendarView, sectionHeaderSizeFor range: (start: Date, end: Date), belongingTo month: Int) -> CGSize {
@@ -49,6 +51,13 @@ class TimetableViewController: UIViewController {
     func calendar(_ calendar: JTAppleCalendarView, willDisplaySectionHeader header: JTAppleHeaderView, range: (start: Date, end: Date), identifier: String) {
         let headerCell = (header as? PinkSectionHeaderView)
         headerCell?.title.text = "S           M           T           W           T           F           S"
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, sectionHeaderIdentifierFor range: (start: Date, end: Date), belongingTo month: Int) -> String {
+        if month % 2 > 0 {
+            return "WhiteSectionHeaderView"
+        }
+        return "PinkSectionHeaderView"
     }
     
     // Function to handle the text color of the calendar
@@ -81,17 +90,27 @@ class TimetableViewController: UIViewController {
         }
     }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if (segue.identifier == "viewEvents") {
+            let secondViewController = segue.destination as! CurrentEventsViewController
+            let passingValue = sender as! Date
+            secondViewController.passingValue = passingValue
+        }
+    }
+
 }
+  
+
 
 extension TimetableViewController: JTAppleCalendarViewDataSource, JTAppleCalendarViewDelegate {
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy MM dd"
         
-        let startDate = formatter.date(from: "2010 02 01")! // You can use date generated from a formatter
+        let startDate = formatter.date(from: "2016 02 01")! // You can use date generated from a formatter
         let endDate = formatter.date(from: "2110 02 01")!                                // You can also use dates created from this function
         let calendar = Calendar.current                     // Make sure you set this up to your time zone. We'll just use default here
-        
         let parameters = ConfigurationParameters(startDate: startDate,
                                                  endDate: endDate,
                                                  numberOfRows: 5,

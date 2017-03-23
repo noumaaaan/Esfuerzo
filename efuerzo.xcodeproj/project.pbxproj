@@ -11,6 +11,7 @@
 		2A0FFAE81E4AA4D400160785 /* IncompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */; };
 		2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */; };
 		2A26E57B1E50E2950030E05B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */; };
+		2A2BF0661E8489D100CA6732 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2BF0651E8489D100CA6732 /* ViewControllerTableViewCell.swift */; };
 		2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CA1E4943B50084327F /* TimetableViewController.swift */; };
 		2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */; };
 		2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140D61E49466D0084327F /* HomePageViewController.swift */; };
@@ -81,6 +82,7 @@
 		2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
 		2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
 		2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		2A2BF0651E8489D100CA6732 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		2A3140CA1E4943B50084327F /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlinesViewController.swift; sourceTree = "<group>"; };
 		2A3140D61E49466D0084327F /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				2AF808451E76430C00AB3E58 /* WhiteSectionHeaderView.swift */,
 				2ACCC2881E74A1E10093BA65 /* CellView.swift */,
 				2A06AB961E6E11540025B9AE /* AddClassViewController.swift */,
+				2A2BF0651E8489D100CA6732 /* ViewControllerTableViewCell.swift */,
 			);
 			name = "Timetable View";
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
 				2ADCDA471E5468EA0084B09A /* walkthroughViewController.swift in Sources */,
+				2A2BF0661E8489D100CA6732 /* ViewControllerTableViewCell.swift in Sources */,
 				2ADCDA491E5486A90084B09A /* PrivacyPolicyViewController.swift in Sources */,
 				2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */,
 				2A55BFD71E5257A900555670 /* ManageAccountViewController.swift in Sources */,

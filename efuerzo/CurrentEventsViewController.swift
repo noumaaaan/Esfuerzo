@@ -13,6 +13,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     // Outlets on the storyboard
     @IBOutlet weak var selectedDateLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var checkLabel: UILabel!
     
     // Initialise the variables used
     let userDetails: [String] = UserDefaults.standard.stringArray(forKey:"UserDetailsArray")!
@@ -31,8 +32,17 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
         self.dismissKeyboard()
     }
     
+    func checkIfThereisData(){
+        if (dataDict?.count == 0){
+            checkLabel.text = "There are no events scheduled for today.";
+        } else {
+            checkLabel.text = "";
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
+        checkIfThereisData()
     }
     
     // Convert the date from String back to date and display the complete date
@@ -94,24 +104,30 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        return 130
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataDict!.count
     }
     
+//    func allowMultipleLines(tableViewCell:UITableViewCell) {
+//        tableViewCell.textLabel?.numberOfLines = 0
+//        tableViewCell.textLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+//    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ViewControllerTableViewCell
+//        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
         if let array = self.dataDict?[String(indexPath.row + 1)] as? [String] {
-            cell.textLabel?.text = array[1]
-            cell.detailTextLabel?.text = array[2]
+            cell.subjectNameLabel.text = "Subject: " + array[1]
+            cell.instructorNameLabel.text = "Instructor: " + array[2]
+            cell.locationNameLabel.text = "Location: " + array[3]
+            cell.startTimeLabel.text = "Start: " + array[4]
+            cell.endTimeLabel.text = "End: " + array[5]
         }
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
     }
     
     /*

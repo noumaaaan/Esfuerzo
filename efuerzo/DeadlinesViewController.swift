@@ -14,8 +14,6 @@ class DeadlinesViewController: UIViewController {
     @IBOutlet weak var IncompleteView: UIView!
     
     @IBAction func SwitchDeadlines(_ sender: UISegmentedControl) {
-        
-
         if sender.selectedSegmentIndex == 0 {
             UIView.animate(withDuration: 0, animations: {
                 self.completeView.alpha = 0
@@ -31,10 +29,8 @@ class DeadlinesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

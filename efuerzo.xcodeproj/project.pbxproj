@@ -43,7 +43,6 @@
 		2A7F48BB1E64C58E00FC991E /* InstructorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F48BA1E64C58E00FC991E /* InstructorViewController.swift */; };
 		2A7F48BD1E683B3700FC991E /* AddTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */; };
 		2A7F48C01E683DB900FC991E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7F48BE1E683DB900FC991E /* Main.storyboard */; };
-		2A7F48C21E6A0FFB00FC991E /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F48C11E6A0FFB00FC991E /* Reach.swift */; };
 		2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCC2881E74A1E10093BA65 /* CellView.swift */; };
 		2ADCDA471E5468EA0084B09A /* walkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */; };
 		2ADCDA491E5486A90084B09A /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */; };
@@ -121,7 +120,6 @@
 		2A7F48BA1E64C58E00FC991E /* InstructorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructorViewController.swift; sourceTree = "<group>"; };
 		2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimetableViewController.swift; sourceTree = "<group>"; };
 		2A7F48BF1E683DB900FC991E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2A7F48C11E6A0FFB00FC991E /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		2ACCC2881E74A1E10093BA65 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = walkthroughViewController.swift; sourceTree = "<group>"; };
 		2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 				2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */,
 				2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */,
 				2A7F48BE1E683DB900FC991E /* Main.storyboard */,
-				2A7F48C11E6A0FFB00FC991E /* Reach.swift */,
 				2A787AB51E42A9C000B82E6E /* Assets.xcassets */,
 				2A787ABA1E42A9C000B82E6E /* Info.plist */,
 				2A7AC3361E543C0C00AB3966 /* efuerzo.xcdatamodeld */,
@@ -545,7 +542,6 @@
 				2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */,
 				2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */,
 				2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */,
-				2A7F48C21E6A0FFB00FC991E /* Reach.swift in Sources */,
 				2AFA6A2E1E5C651300A61FA9 /* PasswordChangeViewController.swift in Sources */,
 				2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */,
 				2AF808421E74E03D00AB3E58 /* PinkSectionHeaderView.swift in Sources */,

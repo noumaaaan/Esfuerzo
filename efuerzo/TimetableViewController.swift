@@ -36,7 +36,13 @@ class TimetableViewController: UIViewController {
         let cellState = calendarView.cellStatus(at: point)
         if (cellState != nil){
             print(cellState!.date)
-            let passingValue: Date = cellState!.date
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let passingValue = dateFormatter.string(from: cellState!.date)
+            print(passingValue)
+            
+//            let passingValue = cellState!.date
             performSegue(withIdentifier: "viewEvents", sender: passingValue)
         }
     }
@@ -94,7 +100,7 @@ class TimetableViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if (segue.identifier == "viewEvents") {
             let secondViewController = segue.destination as! CurrentEventsViewController
-            let passingValue = sender as! Date
+            let passingValue = sender as! String
             secondViewController.passingValue = passingValue
         }
     }
@@ -106,10 +112,10 @@ class TimetableViewController: UIViewController {
 extension TimetableViewController: JTAppleCalendarViewDataSource, JTAppleCalendarViewDelegate {
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy MM dd"
+        formatter.dateFormat = "dd MM yyyy"
         
-        let startDate = formatter.date(from: "2016 02 01")! // You can use date generated from a formatter
-        let endDate = formatter.date(from: "2110 02 01")!                                // You can also use dates created from this function
+        let startDate = formatter.date(from: "01 02 2010")! // You can use date generated from a formatter
+        let endDate = formatter.date(from: "01 02 2030")!                                // You can also use dates created from this function
         let calendar = Calendar.current                     // Make sure you set this up to your time zone. We'll just use default here
         let parameters = ConfigurationParameters(startDate: startDate,
                                                  endDate: endDate,

@@ -159,11 +159,6 @@ class SubjectsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
         if let array = self.dataDict?[String(indexPath.row + 1)] as? [String] {
-            
-            if (array[1] == "Lecture"){
-                cell.textLabel?.textColor = UIColor.red
-            }
-            
             cell.textLabel?.text = array[0] // Print the subject name
             cell.detailTextLabel?.text = array[1] // Print the subject type
         }

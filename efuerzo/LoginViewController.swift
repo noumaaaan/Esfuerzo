@@ -41,6 +41,9 @@ class LoginViewController: UIViewController {
 
             if error != nil {
                 print("error=\(error)")
+                DispatchQueue.main.async{
+                    self.displayAlertMessage(userTitle: "Error", userMessage: "The internet connection appears to be offline", alertAction: "Try again")
+                }
                 return
             }
             
@@ -81,7 +84,7 @@ class LoginViewController: UIViewController {
                 
                     // If successful, initiate session and satore all the fields into an array
                     if (resultValue == "Success"){
-                        
+
                         let storedUserID: String = parseJSON["user_id"] as! String;
                         let storedUsername: String = parseJSON["username"] as! String;
                         let storedFirstname: String = parseJSON["firstname"] as! String;
@@ -89,8 +92,9 @@ class LoginViewController: UIViewController {
                         let storedUniName: String = parseJSON["uni_name"] as! String;
                         let storedUniCourse: String = parseJSON["uni_course"] as! String;
                         let storedEmail: String = parseJSON["email"] as! String;
+                        let storedVerificationCode: String = parseJSON["verification_code"] as! String;
                         
-                        let array = [storedUserID, storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail];
+                        let array = [storedUserID, storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail, storedVerificationCode];
                         
                         UserDefaults.standard.set(array, forKey: "UserDetailsArray");
                         UserDefaults.standard.set(true, forKey: "isUserLoggedIn");
@@ -119,15 +123,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         self.dismissKeyboard()
-        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
-        Reach().monitorReachabilityChanges()
     }
-    
-    func networkStatusChanged(_ notification: Notification) {
-        let int_check = (notification as NSNotification).userInfo
-        print(int_check! as! [String: NSObject])
-    }
-    
+
     // Function to display an alert message parameters for the title, message and action type
     func displayAlertMessage(userTitle: String, userMessage:String, alertAction:String){
         let theAlert = UIAlertController(title: userTitle, message: userMessage, preferredStyle: UIAlertControllerStyle.alert)

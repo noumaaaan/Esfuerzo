@@ -82,6 +82,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
                     
                     if(checker == "Success"){
                         let resultValue = parseJSON["results"] as! [String:AnyObject]
+                        print(resultValue)
                         self.dataDict = resultValue
                     }
                     self.tableView.reloadData()
@@ -104,28 +105,25 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130
+        return 180
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataDict!.count
     }
     
-//    func allowMultipleLines(tableViewCell:UITableViewCell) {
-//        tableViewCell.textLabel?.numberOfLines = 0
-//        tableViewCell.textLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
-//    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ViewControllerTableViewCell
-//        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
         if let array = self.dataDict?[String(indexPath.row + 1)] as? [String] {
-            cell.subjectNameLabel.text = "Subject: " + array[1]
-            cell.instructorNameLabel.text = "Instructor: " + array[2]
-            cell.locationNameLabel.text = "Location: " + array[3]
-            cell.startTimeLabel.text = "Start: " + array[4]
-            cell.endTimeLabel.text = "End: " + array[5]
+            cell.subjectNameLabel.text = array[1]
+            cell.classTypeLabel.text = "Type: " + array[2]
+            cell.instructorNameLabel.text = "Instructor: " + array[3]
+            cell.locationNameLabel.text = "Location: " + array[4]
+            cell.startTimeLabel.text = "Start: " + array[5]
+            cell.endTimeLabel.text = "End: " + array[6]
+            cell.classLengthLabel.text = array[7] + " Hrs"
+            cell.timeRemaining.text = array[8]
         }
         return cell
     }

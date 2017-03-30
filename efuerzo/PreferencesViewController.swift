@@ -13,7 +13,7 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
     // On view load, do these functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.welcomeMessageLabel.text  = "Welcome " + UserDetails[1] + "!"
+        self.welcomeMessageLabel.text  = "Welcome " + UserDetails[2] + "!"
     }
     
     // Initialising the outlets in the view
@@ -25,7 +25,7 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
     
     // Creating the arrays to populate the table
     let walkthrough = ["How to use this app", "Add your own timetable"]
-    let prefArray1  = ["Add Subjects", "Add Instructors", "Add Locations", "Days of the week", "Notification Settings"]
+    let prefArray1  = ["Add Subjects", "Add Instructors", "Add Locations"]
     let prefArray2  = ["Manage Account", "Change your password", "Contact Us", "Privacy Policy", "About Esfuerzo"]
     let prefArray3  = ["Like us on Facebook", "Follow us on Twitter"]
     
@@ -116,10 +116,6 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
                     segueIdentifier = "addInstructorView"
                 case 2:
                     segueIdentifier = "addLocationsView"
-                case 3:
-                    segueIdentifier = "daysOfWeekView"
-                case 4:
-                    segueIdentifier = "NotifSettingsView"
                 default:
                     segueIdentifier = "aboutEsfuerzoView"
             }

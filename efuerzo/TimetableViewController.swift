@@ -15,7 +15,7 @@ class TimetableViewController: UIViewController {
     
     let white = UIColor(colorWithHexValue: 0xECEAED)
     let darkPurple = UIColor(colorWithHexValue: 0x3A284C)
-    let dimPurple = UIColor(colorWithHexValue: 0x574865)
+    let dimPurple = UIColor(colorWithHexValue: 0xFA8072)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +35,11 @@ class TimetableViewController: UIViewController {
         let point = gesture.location(in: gesture.view!)
         let cellState = calendarView.cellStatus(at: point)
         if (cellState != nil){
-            print(cellState!.date)
-            
+
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             let passingValue = dateFormatter.string(from: cellState!.date)
-            print(passingValue)
-            
-//            let passingValue = cellState!.date
+    
             performSegue(withIdentifier: "viewEvents", sender: passingValue)
         }
     }
@@ -114,7 +111,7 @@ extension TimetableViewController: JTAppleCalendarViewDataSource, JTAppleCalenda
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MM yyyy"
         
-        let startDate = formatter.date(from: "01 02 2010")! // You can use date generated from a formatter
+        let startDate = formatter.date(from: "01 03 2017")! // You can use date generated from a formatter
         let endDate = formatter.date(from: "01 02 2030")!                                // You can also use dates created from this function
         let calendar = Calendar.current                     // Make sure you set this up to your time zone. We'll just use default here
         let parameters = ConfigurationParameters(startDate: startDate,

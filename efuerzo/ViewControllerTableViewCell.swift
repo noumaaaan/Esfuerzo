@@ -16,7 +16,9 @@ class ViewControllerTableViewCell: UITableViewCell {
     @IBOutlet weak var startTimeLabel: UILabel!
     @IBOutlet weak var endTimeLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
-    
+    @IBOutlet weak var classTypeLabel: UILabel!
+    @IBOutlet weak var classLengthLabel: UILabel!
+    @IBOutlet weak var timeRemaining: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

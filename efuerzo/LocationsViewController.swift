@@ -1,14 +1,14 @@
 //
-//  InstructorViewController.swift
+//  LocationsViewController.swift
 //  efuerzo
 //
-//  Created by Nouman Mehmood on 27/02/2017.
+//  Created by Nouman Mehmood on 30/03/2017.
 //  Copyright © 2017 Nouman Mehmood. All rights reserved.
 //
 
 import UIKit
 
-class InstructorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LocationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let userDetails: [String] = UserDefaults.standard.stringArray(forKey:"UserDetailsArray")!
     
@@ -20,16 +20,17 @@ class InstructorViewController: UIViewController, UITableViewDelegate, UITableVi
     // Dictionary variable to store the JSON result for the table
     var dataDict: [String:AnyObject]?
     
+    // Run this function when the view loads initially
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataDict = [String:AnyObject]()
+        self.dataDict = [String: AnyObject]()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.getInstructors()
+        self.getLocations()
         self.hideKeyboardWhenTappedAround()
         self.dismissKeyboard()
     }
-    
+
     // Reload the data within the table
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
@@ -106,9 +107,9 @@ class InstructorViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     // Function to retrieve instructors from the table
-    func getInstructors() {
+    func getLocations() {
         
-        let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveInstructors.php");
+        let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveLocations.php");
         let request = NSMutableURLRequest(url:myUrl as! URL)
         let user_id = userDetails[0]
         request.httpMethod = "POST";
@@ -144,7 +145,7 @@ class InstructorViewController: UIViewController, UITableViewDelegate, UITableVi
         task.resume();
         self.tableView.reloadData()
     }
-
+    
     /*
      *  - START UITABLE FUNCTIONS
      */
@@ -263,10 +264,3 @@ class InstructorViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
 }
-
-
-
-
-
-
-

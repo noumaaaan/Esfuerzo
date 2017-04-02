@@ -40,12 +40,13 @@
 		2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */; };
 		2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787ADE1E435F5C00B82E6E /* RegisterViewController.swift */; };
 		2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */; };
+		2A7970751E8D53A90061E5A6 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7970741E8D53A90061E5A6 /* LocationsViewController.swift */; };
+		2A7970771E8EF7530061E5A6 /* ExplorePagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7970761E8EF7530061E5A6 /* ExplorePagingViewController.swift */; };
 		2A7AC33A1E54538500AB3966 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */; };
 		2A7F48BB1E64C58E00FC991E /* InstructorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F48BA1E64C58E00FC991E /* InstructorViewController.swift */; };
 		2A7F48BD1E683B3700FC991E /* AddTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */; };
 		2A7F48C01E683DB900FC991E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7F48BE1E683DB900FC991E /* Main.storyboard */; };
 		2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCC2881E74A1E10093BA65 /* CellView.swift */; };
-		2ADCDA471E5468EA0084B09A /* walkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */; };
 		2ADCDA491E5486A90084B09A /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */; };
 		2AF8083E1E74D2E400AB3E58 /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8083D1E74D2E400AB3E58 /* CellView.xib */; };
 		2AF808401E74DF8C00AB3E58 /* PinkSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */; };
@@ -117,13 +118,14 @@
 		2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2A787ADE1E435F5C00B82E6E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
+		2A7970741E8D53A90061E5A6 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		2A7970761E8EF7530061E5A6 /* ExplorePagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplorePagingViewController.swift; sourceTree = "<group>"; };
 		2A7AC3371E543C0C00AB3966 /* efuerzo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = efuerzo.xcdatamodel; sourceTree = "<group>"; };
 		2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		2A7F48BA1E64C58E00FC991E /* InstructorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructorViewController.swift; sourceTree = "<group>"; };
 		2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimetableViewController.swift; sourceTree = "<group>"; };
 		2A7F48BF1E683DB900FC991E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ACCC2881E74A1E10093BA65 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
-		2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = walkthroughViewController.swift; sourceTree = "<group>"; };
 		2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		2AF8083D1E74D2E400AB3E58 /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = SOURCE_ROOT; };
 		2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinkSectionHeaderView.xib; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */,
+				2A7970761E8EF7530061E5A6 /* ExplorePagingViewController.swift */,
 				2AFA6A2D1E5C651300A61FA9 /* PasswordChangeViewController.swift */,
 				2A368E9F1E5E26FF004BFD25 /* ExistingTimetableViewController.swift */,
 				2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */,
@@ -202,7 +205,7 @@
 				2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */,
 				2AFA69EA1E59B89300A61FA9 /* SubjectsViewController.swift */,
 				2A7F48BA1E64C58E00FC991E /* InstructorViewController.swift */,
-				2ADCDA461E5468EA0084B09A /* walkthroughViewController.swift */,
+				2A7970741E8D53A90061E5A6 /* LocationsViewController.swift */,
 				2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */,
 			);
 			name = "Preferences Tab";
@@ -546,6 +549,7 @@
 				2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */,
 				2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */,
 				2AFA6A2E1E5C651300A61FA9 /* PasswordChangeViewController.swift in Sources */,
+				2A7970771E8EF7530061E5A6 /* ExplorePagingViewController.swift in Sources */,
 				2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */,
 				2AF808421E74E03D00AB3E58 /* PinkSectionHeaderView.swift in Sources */,
 				2AF808461E76430C00AB3E58 /* WhiteSectionHeaderView.swift in Sources */,
@@ -558,8 +562,8 @@
 				2AFA69EB1E59B89300A61FA9 /* SubjectsViewController.swift in Sources */,
 				2A7F48BB1E64C58E00FC991E /* InstructorViewController.swift in Sources */,
 				2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */,
+				2A7970751E8D53A90061E5A6 /* LocationsViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
-				2ADCDA471E5468EA0084B09A /* walkthroughViewController.swift in Sources */,
 				2A2BF0661E8489D100CA6732 /* ViewControllerTableViewCell.swift in Sources */,
 				2ADCDA491E5486A90084B09A /* PrivacyPolicyViewController.swift in Sources */,
 				2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */,

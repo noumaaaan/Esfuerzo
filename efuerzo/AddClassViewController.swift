@@ -49,7 +49,6 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         selectLocationTextField?.inputView = LocationPicker
     }
     
-    // Create an array for the different Universities in the UK
     let SubjectsPicker = UIPickerView()
     let InstructorPicker = UIPickerView()
     let LocationPicker = UIPickerView()
@@ -62,26 +61,34 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if (pickerView.tag == 1){
-            return self.subjectsDict!.count
+            if (self.subjectsDict != nil){
+                return self.subjectsDict!.count
+            }
+            
         } else if (pickerView.tag == 2) {
-            return self.instructDict!.count
+            if (self.instructDict != nil){
+                return self.instructDict!.count
+            }
+            
         } else {
-            return self.locationDict!.count
+            if (self.locationDict != nil){
+                return self.locationDict!.count
+            }
         }
+        return 1
     }
-
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         var stringValue = String()
         
         if (pickerView.tag == 1){
             if let array = self.subjectsDict?[String(row + 1)] as? [String] {
-                stringValue = array[0]
+                stringValue = array[0] + " - " + array[1]
             }
             
         } else if (pickerView.tag == 2){
             if let array = self.instructDict?[String(row + 1)] as? [String] {
-                stringValue = array[0]
+                stringValue = array[0] + " " + array[1]
             }
             
         } else {
@@ -95,12 +102,12 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView.tag == 1){
             if let array = self.subjectsDict?[String(row + 1)] as? [String] {
-                selectCourseTextField?.text = array[0]
+                selectCourseTextField?.text = array[0] + " - " + array[1]
             }
             
         } else if (pickerView.tag == 2){
             if let array = self.instructDict?[String(row + 1)] as? [String] {
-                selectInstructorTextField.text = array[0]
+                selectInstructorTextField.text = array[0] + " " + array[1]
             }
             
         } else {

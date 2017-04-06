@@ -20,11 +20,19 @@ class AddTimetableViewController: UIViewController {
         self.verificationCodeLabel.text  = UserDetails[7]
     }
     
-    @IBAction func redirectToWebsite(_ sender: Any) {
+
+    @IBAction func requestTimetableButton(_ sender: Any) {
+        if let url = URL(string: "http://celcatweb.aston.ac.uk/livetimetable/") {
+            UIApplication.shared.open(url as URL)
+        }
+    }
+    
+    
+    @IBAction func addTimetable(_ sender: Any) {
         if let url = URL(string: "https://esfuerzo.noumanmehmood.com/add_timetable.php") {
             UIApplication.shared.open(url as URL)
         }
     }
 
-    
+
 }

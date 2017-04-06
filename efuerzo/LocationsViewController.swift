@@ -9,52 +9,49 @@
 import UIKit
 
 class LocationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    let userDetails: [String] = UserDefaults.standard.stringArray(forKey:"UserDetailsArray")!
     
-    // Initialise the components of the storyboard
-    @IBOutlet weak var FirstNameTextField: UITextField!
-    @IBOutlet weak var SurnameTextField: UITextField!
+    // Initialise the storyboard outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var locationNameTextField: UITextField!
     
-    // Dictionary variable to store the JSON result for the table
+    // Variable to be used within the class
+    let userDetails: [String] = UserDefaults.standard.stringArray(forKey:"UserDetailsArray")!
     var dataDict: [String:AnyObject]?
     
-    // Run this function when the view loads initially
+    // Run this function when the view loads
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataDict = [String: AnyObject]()
+        self.dataDict = [String:AnyObject]()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.getLocations()
         self.hideKeyboardWhenTappedAround()
         self.dismissKeyboard()
     }
-
+    
     // Reload the data within the table
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
     }
     
-    // Function to add a new Instructor to the database
-    @IBAction func AddInstructorTapped(_ sender: Any) {
-        
-        let firstname = FirstNameTextField.text!
-        let surname = SurnameTextField.text!
+    // Function to add a new location to the table
+    @IBAction func addLocationButtonTapped(_ sender: Any) {
+    
+        let name = locationNameTextField.text!
         
         // Check if the fields passed are empty, display an alert and return
-        if (firstname.isEmpty || surname.isEmpty){
-            displayAlertMessage(userTitle:"Error", userMessage:"All of the fields must be completed", alertAction: "Return")
+        if (name.isEmpty){
+            displayAlertMessage(userTitle:"Error", userMessage:"Name field cannot be empty", alertAction: "Return")
             return
         }
         
         // If not empty, add the values to the database
-        let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/addInstructors.php");
+        let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/addLocations.php");
         let request = NSMutableURLRequest(url:myUrl as! URL)
         
         request.httpMethod = "POST";
         let user_id = userDetails[0]
-        let postString = "user_id=\(user_id)&firstname=\(firstname)&surname=\(surname)";
+        let postString = "user_id=\(user_id)&name=\(name)";
         request.httpBody = postString.data(using: String.Encoding.utf8);
         
         let task = URLSession.shared.dataTask(with: request as URLRequest){
@@ -92,7 +89,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
                     // If successful, display the alert message
                     if (resultValue == "Success"){
                         DispatchQueue.main.async{
-                            self.displayAlertMessage(userTitle: "Success", userMessage: "The instructor was successfully added to the table", alertAction: "Return")
+                            self.displayAlertMessage(userTitle: "Success", userMessage: "The Location was successfully added to the table", alertAction: "Return")
                             self.viewDidAppear(true)
                             self.viewDidLoad()
                         }
@@ -104,6 +101,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }
         task.resume();
+    
     }
     
     // Function to retrieve instructors from the table
@@ -131,7 +129,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
                     let checker:String = parseJSON["status"] as! String;
                     
                     if(checker == "Success"){
-                        let resultValue = parseJSON["instructors"] as! [String:AnyObject]
+                        let resultValue = parseJSON["locations"] as! [String:AnyObject]
                         self.dataDict = resultValue
                     }
                     
@@ -147,7 +145,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     /*
-     *  - START UITABLE FUNCTIONS
+     *  - START OF UITABLE FUNCTIONS
      */
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -162,7 +160,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
         
         if let array = self.dataDict?[String(indexPath.row + 1)] as? [String] {
-            cell.textLabel?.text = array[0] + " " + array[1]
+            cell.textLabel?.text = array[0]
         }
         return cell
     }
@@ -180,14 +178,13 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
             theAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
                 
                 if let array = self.dataDict?[String(indexPath.row + 1)] as? [String] {
-                    let firstname = array[0]
-                    let surname = array[1]
+                    let name = array[0]
                     
-                    let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/removeInstructors.php");
+                    let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/removeLocations");
                     let request = NSMutableURLRequest(url:myUrl as! URL)
                     let user_id = self.userDetails[0]
                     request.httpMethod = "POST";
-                    let postString = "firstname=\(firstname)&surname=\(surname)&user_id=\(user_id)";
+                    let postString = "name=\(name)&user_id=\(user_id)";
                     request.httpBody = postString.data(using: String.Encoding.utf8);
                     
                     let task = URLSession.shared.dataTask(with: request as URLRequest) {
@@ -215,7 +212,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
                                 // If there is an error, display an alert message and return
                                 if (resultValue == "Error"){
                                     DispatchQueue.main.async{
-                                        self.displayAlertMessage(userTitle: "Error", userMessage: "There was an error deleting the instructor from the database", alertAction: "Try again")
+                                        self.displayAlertMessage(userTitle: "Error", userMessage: "There was an error deleting the location from the database", alertAction: "Try again")
                                         return
                                     }
                                 }
@@ -223,7 +220,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
                                 // If there is an error, display an alert message and return
                                 if (resultValue == "Success"){
                                     DispatchQueue.main.async{
-                                        self.displayAlertMessage(userTitle: "Success", userMessage: "Successfully removed the instructor from the table", alertAction: "Return")
+                                        self.displayAlertMessage(userTitle: "Success", userMessage: "Successfully removed the location from the table", alertAction: "Return")
                                         self.viewDidAppear(true)
                                         self.viewDidLoad()
                                     }
@@ -252,7 +249,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     /*
-     *  - END UITABLE FUNCTIONS
+     *  - END OF UITABLE FUNCTIONS
      */
     
     // Function to display an alert message parameters for the title, message and action type
@@ -262,5 +259,4 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
         theAlert.addAction(okAction)
         self.present(theAlert, animated: true, completion: nil)
     }
-    
 }

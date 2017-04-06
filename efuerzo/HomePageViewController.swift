@@ -10,6 +10,7 @@ import UIKit
 
 class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
     // Initialise storyboard outlets
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -24,7 +25,6 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         self.retrieveMotivationalQuote()
 
-        
         super.viewDidLoad()
         
         self.dataDict = [String:AnyObject]()
@@ -82,9 +82,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
                             self.quoteLabel.text = self.quoteVar
                         }
                         return
-                        
                     }
-                    
                 }
             } catch let error as NSError {
                 err = error
@@ -197,9 +195,9 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         self.present(theAlert, animated: true, completion: nil)
     }
     
-    
-    
-    
-    
-    
+    /*
+     * Motivational quotes have been taken from this website
+     * http://www.timothysykes.com/blog/the-best-motivational-quotes-part-2/
+     */
+  
 }

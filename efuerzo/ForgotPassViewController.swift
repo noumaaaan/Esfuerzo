@@ -28,7 +28,7 @@ class ForgotPassViewController: UIViewController {
         
         // If everything is okay, send details to the server
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/userForgot.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         request.httpMethod = "POST";
         
         let postString = "email=\(email)&memorable=\(memorable)";
@@ -38,7 +38,7 @@ class ForgotPassViewController: UIViewController {
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             

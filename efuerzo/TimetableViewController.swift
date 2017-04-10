@@ -15,56 +15,67 @@ class TimetableViewController: UIViewController {
     
     let white = UIColor(colorWithHexValue: 0xECEAED)
     let darkPurple = UIColor(colorWithHexValue: 0x3A284C)
-    let dimPurple = UIColor(colorWithHexValue: 0xFA8072)
+    let dimPurple = UIColor(colorWithHexValue: 0x574865)
+    let dateFormatter = DateFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        calendarView.dataSource = self
-        calendarView.delegate = self
-        calendarView.registerCellViewXib(file: "CellView") // Registering your cell is manditory
-        calendarView.cellInset = CGPoint(x: 0, y: 0)
+        calendarView.register(UINib(nibName: "PinkSectionHeaderView", bundle: Bundle.main),
+                              forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+                              withReuseIdentifier: "PinkSectionHeaderView")
+        
+        
+        calendarView.minimumLineSpacing = 0
+        calendarView.minimumInteritemSpacing = 0
+        
+        calendarView.calendarDelegate = self
+        calendarView.calendarDataSource = self
         
         let doubleTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didDoubleTapCollectionView(gesture:)))
         doubleTapGesture.numberOfTapsRequired = 2  // add double tap
+        
         calendarView.addGestureRecognizer(doubleTapGesture)
-        calendarView.registerHeaderView(xibFileNames: ["PinkSectionHeaderView"])
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.calendarView.scrollToDate(Date())
+            self.calendarView.selectDates([Date()])
+        }
+
+        
     }
 
     func didDoubleTapCollectionView(gesture: UITapGestureRecognizer) {
         let point = gesture.location(in: gesture.view!)
         let cellState = calendarView.cellStatus(at: point)
         if (cellState != nil){
-
-            let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             let passingValue = dateFormatter.string(from: cellState!.date)
     
             performSegue(withIdentifier: "viewEvents", sender: passingValue)
         }
     }
-    
 
     
     // This sets the height of your header
-    func calendar(_ calendar: JTAppleCalendarView, sectionHeaderSizeFor range: (start: Date, end: Date), belongingTo month: Int) -> CGSize {
-        return CGSize(width: 200, height: 50)
+    func calendarSizeForMonths(_ calendar: JTAppleCalendarView?) -> MonthSize? {
+        return MonthSize(defaultSize: 130)
     }
     // This setups the display of your header
-    func calendar(_ calendar: JTAppleCalendarView, willDisplaySectionHeader header: JTAppleHeaderView, range: (start: Date, end: Date), identifier: String) {
-        let headerCell = (header as? PinkSectionHeaderView)
-        headerCell?.title.text = "S           M           T           W           T           F           S"
+    func calendar(_ calendar: JTAppleCalendarView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTAppleCollectionReusableView {
+        let header = calendar.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier: "PinkSectionHeaderView", for: indexPath) as! PinkSectionHeaderView
+        
+        dateFormatter.dateFormat = "yyyy"
+        header.year.text = dateFormatter.string(from: range.start)
+        
+        dateFormatter.dateFormat = "MMMM"
+        header.month.text = dateFormatter.string(from: range.start)
+        
+        return header
     }
-    
-    func calendar(_ calendar: JTAppleCalendarView, sectionHeaderIdentifierFor range: (start: Date, end: Date), belongingTo month: Int) -> String {
-        if month % 2 > 0 {
-            return "WhiteSectionHeaderView"
-        }
-        return "PinkSectionHeaderView"
-    }
+
     
     // Function to handle the text color of the calendar
-    func handleCellTextColor(view: JTAppleDayCellView?, cellState: CellState) {
+    func handleCellTextColor(view: JTAppleCell?, cellState: CellState) {
         guard let myCustomCell = view as? CellView  else {
             return
         }
@@ -81,7 +92,7 @@ class TimetableViewController: UIViewController {
     }
     
     // Function to handle the calendar selection
-    func handleCellSelection(view: JTAppleDayCellView?, cellState: CellState) {
+    func handleCellSelection(view: JTAppleCell?, cellState: CellState) {
         guard let myCustomCell = view as? CellView  else {
             return
         }
@@ -126,22 +137,23 @@ extension TimetableViewController: JTAppleCalendarViewDataSource, JTAppleCalenda
     
     
     
-    func calendar(_ calendar: JTAppleCalendarView, willDisplayCell cell: JTAppleDayCellView, date: Date, cellState: CellState) {
-        let myCustomCell = cell as! CellView
+    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
+        let myCustomCell = calendarView.dequeueReusableJTAppleCell(withReuseIdentifier: "CellView", for: indexPath) as! CellView
         
         // Setup Cell text
         myCustomCell.dayLabel.text = cellState.text
         
-        handleCellTextColor(view: cell, cellState: cellState)
-        handleCellSelection(view: cell, cellState: cellState)
+        handleCellTextColor(view: myCustomCell, cellState: cellState)
+        handleCellSelection(view: myCustomCell, cellState: cellState)
+        return myCustomCell
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelection(view: cell, cellState: cellState)
         handleCellTextColor(view: cell, cellState: cellState)
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
+    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelection(view: cell, cellState: cellState)
         handleCellTextColor(view: cell, cellState: cellState)
     }

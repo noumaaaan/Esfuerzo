@@ -14,12 +14,13 @@ class ExplorePagingViewController: UIPageViewController, UIPageViewControllerDat
     lazy var viewControllerList : [UIViewController] = {
         let sb = UIStoryboard(name:"Main", bundle:nil)
         
-        let view1 = sb.instantiateViewController(withIdentifier: "Red1")
-        let view2 = sb.instantiateViewController(withIdentifier: "Blue1")
-        let view3 = sb.instantiateViewController(withIdentifier: "Green1")
-        let view4 = sb.instantiateViewController(withIdentifier: "Pink1")
-       
-        return [view1, view2, view3, view4]
+        let view1 = sb.instantiateViewController(withIdentifier: "Uno")
+        let view2 = sb.instantiateViewController(withIdentifier: "Dos")
+        let view3 = sb.instantiateViewController(withIdentifier: "Tres")
+        let view4 = sb.instantiateViewController(withIdentifier: "Cuatro")
+        let view5 = sb.instantiateViewController(withIdentifier: "Cinco")
+        
+        return [view1, view2, view3, view4, view5]
     }()
     
     // Function run when the view loads for the first time

@@ -49,7 +49,7 @@ class InstructorViewController: UIViewController, UITableViewDelegate, UITableVi
         
         // If not empty, add the values to the database
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/addInstructors.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         
         request.httpMethod = "POST";
         let user_id = userDetails[0]
@@ -60,7 +60,7 @@ class InstructorViewController: UIViewController, UITableViewDelegate, UITableVi
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
@@ -109,7 +109,7 @@ class InstructorViewController: UIViewController, UITableViewDelegate, UITableVi
     func getInstructors() {
         
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveInstructors.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         let user_id = userDetails[0]
         request.httpMethod = "POST";
         let postString = "user_id=\(user_id)";
@@ -119,7 +119,7 @@ class InstructorViewController: UIViewController, UITableViewDelegate, UITableVi
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
@@ -183,7 +183,7 @@ class InstructorViewController: UIViewController, UITableViewDelegate, UITableVi
                     let surname = array[1]
                     
                     let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/removeInstructors.php");
-                    let request = NSMutableURLRequest(url:myUrl as! URL)
+                    let request = NSMutableURLRequest(url:myUrl! as URL)
                     let user_id = self.userDetails[0]
                     request.httpMethod = "POST";
                     let postString = "firstname=\(firstname)&surname=\(surname)&user_id=\(user_id)";
@@ -193,7 +193,7 @@ class InstructorViewController: UIViewController, UITableViewDelegate, UITableVi
                         data, response, error in
                         
                         if error != nil {
-                            print("error=\(error)")
+                            print("error=\(String(describing: error))")
                             return
                         }
                         

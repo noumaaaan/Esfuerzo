@@ -1,0 +1,22 @@
+PODS:
+  - JTAppleCalendar (7.0.0)
+
+DEPENDENCIES:
+  - JTAppleCalendar (from `https://github.com/patchthecode/JTAppleCalendar.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  JTAppleCalendar:
+    :branch: master
+    :git: https://github.com/patchthecode/JTAppleCalendar.git
+
+CHECKOUT OPTIONS:
+  JTAppleCalendar:
+    :commit: cf52a57253b975c13ccdb199a20a156ae0ca4493
+    :git: https://github.com/patchthecode/JTAppleCalendar.git
+
+SPEC CHECKSUMS:
+  JTAppleCalendar: 68e582027f35f1256b576e63688ae199bbcb1c1e
+
+PODFILE CHECKSUM: ce4fb0bb1fcb385065a27146a660d8629a4cf82e
+
+COCOAPODS: 1.2.0

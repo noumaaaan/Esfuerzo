@@ -50,7 +50,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     func retrieveMotivationalQuote(){
         
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveQuoteOfTheDay.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         
         request.httpMethod = "POSTs";
         let postString = "";
@@ -60,7 +60,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
@@ -102,7 +102,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         let convertedDate = dateFormatter.string(from: currentDate as Date)
         
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveEventsForDay.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         let user_id = userDetails[0]
         request.httpMethod = "POST";
         let postString = "user_id=\(user_id)&requested_time=\(convertedDate)";
@@ -112,7 +112,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             

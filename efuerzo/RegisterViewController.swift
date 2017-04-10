@@ -10,21 +10,53 @@ import UIKit
 
 class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
+    
+    // Initalise storyboard outlets
+    @IBOutlet weak var ScrollView: UIScrollView!
+    
+    @IBOutlet weak var FirstnameTextField: UITextField!
+    @IBOutlet weak var SurnameTextField: UITextField!
+    @IBOutlet weak var SelectUniversityTextField: UITextField!
+    @IBOutlet weak var CourseTextField: UITextField!
+    @IBOutlet weak var EmailTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var PasswordTextField: UITextField!
+    @IBOutlet weak var ConfirmPasswordTextField: UITextField!
+    @IBOutlet weak var MemorableTextField: UITextField!
+    
+    @IBOutlet var myTextField : UITextField?
+    
     // Function when the view looads
     override func viewDidLoad() {
         super.viewDidLoad()
-        ScrollView.contentSize.height = 1800;
         self.hideKeyboardWhenTappedAround()
         self.dismissKeyboard()
+        ScrollView.contentSize.height = 1600;
         
-//         Bind the text field to the picker view
+        // Bind the text field to the picker view
         picker.dataSource = self
         picker.delegate = self
         SelectUniversityTextField.inputView = picker
+        
+        PasswordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingDidEnd)
+        ConfirmPasswordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingDidEnd)
     }
-
     
-    @IBOutlet var myTextField : UITextField?
+    // Function to dynmaically check the length of the password
+    func textFieldDidChange(_ textField: UITextField) {
+        
+        let letters = textField.text!
+        if ((letters.characters.count) < 6){
+            displayAlertMessage(userTitle: "Too short", userMessage: "Passwords must be at least 6 characters long", alertAction: "Return")
+            
+            textField.layer.cornerRadius = 8.0
+            textField.layer.masksToBounds = true
+            textField.layer.borderColor = UIColor( red: 255/255, green: 0/255, blue:0/255, alpha: 1.0 ).cgColor
+            textField.layer.borderWidth = 2.0
+    
+            return
+        }
+    }
     
     // Create an array for the different Universities in the UK
     let picker = UIPickerView()
@@ -48,19 +80,7 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         SelectUniversityTextField.text = Universities[row]
         self.view.endEditing(false)
     }
-    
-    // Initalise storyboard outlets
-    @IBOutlet weak var ScrollView: UIScrollView!
-    
-    @IBOutlet weak var FirstnameTextField: UITextField!
-    @IBOutlet weak var SurnameTextField: UITextField!
-    @IBOutlet weak var SelectUniversityTextField: UITextField!
-    @IBOutlet weak var CourseTextField: UITextField!
-    @IBOutlet weak var EmailTextField: UITextField!
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var PasswordTextField: UITextField!
-    @IBOutlet weak var ConfirmPasswordTextField: UITextField!
-    @IBOutlet weak var MemorableTextField: UITextField!
+
     
     // Function run when register button pressed
     @IBAction func RegisterButtonTapped(_ sender: Any) {
@@ -112,7 +132,7 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         // If everything is okay, send details to the server
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/userRegister.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         request.httpMethod = "POST";
         
         let postString = "firstname=\(firstname)&surname=\(surname)&uniName=\(uniName)&uniCourse=\(uniCourse)&username=\(username)&password=\(password)&memorable=\(memorable)&email=\(email)";
@@ -122,7 +142,7 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             

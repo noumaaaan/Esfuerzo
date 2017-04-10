@@ -48,7 +48,7 @@ class SubjectsViewController: UIViewController, UITableViewDelegate, UITableView
         
         // If not empty insert the new subjects into the database
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/addSubjects.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         
         request.httpMethod = "POST";
         let user_id = userDetails[0]
@@ -59,7 +59,7 @@ class SubjectsViewController: UIViewController, UITableViewDelegate, UITableView
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
@@ -108,7 +108,7 @@ class SubjectsViewController: UIViewController, UITableViewDelegate, UITableView
     func getSubjects() {
         
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveSubjects.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         let user_id = userDetails[0]
         request.httpMethod = "POST";
         let postString = "user_id=\(user_id)";
@@ -118,7 +118,7 @@ class SubjectsViewController: UIViewController, UITableViewDelegate, UITableView
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
@@ -182,7 +182,7 @@ class SubjectsViewController: UIViewController, UITableViewDelegate, UITableView
                     let subjectType = array[1]
                     
                     let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/removeSubjects.php");
-                    let request = NSMutableURLRequest(url:myUrl as! URL)
+                    let request = NSMutableURLRequest(url:myUrl! as URL)
                     let user_id = self.userDetails[0]
                     request.httpMethod = "POST";
                     let postString = "subjectName=\(subjectName)&subjectType=\(subjectType)&user_id=\(user_id)";
@@ -192,7 +192,7 @@ class SubjectsViewController: UIViewController, UITableViewDelegate, UITableView
                         data, response, error in
                         
                         if error != nil {
-                            print("error=\(error)")
+                            print("error=\(String(describing: error))")
                             return
                         }
                         

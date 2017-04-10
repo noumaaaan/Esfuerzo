@@ -122,7 +122,7 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // Function to retrieve the subjects
     func retrieveSubjects(){
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveSubjects.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         let user_id = userDetails[0]
         request.httpMethod = "POST";
         let postString = "user_id=\(user_id)";
@@ -132,7 +132,7 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
@@ -157,7 +157,7 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // Function to retrieve the instructors
     func retrieveInstructors(){
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveInstructors.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         let user_id = userDetails[0]
         request.httpMethod = "POST";
         let postString = "user_id=\(user_id)";
@@ -167,7 +167,7 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
@@ -192,7 +192,7 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // Function to retrieve the locations
     func retrieveLocations(){
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveLocations.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         let user_id = userDetails[0]
         request.httpMethod = "POST";
         let postString = "user_id=\(user_id)";
@@ -202,7 +202,7 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             

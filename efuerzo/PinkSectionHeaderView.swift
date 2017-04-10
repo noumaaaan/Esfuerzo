@@ -8,8 +8,9 @@
 
 import JTAppleCalendar
 
-class PinkSectionHeaderView: JTAppleHeaderView {
+class PinkSectionHeaderView: JTAppleCollectionReusableView {
 
-    @IBOutlet var title: UILabel!
+    @IBOutlet weak var year: UILabel!
+    @IBOutlet weak var month: UILabel!
 
 }

@@ -59,7 +59,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     // Get the events from the database for the selected date
     func getEvents() {
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveEventsForDay.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         let user_id = userDetails[0]
         request.httpMethod = "POST";
         let postString = "user_id=\(user_id)&requested_time=\(passingValue!)";
@@ -69,7 +69,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             

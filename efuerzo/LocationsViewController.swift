@@ -47,7 +47,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
         
         // If not empty, add the values to the database
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/addLocations.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         
         request.httpMethod = "POST";
         let user_id = userDetails[0]
@@ -58,7 +58,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
@@ -108,7 +108,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
     func getLocations() {
         
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveLocations.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         let user_id = userDetails[0]
         request.httpMethod = "POST";
         let postString = "user_id=\(user_id)";
@@ -118,7 +118,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
             data, response, error in
             
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
@@ -181,7 +181,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
                     let name = array[0]
                     
                     let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/removeLocations");
-                    let request = NSMutableURLRequest(url:myUrl as! URL)
+                    let request = NSMutableURLRequest(url:myUrl! as URL)
                     let user_id = self.userDetails[0]
                     request.httpMethod = "POST";
                     let postString = "name=\(name)&user_id=\(user_id)";
@@ -191,7 +191,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
                         data, response, error in
                         
                         if error != nil {
-                            print("error=\(error)")
+                            print("error=\(String(describing: error))")
                             return
                         }
                         

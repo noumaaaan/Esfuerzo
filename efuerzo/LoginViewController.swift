@@ -15,6 +15,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    // Once the view loads, by default call dismiss keyboard to hide keyboard once the screen is tapped
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        self.dismissKeyboard()
+    }
+    
+    
     // Function once login button is pressed
     @IBAction func LoginButtonTapped(_ sender: Any) {
     
@@ -30,7 +38,7 @@ class LoginViewController: UIViewController {
         
         // If not empty, do a post request to the server with the details
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/userLogin.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         
         request.httpMethod = "POST";
         let postString = "username=\(username)&password=\(password)";
@@ -40,7 +48,7 @@ class LoginViewController: UIViewController {
             data, response, error in
 
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 DispatchQueue.main.async{
                     self.displayAlertMessage(userTitle: "Error", userMessage: "The internet connection appears to be offline", alertAction: "Try again")
                 }
@@ -118,12 +126,6 @@ class LoginViewController: UIViewController {
         task.resume();
     }
 
-    // Once the view loads, by default call dismiss keyboard to hide keyboard once the screen is tapped
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
-        self.dismissKeyboard()
-    }
 
     // Function to display an alert message parameters for the title, message and action type
     func displayAlertMessage(userTitle: String, userMessage:String, alertAction:String){

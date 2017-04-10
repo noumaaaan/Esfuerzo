@@ -15,23 +15,9 @@
 		2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CA1E4943B50084327F /* TimetableViewController.swift */; };
 		2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */; };
 		2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140D61E49466D0084327F /* HomePageViewController.swift */; };
-		2A3140DB1E4958C60084327F /* class.phpmailer.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A3140DA1E4958C60084327F /* class.phpmailer.php */; };
 		2A368EA01E5E26FF004BFD25 /* ExistingTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A368E9F1E5E26FF004BFD25 /* ExistingTimetableViewController.swift */; };
+		2A4B5F511E9B297F00755B0D /* AboutEsfuerzoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B5F501E9B297F00755B0D /* AboutEsfuerzoViewController.swift */; };
 		2A55BFD71E5257A900555670 /* ManageAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */; };
-		2A68BFBB1E7495C200B4B7AC /* addInstructors.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFAD1E7495C200B4B7AC /* addInstructors.php */; };
-		2A68BFBC1E7495C200B4B7AC /* addSubjects.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFAE1E7495C200B4B7AC /* addSubjects.php */; };
-		2A68BFBD1E7495C200B4B7AC /* changePassword.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFAF1E7495C200B4B7AC /* changePassword.php */; };
-		2A68BFBE1E7495C200B4B7AC /* class.phpmailer.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB01E7495C200B4B7AC /* class.phpmailer.php */; };
-		2A68BFBF1E7495C200B4B7AC /* connection.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB11E7495C200B4B7AC /* connection.php */; };
-		2A68BFC01E7495C200B4B7AC /* email_verify.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB21E7495C200B4B7AC /* email_verify.php */; };
-		2A68BFC11E7495C200B4B7AC /* removeInstructors.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB31E7495C200B4B7AC /* removeInstructors.php */; };
-		2A68BFC21E7495C200B4B7AC /* removeSubjects.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB41E7495C200B4B7AC /* removeSubjects.php */; };
-		2A68BFC31E7495C200B4B7AC /* retrieveInstructors.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB51E7495C200B4B7AC /* retrieveInstructors.php */; };
-		2A68BFC41E7495C200B4B7AC /* retrieveSubjects.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB61E7495C200B4B7AC /* retrieveSubjects.php */; };
-		2A68BFC51E7495C200B4B7AC /* testfile.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB71E7495C200B4B7AC /* testfile.php */; };
-		2A68BFC61E7495C200B4B7AC /* userForgot.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB81E7495C200B4B7AC /* userForgot.php */; };
-		2A68BFC71E7495C200B4B7AC /* userLogin.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFB91E7495C200B4B7AC /* userLogin.php */; };
-		2A68BFC81E7495C200B4B7AC /* userRegister.php in Resources */ = {isa = PBXBuildFile; fileRef = 2A68BFBA1E7495C200B4B7AC /* userRegister.php */; };
 		2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */; };
 		2A787AB61E42A9C000B82E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB51E42A9C000B82E6E /* Assets.xcassets */; };
 		2A787AB91E42A9C000B82E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */; };
@@ -47,16 +33,12 @@
 		2A7F48BD1E683B3700FC991E /* AddTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */; };
 		2A7F48C01E683DB900FC991E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7F48BE1E683DB900FC991E /* Main.storyboard */; };
 		2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCC2881E74A1E10093BA65 /* CellView.swift */; };
-		2ADCDA491E5486A90084B09A /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */; };
-		2AF8083E1E74D2E400AB3E58 /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8083D1E74D2E400AB3E58 /* CellView.xib */; };
 		2AF808401E74DF8C00AB3E58 /* PinkSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */; };
 		2AF808421E74E03D00AB3E58 /* PinkSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF808411E74E03D00AB3E58 /* PinkSectionHeaderView.swift */; };
-		2AF808441E76429D00AB3E58 /* WhiteSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF808431E76429D00AB3E58 /* WhiteSectionHeaderView.xib */; };
-		2AF808461E76430C00AB3E58 /* WhiteSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF808451E76430C00AB3E58 /* WhiteSectionHeaderView.swift */; };
 		2AF808481E77543500AB3E58 /* CurrentEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF808471E77543500AB3E58 /* CurrentEventsViewController.swift */; };
 		2AFA69EB1E59B89300A61FA9 /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA69EA1E59B89300A61FA9 /* SubjectsViewController.swift */; };
 		2AFA69EC1E5A754400A61FA9 /* efuerzo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC3361E543C0C00AB3966 /* efuerzo.xcdatamodeld */; };
-		2AFA69EF1E5A75AC00A61FA9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFA69EE1E5A75AC00A61FA9 /* CoreData.framework */; };
+		2AFA69EF1E5A75AC00A61FA9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFA69EE1E5A75AC00A61FA9 /* CoreData.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2AFA6A2E1E5C651300A61FA9 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA6A2D1E5C651300A61FA9 /* PasswordChangeViewController.swift */; };
 		B0A4152A785518C710DB518E /* Pods_efuerzo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B44072601641C45639DF511 /* Pods_efuerzo.framework */; };
 /* End PBXBuildFile section */
@@ -87,23 +69,9 @@
 		2A3140CA1E4943B50084327F /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlinesViewController.swift; sourceTree = "<group>"; };
 		2A3140D61E49466D0084327F /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		2A3140DA1E4958C60084327F /* class.phpmailer.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = class.phpmailer.php; sourceTree = "<group>"; };
 		2A368E9F1E5E26FF004BFD25 /* ExistingTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingTimetableViewController.swift; sourceTree = "<group>"; };
+		2A4B5F501E9B297F00755B0D /* AboutEsfuerzoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutEsfuerzoViewController.swift; sourceTree = "<group>"; };
 		2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageAccountViewController.swift; sourceTree = "<group>"; };
-		2A68BFAD1E7495C200B4B7AC /* addInstructors.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = addInstructors.php; path = ../scripts/addInstructors.php; sourceTree = "<group>"; };
-		2A68BFAE1E7495C200B4B7AC /* addSubjects.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = addSubjects.php; path = ../scripts/addSubjects.php; sourceTree = "<group>"; };
-		2A68BFAF1E7495C200B4B7AC /* changePassword.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = changePassword.php; path = ../scripts/changePassword.php; sourceTree = "<group>"; };
-		2A68BFB01E7495C200B4B7AC /* class.phpmailer.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = class.phpmailer.php; path = ../scripts/class.phpmailer.php; sourceTree = "<group>"; };
-		2A68BFB11E7495C200B4B7AC /* connection.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = connection.php; path = ../scripts/connection.php; sourceTree = "<group>"; };
-		2A68BFB21E7495C200B4B7AC /* email_verify.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = email_verify.php; path = ../scripts/email_verify.php; sourceTree = "<group>"; };
-		2A68BFB31E7495C200B4B7AC /* removeInstructors.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = removeInstructors.php; path = ../scripts/removeInstructors.php; sourceTree = "<group>"; };
-		2A68BFB41E7495C200B4B7AC /* removeSubjects.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = removeSubjects.php; path = ../scripts/removeSubjects.php; sourceTree = "<group>"; };
-		2A68BFB51E7495C200B4B7AC /* retrieveInstructors.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = retrieveInstructors.php; path = ../scripts/retrieveInstructors.php; sourceTree = "<group>"; };
-		2A68BFB61E7495C200B4B7AC /* retrieveSubjects.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = retrieveSubjects.php; path = ../scripts/retrieveSubjects.php; sourceTree = "<group>"; };
-		2A68BFB71E7495C200B4B7AC /* testfile.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = testfile.php; path = ../scripts/testfile.php; sourceTree = "<group>"; };
-		2A68BFB81E7495C200B4B7AC /* userForgot.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = userForgot.php; path = ../scripts/userForgot.php; sourceTree = "<group>"; };
-		2A68BFB91E7495C200B4B7AC /* userLogin.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = userLogin.php; path = ../scripts/userLogin.php; sourceTree = "<group>"; };
-		2A68BFBA1E7495C200B4B7AC /* userRegister.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = userRegister.php; path = ../scripts/userRegister.php; sourceTree = "<group>"; };
 		2A787AA91E42A9C000B82E6E /* efuerzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = efuerzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A787AB51E42A9C000B82E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,7 +83,7 @@
 		2A787ACA1E42A9C000B82E6E /* efuerzoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = efuerzoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A787ACE1E42A9C000B82E6E /* efuerzoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = efuerzoUITests.swift; sourceTree = "<group>"; };
 		2A787AD01E42A9C000B82E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2A787ADC1E42AA9100B82E6E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2A787ADE1E435F5C00B82E6E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2A787AE01E43B0A000B82E6E /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		2A7970741E8D53A90061E5A6 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
@@ -126,12 +94,8 @@
 		2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimetableViewController.swift; sourceTree = "<group>"; };
 		2A7F48BF1E683DB900FC991E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ACCC2881E74A1E10093BA65 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
-		2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
-		2AF8083D1E74D2E400AB3E58 /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = SOURCE_ROOT; };
 		2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinkSectionHeaderView.xib; sourceTree = "<group>"; };
 		2AF808411E74E03D00AB3E58 /* PinkSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkSectionHeaderView.swift; sourceTree = "<group>"; };
-		2AF808431E76429D00AB3E58 /* WhiteSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhiteSectionHeaderView.xib; sourceTree = "<group>"; };
-		2AF808451E76430C00AB3E58 /* WhiteSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteSectionHeaderView.swift; sourceTree = "<group>"; };
 		2AF808471E77543500AB3E58 /* CurrentEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentEventsViewController.swift; sourceTree = "<group>"; };
 		2AFA69EA1E59B89300A61FA9 /* SubjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
 		2AFA69EE1E5A75AC00A61FA9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -170,29 +134,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A4012361E44FDEF00BD48CB /* php scripts */ = {
-			isa = PBXGroup;
-			children = (
-				2A68BFAD1E7495C200B4B7AC /* addInstructors.php */,
-				2A68BFAE1E7495C200B4B7AC /* addSubjects.php */,
-				2A68BFAF1E7495C200B4B7AC /* changePassword.php */,
-				2A68BFB01E7495C200B4B7AC /* class.phpmailer.php */,
-				2A68BFB11E7495C200B4B7AC /* connection.php */,
-				2A68BFB21E7495C200B4B7AC /* email_verify.php */,
-				2A68BFB31E7495C200B4B7AC /* removeInstructors.php */,
-				2A68BFB41E7495C200B4B7AC /* removeSubjects.php */,
-				2A68BFB51E7495C200B4B7AC /* retrieveInstructors.php */,
-				2A68BFB61E7495C200B4B7AC /* retrieveSubjects.php */,
-				2A68BFB71E7495C200B4B7AC /* testfile.php */,
-				2A68BFB81E7495C200B4B7AC /* userForgot.php */,
-				2A68BFB91E7495C200B4B7AC /* userLogin.php */,
-				2A68BFBA1E7495C200B4B7AC /* userRegister.php */,
-				2A3140DA1E4958C60084327F /* class.phpmailer.php */,
-			);
-			name = "php scripts";
-			path = ..;
-			sourceTree = "<group>";
-		};
 		2A55BFD91E52585600555670 /* Preferences Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,10 +144,10 @@
 				2A55BFD61E5257A900555670 /* ManageAccountViewController.swift */,
 				2A7AC3391E54538500AB3966 /* ContactUsViewController.swift */,
 				2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */,
+				2A4B5F501E9B297F00755B0D /* AboutEsfuerzoViewController.swift */,
 				2AFA69EA1E59B89300A61FA9 /* SubjectsViewController.swift */,
 				2A7F48BA1E64C58E00FC991E /* InstructorViewController.swift */,
 				2A7970741E8D53A90061E5A6 /* LocationsViewController.swift */,
-				2ADCDA481E5486A90084B09A /* PrivacyPolicyViewController.swift */,
 			);
 			name = "Preferences Tab";
 			sourceTree = "<group>";
@@ -226,11 +167,8 @@
 			children = (
 				2A3140CA1E4943B50084327F /* TimetableViewController.swift */,
 				2AF808471E77543500AB3E58 /* CurrentEventsViewController.swift */,
-				2AF8083D1E74D2E400AB3E58 /* CellView.xib */,
 				2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */,
-				2AF808431E76429D00AB3E58 /* WhiteSectionHeaderView.xib */,
 				2AF808411E74E03D00AB3E58 /* PinkSectionHeaderView.swift */,
-				2AF808451E76430C00AB3E58 /* WhiteSectionHeaderView.swift */,
 				2ACCC2881E74A1E10093BA65 /* CellView.swift */,
 				2A06AB961E6E11540025B9AE /* AddClassViewController.swift */,
 				2A2BF0651E8489D100CA6732 /* ViewControllerTableViewCell.swift */,
@@ -281,7 +219,6 @@
 		2A787AAB1E42A9C000B82E6E /* efuerzo */ = {
 			isa = PBXGroup;
 			children = (
-				2A4012361E44FDEF00BD48CB /* php scripts */,
 				2A787AB71E42A9C000B82E6E /* LaunchScreen.storyboard */,
 				2A787AAC1E42A9C000B82E6E /* AppDelegate.swift */,
 				2A7F48BE1E683DB900FC991E /* Main.storyboard */,
@@ -448,27 +385,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A68BFC11E7495C200B4B7AC /* removeInstructors.php in Resources */,
 				2A787AB91E42A9C000B82E6E /* LaunchScreen.storyboard in Resources */,
-				2A68BFC31E7495C200B4B7AC /* retrieveInstructors.php in Resources */,
-				2A68BFBB1E7495C200B4B7AC /* addInstructors.php in Resources */,
-				2A68BFC61E7495C200B4B7AC /* userForgot.php in Resources */,
-				2A68BFC51E7495C200B4B7AC /* testfile.php in Resources */,
 				2A7F48C01E683DB900FC991E /* Main.storyboard in Resources */,
-				2A68BFBD1E7495C200B4B7AC /* changePassword.php in Resources */,
-				2A68BFC21E7495C200B4B7AC /* removeSubjects.php in Resources */,
-				2A68BFC71E7495C200B4B7AC /* userLogin.php in Resources */,
-				2A68BFC01E7495C200B4B7AC /* email_verify.php in Resources */,
-				2AF8083E1E74D2E400AB3E58 /* CellView.xib in Resources */,
-				2A68BFBC1E7495C200B4B7AC /* addSubjects.php in Resources */,
-				2AF808441E76429D00AB3E58 /* WhiteSectionHeaderView.xib in Resources */,
 				2AF808401E74DF8C00AB3E58 /* PinkSectionHeaderView.xib in Resources */,
 				2A787AB61E42A9C000B82E6E /* Assets.xcassets in Resources */,
-				2A3140DB1E4958C60084327F /* class.phpmailer.php in Resources */,
-				2A68BFC81E7495C200B4B7AC /* userRegister.php in Resources */,
-				2A68BFBE1E7495C200B4B7AC /* class.phpmailer.php in Resources */,
-				2A68BFBF1E7495C200B4B7AC /* connection.php in Resources */,
-				2A68BFC41E7495C200B4B7AC /* retrieveSubjects.php in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,20 +472,19 @@
 				2A7970771E8EF7530061E5A6 /* ExplorePagingViewController.swift in Sources */,
 				2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */,
 				2AF808421E74E03D00AB3E58 /* PinkSectionHeaderView.swift in Sources */,
-				2AF808461E76430C00AB3E58 /* WhiteSectionHeaderView.swift in Sources */,
 				2A368EA01E5E26FF004BFD25 /* ExistingTimetableViewController.swift in Sources */,
 				2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */,
 				2A0FFAE81E4AA4D400160785 /* IncompleteDeadlinesViewController.swift in Sources */,
 				2A26E57B1E50E2950030E05B /* PreferencesViewController.swift in Sources */,
 				2A7AC33A1E54538500AB3966 /* ContactUsViewController.swift in Sources */,
 				2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */,
+				2A4B5F511E9B297F00755B0D /* AboutEsfuerzoViewController.swift in Sources */,
 				2AFA69EB1E59B89300A61FA9 /* SubjectsViewController.swift in Sources */,
 				2A7F48BB1E64C58E00FC991E /* InstructorViewController.swift in Sources */,
 				2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */,
 				2A7970751E8D53A90061E5A6 /* LocationsViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
 				2A2BF0661E8489D100CA6732 /* ViewControllerTableViewCell.swift in Sources */,
-				2ADCDA491E5486A90084B09A /* PrivacyPolicyViewController.swift in Sources */,
 				2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */,
 				2A55BFD71E5257A900555670 /* ManageAccountViewController.swift in Sources */,
 			);

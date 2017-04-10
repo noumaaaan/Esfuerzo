@@ -131,7 +131,7 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
             case 2:
                 segueIdentifier = "makeSuggestView"
             case 3:
-                segueIdentifier = "aboutEsfuerzoView"
+                segueIdentifier = "aboutEsfuerzo"
             default:
                 segueIdentifier = "aboutEsfuerzoView"
             }

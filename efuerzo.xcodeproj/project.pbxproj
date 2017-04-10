@@ -33,6 +33,7 @@
 		2A7F48BD1E683B3700FC991E /* AddTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */; };
 		2A7F48C01E683DB900FC991E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7F48BE1E683DB900FC991E /* Main.storyboard */; };
 		2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCC2881E74A1E10093BA65 /* CellView.swift */; };
+		2AE225B41E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */; };
 		2AF808401E74DF8C00AB3E58 /* PinkSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */; };
 		2AF808421E74E03D00AB3E58 /* PinkSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF808411E74E03D00AB3E58 /* PinkSectionHeaderView.swift */; };
 		2AF808481E77543500AB3E58 /* CurrentEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF808471E77543500AB3E58 /* CurrentEventsViewController.swift */; };
@@ -94,6 +95,7 @@
 		2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimetableViewController.swift; sourceTree = "<group>"; };
 		2A7F48BF1E683DB900FC991E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ACCC2881E74A1E10093BA65 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewDeadlineViewController.swift; sourceTree = "<group>"; };
 		2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinkSectionHeaderView.xib; sourceTree = "<group>"; };
 		2AF808411E74E03D00AB3E58 /* PinkSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkSectionHeaderView.swift; sourceTree = "<group>"; };
 		2AF808471E77543500AB3E58 /* CurrentEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentEventsViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		2A55BFDC1E5258BA00555670 /* Assignments and Exams */ = {
 			isa = PBXGroup;
 			children = (
+				2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */,
 				2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */,
 				2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */,
 				2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */,
@@ -226,10 +229,10 @@
 				2A787ABA1E42A9C000B82E6E /* Info.plist */,
 				2A7AC3361E543C0C00AB3966 /* efuerzo.xcdatamodeld */,
 				2A55BFDA1E52587C00555670 /* Login and Register */,
-				2A55BFD91E52585600555670 /* Preferences Tab */,
-				2A55BFDB1E5258A800555670 /* Timetable View */,
-				2A55BFDC1E5258BA00555670 /* Assignments and Exams */,
 				2A55BFDD1E5258DF00555670 /* Homepage */,
+				2A55BFDC1E5258BA00555670 /* Assignments and Exams */,
+				2A55BFDB1E5258A800555670 /* Timetable View */,
+				2A55BFD91E52585600555670 /* Preferences Tab */,
 			);
 			path = efuerzo;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				2A7F48BD1E683B3700FC991E /* AddTimetableViewController.swift in Sources */,
 				2AF808481E77543500AB3E58 /* CurrentEventsViewController.swift in Sources */,
 				2A06AB971E6E11540025B9AE /* AddClassViewController.swift in Sources */,
+				2AE225B41E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift in Sources */,
 				2AFA69EC1E5A754400A61FA9 /* efuerzo.xcdatamodeld in Sources */,
 				2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */,
 				2A787ADD1E42AA9100B82E6E /* LoginViewController.swift in Sources */,

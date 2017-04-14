@@ -101,8 +101,9 @@ class LoginViewController: UIViewController {
                         let storedUniCourse: String = parseJSON["uni_course"] as! String;
                         let storedEmail: String = parseJSON["email"] as! String;
                         let storedVerificationCode: String = parseJSON["verification_code"] as! String;
+                        let theQuote: String = parseJSON["quote"] as! String
                         
-                        let array = [storedUserID, storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail, storedVerificationCode];
+                        let array = [storedUserID, storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail, storedVerificationCode, theQuote]
                         
                         UserDefaults.standard.set(array, forKey: "UserDetailsArray");
                         UserDefaults.standard.set(true, forKey: "isUserLoggedIn");
@@ -119,6 +120,13 @@ class LoginViewController: UIViewController {
                     }
                 }
             } catch let error as NSError {
+                let dataSet = String(data: data!, encoding: .utf8)
+                
+                print("Trying again")
+                if (dataSet?.isEmpty)!{
+                    self.LoginButtonTapped(self)
+                }
+
                 err = error
                 print(err!);
             }

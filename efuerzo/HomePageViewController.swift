@@ -19,11 +19,11 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     // Initialise variables being used
     let userDetails: [String] = UserDefaults.standard.stringArray(forKey:"UserDetailsArray")!
     var dataDict: [String:AnyObject]?
-    var quoteVar: String = ""
+    
     
     // Run this function when the view loads
     override func viewDidLoad() {
-        self.retrieveMotivationalQuote()
+//        self.retrieveMotivationalQuote()
 
         super.viewDidLoad()
         
@@ -34,6 +34,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         self.getEvents()
         self.hideKeyboardWhenTappedAround()
         self.dismissKeyboard()
+        self.quoteLabel.text = userDetails[8]
     }
     
     // Function to display the date at start
@@ -41,56 +42,57 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         let currentDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.locale = NSLocale(localeIdentifier: "en_GB") as Locale!
-        dateFormatter.dateStyle = DateFormatter.Style.full
+        dateFormatter.dateFormat = "E, d MMM yyyy"
+//        dateFormatter.dateStyle = DateFormatter.Style.full
         let convertedDate = dateFormatter.string(from: currentDate as Date)
         DateLabel.text = convertedDate;
     }
     
-    // Get a quote from the database
-    func retrieveMotivationalQuote(){
-        
-        let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveQuoteOfTheDay.php");
-        let request = NSMutableURLRequest(url:myUrl! as URL)
-        
-        request.httpMethod = "POSTs";
-        let postString = "";
-        request.httpBody = postString.data(using: String.Encoding.utf8);
-        
-        let task = URLSession.shared.dataTask(with: request as URLRequest){
-            data, response, error in
-            
-            if error != nil {
-                print("error=\(String(describing: error))")
-                return
-            }
-            
-            // Parse the results of the JSON result and naivigate to app if success
-            var err: NSError?
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-                if let parseJSON = json {
-                    
-                    let resultValue:String = parseJSON["status"] as! String;
-                    print(resultValue)
-                    
-                    // If successful, initiate session and satore all the fields into an array
-                    if (resultValue == "Success"){
-                        let quoteValue: String = parseJSON["result"] as! String;
-                        self.quoteVar = quoteValue
-                        
-                        DispatchQueue.main.async{
-                            self.quoteLabel.text = self.quoteVar
-                        }
-                        return
-                    }
-                }
-            } catch let error as NSError {
-                err = error
-                print(err!);
-            }
-        }
-        task.resume();
-    }
+//    // Get a quote from the database
+//    func retrieveMotivationalQuote(){
+//        
+//        let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveQuoteOfTheDay.php");
+//        let request = NSMutableURLRequest(url:myUrl! as URL)
+//        
+//        request.httpMethod = "POSTs";
+//        let postString = "";
+//        request.httpBody = postString.data(using: String.Encoding.utf8);
+//        
+//        let task = URLSession.shared.dataTask(with: request as URLRequest){
+//            data, response, error in
+//            
+//            if error != nil {
+//                print("error=\(String(describing: error))")
+//                return
+//            }
+//            
+//            // Parse the results of the JSON result and naivigate to app if success
+//            var err: NSError?
+//            do {
+//                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+//                if let parseJSON = json {
+//                    
+//                    let resultValue:String = parseJSON["status"] as! String;
+//                    print(resultValue)
+//                    
+//                    // If successful, initiate session and satore all the fields into an array
+//                    if (resultValue == "Success"){
+//                        let quoteValue: String = parseJSON["result"] as! String;
+//                        self.quoteVar = quoteValue
+//                        
+//                        DispatchQueue.main.async{
+//                            self.quoteLabel.text = self.quoteVar
+//                        }
+//                        return
+//                    }
+//                }
+//            } catch let error as NSError {
+//                err = error
+//                print(err!);
+//            }
+//        }
+//        task.resume();
+//    }
     
     // Get the events from the database for the selected date
     func getEvents() {

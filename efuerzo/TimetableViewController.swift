@@ -15,7 +15,7 @@ class TimetableViewController: UIViewController {
     
     let white = UIColor(colorWithHexValue: 0xECEAED)
     let darkPurple = UIColor(colorWithHexValue: 0x3A284C)
-    let dimPurple = UIColor(colorWithHexValue: 0x574865)
+    let dimPurple = UIColor(colorWithHexValue: 0x455B77)
     let dateFormatter = DateFormatter()
 
     override func viewDidLoad() {

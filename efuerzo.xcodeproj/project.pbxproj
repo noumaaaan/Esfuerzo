@@ -33,6 +33,8 @@
 		2A7F48BD1E683B3700FC991E /* AddTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */; };
 		2A7F48C01E683DB900FC991E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7F48BE1E683DB900FC991E /* Main.storyboard */; };
 		2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCC2881E74A1E10093BA65 /* CellView.swift */; };
+		2AD7E87F1EA2B4CC00AE2CFD /* EditCompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD7E87E1EA2B4CC00AE2CFD /* EditCompleteDeadlinesViewController.swift */; };
+		2AD7E8811EA2B50000AE2CFD /* EditIncompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD7E8801EA2B50000AE2CFD /* EditIncompleteDeadlinesViewController.swift */; };
 		2AE225B41E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */; };
 		2AE225BA1EA088EF003EDC26 /* DeadlinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE225B91EA088EF003EDC26 /* DeadlinesTableViewCell.swift */; };
 		2AF808401E74DF8C00AB3E58 /* PinkSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */; };
@@ -96,6 +98,8 @@
 		2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimetableViewController.swift; sourceTree = "<group>"; };
 		2A7F48BF1E683DB900FC991E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ACCC2881E74A1E10093BA65 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		2AD7E87E1EA2B4CC00AE2CFD /* EditCompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
+		2AD7E8801EA2B50000AE2CFD /* EditIncompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditIncompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
 		2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewDeadlineViewController.swift; sourceTree = "<group>"; };
 		2AE225B91EA088EF003EDC26 /* DeadlinesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlinesTableViewCell.swift; sourceTree = "<group>"; };
 		2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinkSectionHeaderView.xib; sourceTree = "<group>"; };
@@ -185,7 +189,9 @@
 			children = (
 				2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */,
 				2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */,
+				2AD7E8801EA2B50000AE2CFD /* EditIncompleteDeadlinesViewController.swift */,
 				2AE225B91EA088EF003EDC26 /* DeadlinesTableViewCell.swift */,
+				2AD7E87E1EA2B4CC00AE2CFD /* EditCompleteDeadlinesViewController.swift */,
 				2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */,
 				2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */,
 			);
@@ -470,6 +476,7 @@
 				2A7F48BD1E683B3700FC991E /* AddTimetableViewController.swift in Sources */,
 				2AF808481E77543500AB3E58 /* CurrentEventsViewController.swift in Sources */,
 				2A06AB971E6E11540025B9AE /* AddClassViewController.swift in Sources */,
+				2AD7E87F1EA2B4CC00AE2CFD /* EditCompleteDeadlinesViewController.swift in Sources */,
 				2AE225BA1EA088EF003EDC26 /* DeadlinesTableViewCell.swift in Sources */,
 				2AE225B41E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift in Sources */,
 				2AFA69EC1E5A754400A61FA9 /* efuerzo.xcdatamodeld in Sources */,
@@ -494,6 +501,7 @@
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
 				2A2BF0661E8489D100CA6732 /* ViewControllerTableViewCell.swift in Sources */,
 				2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */,
+				2AD7E8811EA2B50000AE2CFD /* EditIncompleteDeadlinesViewController.swift in Sources */,
 				2A55BFD71E5257A900555670 /* ManageAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

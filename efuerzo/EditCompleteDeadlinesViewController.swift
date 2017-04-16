@@ -1,14 +1,14 @@
 //
-//  AddNewDeadlineViewController.swift
+//  EditCompleteDeadlinesViewController.swift
 //  efuerzo
 //
-//  Created by Nouman Mehmood on 10/04/2017.
+//  Created by Nouman Mehmood on 15/04/2017.
 //  Copyright © 2017 Nouman Mehmood. All rights reserved.
 //
 
 import UIKit
 
-class AddNewDeadlineViewController: UIPageViewController {
+class EditCompleteDeadlinesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +20,5 @@ class AddNewDeadlineViewController: UIPageViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }

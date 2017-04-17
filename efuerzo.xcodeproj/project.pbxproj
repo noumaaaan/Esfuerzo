@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2A06AB971E6E11540025B9AE /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A06AB961E6E11540025B9AE /* AddClassViewController.swift */; };
-		2A0FFAE81E4AA4D400160785 /* IncompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */; };
-		2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */; };
 		2A26E57B1E50E2950030E05B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */; };
 		2A2BF0661E8489D100CA6732 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2BF0651E8489D100CA6732 /* ViewControllerTableViewCell.swift */; };
 		2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CA1E4943B50084327F /* TimetableViewController.swift */; };
@@ -33,8 +31,7 @@
 		2A7F48BD1E683B3700FC991E /* AddTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */; };
 		2A7F48C01E683DB900FC991E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7F48BE1E683DB900FC991E /* Main.storyboard */; };
 		2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCC2881E74A1E10093BA65 /* CellView.swift */; };
-		2AD7E87F1EA2B4CC00AE2CFD /* EditCompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD7E87E1EA2B4CC00AE2CFD /* EditCompleteDeadlinesViewController.swift */; };
-		2AD7E8811EA2B50000AE2CFD /* EditIncompleteDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD7E8801EA2B50000AE2CFD /* EditIncompleteDeadlinesViewController.swift */; };
+		2AD7E8831EA5364300AE2CFD /* editDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD7E8821EA5364300AE2CFD /* editDeadlinesViewController.swift */; };
 		2AE225B41E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */; };
 		2AE225BA1EA088EF003EDC26 /* DeadlinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE225B91EA088EF003EDC26 /* DeadlinesTableViewCell.swift */; };
 		2AF808401E74DF8C00AB3E58 /* PinkSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */; };
@@ -66,8 +63,6 @@
 
 /* Begin PBXFileReference section */
 		2A06AB961E6E11540025B9AE /* AddClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassViewController.swift; sourceTree = "<group>"; };
-		2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
-		2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
 		2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		2A2BF0651E8489D100CA6732 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		2A3140CA1E4943B50084327F /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
@@ -98,8 +93,7 @@
 		2A7F48BC1E683B3700FC991E /* AddTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimetableViewController.swift; sourceTree = "<group>"; };
 		2A7F48BF1E683DB900FC991E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ACCC2881E74A1E10093BA65 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
-		2AD7E87E1EA2B4CC00AE2CFD /* EditCompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
-		2AD7E8801EA2B50000AE2CFD /* EditIncompleteDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditIncompleteDeadlinesViewController.swift; sourceTree = "<group>"; };
+		2AD7E8821EA5364300AE2CFD /* editDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editDeadlinesViewController.swift; sourceTree = "<group>"; };
 		2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewDeadlineViewController.swift; sourceTree = "<group>"; };
 		2AE225B91EA088EF003EDC26 /* DeadlinesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlinesTableViewCell.swift; sourceTree = "<group>"; };
 		2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinkSectionHeaderView.xib; sourceTree = "<group>"; };
@@ -189,11 +183,8 @@
 			children = (
 				2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */,
 				2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */,
-				2AD7E8801EA2B50000AE2CFD /* EditIncompleteDeadlinesViewController.swift */,
+				2AD7E8821EA5364300AE2CFD /* editDeadlinesViewController.swift */,
 				2AE225B91EA088EF003EDC26 /* DeadlinesTableViewCell.swift */,
-				2AD7E87E1EA2B4CC00AE2CFD /* EditCompleteDeadlinesViewController.swift */,
-				2A0FFAE71E4AA4D400160785 /* IncompleteDeadlinesViewController.swift */,
-				2A0FFAE91E4AA4F300160785 /* CompleteDeadlinesViewController.swift */,
 			);
 			name = "Assignments and Exams";
 			sourceTree = "<group>";
@@ -476,7 +467,6 @@
 				2A7F48BD1E683B3700FC991E /* AddTimetableViewController.swift in Sources */,
 				2AF808481E77543500AB3E58 /* CurrentEventsViewController.swift in Sources */,
 				2A06AB971E6E11540025B9AE /* AddClassViewController.swift in Sources */,
-				2AD7E87F1EA2B4CC00AE2CFD /* EditCompleteDeadlinesViewController.swift in Sources */,
 				2AE225BA1EA088EF003EDC26 /* DeadlinesTableViewCell.swift in Sources */,
 				2AE225B41E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift in Sources */,
 				2AFA69EC1E5A754400A61FA9 /* efuerzo.xcdatamodeld in Sources */,
@@ -485,11 +475,11 @@
 				2A787ADF1E435F5C00B82E6E /* RegisterViewController.swift in Sources */,
 				2AFA6A2E1E5C651300A61FA9 /* PasswordChangeViewController.swift in Sources */,
 				2A7970771E8EF7530061E5A6 /* ExplorePagingViewController.swift in Sources */,
+				2AD7E8831EA5364300AE2CFD /* editDeadlinesViewController.swift in Sources */,
 				2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */,
 				2AF808421E74E03D00AB3E58 /* PinkSectionHeaderView.swift in Sources */,
 				2A368EA01E5E26FF004BFD25 /* ExistingTimetableViewController.swift in Sources */,
 				2A3140D71E49466D0084327F /* HomePageViewController.swift in Sources */,
-				2A0FFAE81E4AA4D400160785 /* IncompleteDeadlinesViewController.swift in Sources */,
 				2A26E57B1E50E2950030E05B /* PreferencesViewController.swift in Sources */,
 				2A7AC33A1E54538500AB3966 /* ContactUsViewController.swift in Sources */,
 				2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */,
@@ -500,8 +490,6 @@
 				2A7970751E8D53A90061E5A6 /* LocationsViewController.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
 				2A2BF0661E8489D100CA6732 /* ViewControllerTableViewCell.swift in Sources */,
-				2A0FFAEA1E4AA4F300160785 /* CompleteDeadlinesViewController.swift in Sources */,
-				2AD7E8811EA2B50000AE2CFD /* EditIncompleteDeadlinesViewController.swift in Sources */,
 				2A55BFD71E5257A900555670 /* ManageAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

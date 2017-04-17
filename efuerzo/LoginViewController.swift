@@ -14,14 +14,22 @@ class LoginViewController: UIViewController {
     // Initialise storyboard outlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     // Once the view loads, by default call dismiss keyboard to hide keyboard once the screen is tapped
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         self.dismissKeyboard()
+        self.makeButtonRounded()
     }
     
+    // Function to round the corner of the login button
+    func makeButtonRounded(){
+        loginButton.layer.cornerRadius = 5
+        loginButton.layer.borderWidth = 1
+        loginButton.layer.borderColor = UIColor.black.cgColor
+    }
     
     // Function once login button is pressed
     @IBAction func LoginButtonTapped(_ sender: Any) {

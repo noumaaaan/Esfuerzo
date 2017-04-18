@@ -35,7 +35,15 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
     // Run this function when the view appears
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
-        self.deadlinesLabel.text = "Incomplete Deadlines"
+        
+        switch (segmentedControl.selectedSegmentIndex) {
+        case 0:
+            deadlinesLabel.text = "Incomplete Deadlines"
+        case 1:
+            deadlinesLabel.text = "Completed Deadlines"
+        default:
+            break
+        }
     }
     
     // Function to switch between the segmented control
@@ -63,7 +71,7 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
     
     // Set the height of the table rows
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 228
+        return 220
     }
     
     
@@ -120,6 +128,13 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
                 cell.descriptionNameLabel.text = array[2]
                 cell.timeDueLabel.text = "Due " + array[4]
                 cell.dueDateLabel.text = array[5]
+                
+                if (array[7] == "yes") {
+                    cell.timeRemainingLabel.textColor = UIColor.red
+                } else {
+                    cell.timeRemainingLabel.textColor = UIColor.green
+                }
+                
                 cell.timeRemainingLabel.text = "Time remaining " + array[6]
             }
         case 1:
@@ -175,7 +190,9 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
                         let resultValue = parseJSON["deadlines"] as! [String:AnyObject]
                         self.CompletedDeadlines = resultValue
                     }
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                 }
             } catch let error as NSError {
                 err = error
@@ -213,7 +230,9 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
                         let resultValue = parseJSON["deadlines"] as! [String:AnyObject]
                         self.IncompleteDeadlines = resultValue
                     }
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                 }
             } catch let error as NSError {
                 err = error

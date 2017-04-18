@@ -173,7 +173,6 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
                     if(checker == "Success"){
                         let resultValue = parseJSON["deadlines"] as! [String:AnyObject]
                         self.CompletedDeadlines = resultValue
-                        print(resultValue)
                     }
                     self.tableView.reloadData()
                 }
@@ -212,7 +211,6 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
                     if(checker == "Success"){
                         let resultValue = parseJSON["deadlines"] as! [String:AnyObject]
                         self.IncompleteDeadlines = resultValue
-                        print(resultValue)
                     }
                     self.tableView.reloadData()
                 }

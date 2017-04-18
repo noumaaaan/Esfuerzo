@@ -10,22 +10,14 @@ import UIKit
 
 class DeadlinesTableViewCell: UITableViewCell {
 
-
+    // Outlets for the deadlines controller in the table
     @IBOutlet weak var subjectNameLabel: UILabel!
     @IBOutlet weak var descriptionNameLabel: UILabel!
     @IBOutlet weak var dueDateLabel: UILabel!
-
     @IBOutlet weak var timeDueLabel: UILabel!
-    
     @IBOutlet weak var timeRemainingLabel: UILabel!
-    
     @IBOutlet weak var titleNameLabel: UILabel!
-    
-    
-    
 
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

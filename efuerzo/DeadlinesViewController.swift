@@ -124,12 +124,13 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
             }
         case 1:
             if let array = self.CompletedDeadlines?[String(indexPath.row + 1)] as? [String] {
+                
                 cell.subjectNameLabel.text = array[0]
                 cell.titleNameLabel.text = array[1]
                 cell.descriptionNameLabel.text = array[2]
-                cell.timeDueLabel.text = "Due " + array[4]
+                cell.timeDueLabel.text = "Was Due " + array[4]
                 cell.dueDateLabel.text = array[5]
-                cell.timeRemainingLabel.text = "Time remaining " + array[6]
+                cell.timeRemainingLabel.text = ""
             }
         default:
             break

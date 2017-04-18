@@ -10,12 +10,21 @@ import UIKit
 
 class DeadlinesTableViewCell: UITableViewCell {
 
+
     @IBOutlet weak var subjectNameLabel: UILabel!
     @IBOutlet weak var descriptionNameLabel: UILabel!
     @IBOutlet weak var dueDateLabel: UILabel!
-    @IBOutlet weak var titleNameLabel: UILabel!
-    @IBOutlet weak var timeRemainingLabel: UILabel!
+
     @IBOutlet weak var timeDueLabel: UILabel!
+    
+    @IBOutlet weak var timeRemainingLabel: UILabel!
+    
+    @IBOutlet weak var titleNameLabel: UILabel!
+    
+    
+    
+
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

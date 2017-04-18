@@ -1,51 +1,44 @@
 //
-//  DeadlinesViewController.swift
+//  PreferencesViewController.swift
 //  efuerzo
 //
-//  Created by Nouman Mehmood on 06/02/2017.
+//  Created by Nouman Mehmood on 12/02/2017.
 //  Copyright © 2017 Nouman Mehmood. All rights reserved.
 //
 
 import UIKit
 
-class DeadlinesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    // Initialise the storyboard outlets
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    // Initialising the outlets in the view
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var deadlinesLabel: UILabel!
     
-    // Instantiate variables
-    let userDetails: [String] = UserDefaults.standard.stringArray(forKey:"UserDetailsArray")!
-    var CompletedDeadlines: [String:AnyObject]?
-    var IncompleteDeadlines: [String:AnyObject]?
+    // Instantiate variables used within the class
+    let UserDetails = UserDefaults.standard.stringArray(forKey: "UserDetailsArray") ?? [String]()
+    var CompletedDeadlines: [String:AnyObject]!
+    var IncompleteDeadlines: [String:AnyObject]!
     var arr = [String]()
-    
-    // Run this function when the view loads
+
+    // On view load, do these functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
-        self.dismissKeyboard()
-
+        
         self.CompletedDeadlines = [String:AnyObject]()
         self.IncompleteDeadlines = [String:AnyObject]()
         
         self.retrieveCompletedDeadlines()
         self.retrieveIncompletedDeadlines()
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        
     }
-    
+
     // Run this function when the view appears
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
-        self.deadlinesLabel.text = "Incompleted Deadlines"
+        self.deadlinesLabel.text = "Incomplete Deadlines"
     }
     
-    // On the segmented deadlines action, reload the table and change the label
+    // Function to switch between the segmented control
     @IBAction func switchDeadlinesTableView(_ sender: Any) {
         self.tableView.reloadData()
         
@@ -57,63 +50,15 @@ class DeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
         default:
             break
         }
-        
     }
-    
     
     /*
      *  - START UITABLE FUNCTIONS
      */
     
-    // NUmber of sections in the table
+    // Return number of sections in the table
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-    }
-    
-    // The number of rows that will be in the table
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        var returnValue = 0
-        
-        switch (segmentedControl.selectedSegmentIndex) {
-        case 0:
-            returnValue = IncompleteDeadlines!.count
-        case 1:
-            returnValue = CompletedDeadlines!.count
-        default:
-            break
-        }
-        
-        return returnValue
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DeadlinesTableViewCell
-        
-        switch (segmentedControl.selectedSegmentIndex) {
-        case 0:
-            if let array = self.IncompleteDeadlines?[String(indexPath.row + 1)] as? [String] {
-                cell.subjectNameLabel.text = array[0]
-                cell.titleNameLabel.text = array[1]
-                cell.descriptionNameLabel.text = array[2]
-                cell.timeDueLabel.text = "Due " + array[4]
-                cell.dueDateLabel.text = array[5]
-                cell.timeRemainingLabel.text = "Time remaining: " + array[6]
-            }
-        case 1:
-            if let array = self.CompletedDeadlines?[String(indexPath.row + 1)] as? [String] {
-                cell.subjectNameLabel.text = array[0]
-                cell.titleNameLabel.text = array[1]
-                cell.descriptionNameLabel.text = array[2]
-                cell.timeDueLabel.text = "Due " + array[4]
-                cell.dueDateLabel.text = array[5]
-                cell.timeRemainingLabel.text = "Time remaining: " + array[6]
-            }
-        default:
-            break
-        }
-        return cell
     }
     
     // Set the height of the table rows
@@ -121,9 +66,27 @@ class DeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
         return 228
     }
     
+    
+    // The number of rows that will be in the table
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        var row_Count = 0
+        
+        switch (segmentedControl.selectedSegmentIndex) {
+        case 0:
+            row_Count = IncompleteDeadlines!.count
+        case 1:
+            row_Count = CompletedDeadlines!.count
+        default:
+            break
+        }
+        
+        return row_Count
+    }
+    
     // Navigate to the view controllers dependant upon what table in cell has been selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        
         switch (segmentedControl.selectedSegmentIndex) {
         case 0:
             // Convert the dictionary to array
@@ -141,9 +104,39 @@ class DeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
             break
         }
         self.performSegue(withIdentifier: "editDeadline", sender: self)
-
+        
     }
-
+    
+    // Populate the table with data from the arrays
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DeadlinesTableViewCell
+        
+        switch (segmentedControl.selectedSegmentIndex) {
+        case 0:
+            if let array = self.IncompleteDeadlines?[String(indexPath.row + 1)] as? [String] {
+                cell.subjectNameLabel.text = array[0]
+                cell.titleNameLabel.text = array[1]
+                cell.descriptionNameLabel.text = array[2]
+                cell.timeDueLabel.text = "Due " + array[4]
+                cell.dueDateLabel.text = array[5]
+                cell.timeRemainingLabel.text = "Time remaining " + array[6]
+            }
+        case 1:
+            if let array = self.CompletedDeadlines?[String(indexPath.row + 1)] as? [String] {
+                cell.subjectNameLabel.text = array[0]
+                cell.titleNameLabel.text = array[1]
+                cell.descriptionNameLabel.text = array[2]
+                cell.timeDueLabel.text = "Due " + array[4]
+                cell.dueDateLabel.text = array[5]
+                cell.timeRemainingLabel.text = "Time remaining " + array[6]
+            }
+        default:
+            break
+        }
+        return cell
+    }
+    
     // Prepare for segue by sending the array
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let DVC = segue.destination as! editDeadlinesViewController
@@ -158,7 +151,7 @@ class DeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
     func retrieveCompletedDeadlines(){
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveCompletedDeadlines.php");
         let request = NSMutableURLRequest(url:myUrl! as URL)
-        let user_id = userDetails[0]
+        let user_id = UserDetails[0]
         request.httpMethod = "POST";
         let postString = "user_id=\(user_id)";
         request.httpBody = postString.data(using: String.Encoding.utf8);
@@ -197,7 +190,7 @@ class DeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
     func retrieveIncompletedDeadlines(){
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/retrieveIncompleteDeadlines.php");
         let request = NSMutableURLRequest(url:myUrl! as URL)
-        let user_id = userDetails[0]
+        let user_id = UserDetails[0]
         request.httpMethod = "POST";
         let postString = "user_id=\(user_id)";
         request.httpBody = postString.data(using: String.Encoding.utf8);
@@ -231,5 +224,5 @@ class DeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
         task.resume();
         self.tableView.reloadData()
     }
-}
  
+}

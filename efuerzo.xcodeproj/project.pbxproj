@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A06AB971E6E11540025B9AE /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A06AB961E6E11540025B9AE /* AddClassViewController.swift */; };
+		2A0C22271EA65C8000883963 /* DeadlinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C22261EA65C8000883963 /* DeadlinesTableViewCell.swift */; };
 		2A26E57B1E50E2950030E05B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */; };
 		2A2BF0661E8489D100CA6732 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2BF0651E8489D100CA6732 /* ViewControllerTableViewCell.swift */; };
 		2A3140CB1E4943B50084327F /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3140CA1E4943B50084327F /* TimetableViewController.swift */; };
@@ -33,7 +34,6 @@
 		2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCC2881E74A1E10093BA65 /* CellView.swift */; };
 		2AD7E8831EA5364300AE2CFD /* editDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD7E8821EA5364300AE2CFD /* editDeadlinesViewController.swift */; };
 		2AE225B41E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */; };
-		2AE225BA1EA088EF003EDC26 /* DeadlinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE225B91EA088EF003EDC26 /* DeadlinesTableViewCell.swift */; };
 		2AF808401E74DF8C00AB3E58 /* PinkSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */; };
 		2AF808421E74E03D00AB3E58 /* PinkSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF808411E74E03D00AB3E58 /* PinkSectionHeaderView.swift */; };
 		2AF808481E77543500AB3E58 /* CurrentEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF808471E77543500AB3E58 /* CurrentEventsViewController.swift */; };
@@ -63,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		2A06AB961E6E11540025B9AE /* AddClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassViewController.swift; sourceTree = "<group>"; };
+		2A0C22261EA65C8000883963 /* DeadlinesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlinesTableViewCell.swift; sourceTree = "<group>"; };
 		2A26E57A1E50E2950030E05B /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		2A2BF0651E8489D100CA6732 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		2A3140CA1E4943B50084327F /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		2ACCC2881E74A1E10093BA65 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		2AD7E8821EA5364300AE2CFD /* editDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editDeadlinesViewController.swift; sourceTree = "<group>"; };
 		2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewDeadlineViewController.swift; sourceTree = "<group>"; };
-		2AE225B91EA088EF003EDC26 /* DeadlinesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeadlinesTableViewCell.swift; sourceTree = "<group>"; };
 		2AF8083F1E74DF8C00AB3E58 /* PinkSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinkSectionHeaderView.xib; sourceTree = "<group>"; };
 		2AF808411E74E03D00AB3E58 /* PinkSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkSectionHeaderView.swift; sourceTree = "<group>"; };
 		2AF808471E77543500AB3E58 /* CurrentEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentEventsViewController.swift; sourceTree = "<group>"; };
@@ -181,10 +181,10 @@
 		2A55BFDC1E5258BA00555670 /* Assignments and Exams */ = {
 			isa = PBXGroup;
 			children = (
+				2A0C22261EA65C8000883963 /* DeadlinesTableViewCell.swift */,
 				2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */,
 				2A3140CC1E4943C20084327F /* DeadlinesViewController.swift */,
 				2AD7E8821EA5364300AE2CFD /* editDeadlinesViewController.swift */,
-				2AE225B91EA088EF003EDC26 /* DeadlinesTableViewCell.swift */,
 			);
 			name = "Assignments and Exams";
 			sourceTree = "<group>";
@@ -467,7 +467,6 @@
 				2A7F48BD1E683B3700FC991E /* AddTimetableViewController.swift in Sources */,
 				2AF808481E77543500AB3E58 /* CurrentEventsViewController.swift in Sources */,
 				2A06AB971E6E11540025B9AE /* AddClassViewController.swift in Sources */,
-				2AE225BA1EA088EF003EDC26 /* DeadlinesTableViewCell.swift in Sources */,
 				2AE225B41E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift in Sources */,
 				2AFA69EC1E5A754400A61FA9 /* efuerzo.xcdatamodeld in Sources */,
 				2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */,
@@ -484,6 +483,7 @@
 				2A7AC33A1E54538500AB3966 /* ContactUsViewController.swift in Sources */,
 				2A787AE11E43B0A000B82E6E /* ForgotPassViewController.swift in Sources */,
 				2A4B5F511E9B297F00755B0D /* AboutEsfuerzoViewController.swift in Sources */,
+				2A0C22271EA65C8000883963 /* DeadlinesTableViewCell.swift in Sources */,
 				2AFA69EB1E59B89300A61FA9 /* SubjectsViewController.swift in Sources */,
 				2A7F48BB1E64C58E00FC991E /* InstructorViewController.swift in Sources */,
 				2A3140CD1E4943C20084327F /* DeadlinesViewController.swift in Sources */,

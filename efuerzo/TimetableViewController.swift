@@ -122,8 +122,8 @@ extension TimetableViewController: JTAppleCalendarViewDataSource, JTAppleCalenda
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MM yyyy"
         
-        let startDate = formatter.date(from: "01 03 2017")! // You can use date generated from a formatter
-        let endDate = formatter.date(from: "01 02 2030")!                                // You can also use dates created from this function
+        let startDate = formatter.date(from: "01 09 2016")! // You can use date generated from a formatter
+        let endDate = formatter.date(from: "01 01 2020")!                                // You can also use dates created from this function
         let calendar = Calendar.current                     // Make sure you set this up to your time zone. We'll just use default here
         let parameters = ConfigurationParameters(startDate: startDate,
                                                  endDate: endDate,

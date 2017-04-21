@@ -97,15 +97,13 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
         
         switch (segmentedControl.selectedSegmentIndex) {
         case 0:
-            // Convert the dictionary to array
-            for (value) in IncompleteDeadlines! {
-                arr.append("\(value)")
+            if let array = self.IncompleteDeadlines?[String(indexPath.row + 1)] as? [String] {
+                arr =  array
             }
             
         case 1:
-            // Convert the dictionary to array
-            for (value) in CompletedDeadlines! {
-                arr.append("\(value)")
+            if let array = self.CompletedDeadlines?[String(indexPath.row + 1)] as? [String] {
+                arr = array
             }
             
         default:

@@ -28,19 +28,24 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
         self.CompletedDeadlines = [String:AnyObject]()
         self.IncompleteDeadlines = [String:AnyObject]()
         
+        loadingAlert()
+        
         self.retrieveCompletedDeadlines()
         self.retrieveIncompletedDeadlines()
+        
+        dismiss(animated: false, completion: nil)
     }
 
     // Run this function when the view appears
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
-        
         switch (segmentedControl.selectedSegmentIndex) {
         case 0:
             deadlinesLabel.text = "Incomplete Deadlines"
+            self.tableView.reloadData()
         case 1:
             deadlinesLabel.text = "Completed Deadlines"
+            self.tableView.reloadData()
         default:
             break
         }
@@ -49,15 +54,29 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
     // Function to switch between the segmented control
     @IBAction func switchDeadlinesTableView(_ sender: Any) {
         self.tableView.reloadData()
-        
         switch (segmentedControl.selectedSegmentIndex) {
         case 0:
             deadlinesLabel.text = "Incomplete Deadlines"
+            self.tableView.reloadData()
         case 1:
             deadlinesLabel.text = "Completed Deadlines"
+            self.tableView.reloadData()
         default:
             break
         }
+    }
+    
+    // Present a loading alert at start
+    func loadingAlert(){
+        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
     }
     
     /*
@@ -124,7 +143,7 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
                 cell.subjectNameLabel.text = array[0]
                 cell.titleNameLabel.text = array[1]
                 cell.descriptionNameLabel.text = array[2]
-                cell.timeDueLabel.text = "Due " + array[4]
+                cell.timeDueLabel.text = array[4]
                 cell.dueDateLabel.text = array[5]
                 
                 if (array[7] == "yes") {
@@ -141,9 +160,10 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
                 cell.subjectNameLabel.text = array[0]
                 cell.titleNameLabel.text = array[1]
                 cell.descriptionNameLabel.text = array[2]
-                cell.timeDueLabel.text = "Was Due " + array[4]
+                cell.timeDueLabel.text = array[4]
                 cell.dueDateLabel.text = array[5]
-                cell.timeRemainingLabel.text = ""
+                cell.timeRemainingLabel.text = "Marked as Complete"
+                cell.timeRemainingLabel.textColor = UIColor.red
             }
         default:
             break
@@ -151,10 +171,12 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
-    // Prepare for segue by sending the array
+    // Prepare for segue by sending the array only if the segue is connecting to the edit deadline controller 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let DVC = segue.destination as! editDeadlinesViewController
-        DVC.arr = arr
+        if segue.identifier == "editDeadline" {
+            let DVC = segue.destination as! editDeadlinesViewController
+            DVC.arr = arr
+        }
     }
     
     /*

@@ -97,7 +97,7 @@ class LoginViewController: UIViewController {
                             return
                         }
                     }
-                
+
                     // If successful, initiate session and satore all the fields into an array
                     if (resultValue == "Success"){
 

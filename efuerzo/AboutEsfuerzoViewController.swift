@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutEsfuerzoViewController: UIPageViewController {
+class AboutEsfuerzoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +16,13 @@ class AboutEsfuerzoViewController: UIPageViewController {
     
     // Send the users to the calendar framework page
     @IBAction func ShowCalendarFramework(_ sender: Any) {
-        let githubPage = URL(string: "https://patchthecode.github.io/")!
+        let githubPage = URL(string: "https://github.com/patchthecode/JTAppleCalendar")!
         UIApplication.shared.open(githubPage)
     }
 
+    // Send the users to the Checkbox framework page
+    @IBAction func showCheckboxFramework(_ sender: Any) {
+        let githubPage = URL(string: "https://github.com/Marxon13/M13Checkbox")!
+        UIApplication.shared.open(githubPage)
+    }
 }

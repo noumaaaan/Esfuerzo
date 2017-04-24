@@ -47,7 +47,6 @@ class editDeadlinesViewController: UIViewController, UIPickerViewDelegate, UIPic
         
         createDatePicker()
         createTimePicker()
-        
     }
     
     // Function to create the date picker
@@ -147,6 +146,7 @@ class editDeadlinesViewController: UIViewController, UIPickerViewDelegate, UIPic
         self.descriptionTextField.layer.borderColor = borderColor.cgColor
         self.descriptionTextField.layer.borderWidth = 0.8
         self.descriptionTextField.layer.cornerRadius = 5
+        self.descriptionTextField.layer.backgroundColor = UIColor.clear.cgColor
     }
     
     // Function to set default values for the textfields
@@ -222,6 +222,8 @@ class editDeadlinesViewController: UIViewController, UIPickerViewDelegate, UIPic
                         
                         DispatchQueue.main.async{
                             self.displayAlertMessage(userTitle: "Success", userMessage: "Successfully updated the database for this deadline", alertAction: "Return")
+                            _ = self.navigationController?.popViewController(animated: true) // Go to previous view
+                            return
                         }
                     }
                 }

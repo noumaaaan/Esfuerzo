@@ -5,6 +5,8 @@
 //  Created by Nouman Mehmood on 12/02/2017.
 //  Copyright © 2017 Nouman Mehmood. All rights reserved.
 //
+// http://stackoverflow.com/questions/27960556/loading-an-overlay-when-running-long-tasks-in-ios
+// For the alert
 
 import UIKit
 

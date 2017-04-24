@@ -33,6 +33,17 @@ class LoginViewController: UIViewController {
     
     // Function once login button is pressed
     @IBAction func LoginButtonTapped(_ sender: Any) {
+        
+        // Alert to tell user to wait while JSON request processes
+        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
     
         let username = usernameTextField.text!
         let password = passwordTextField.text!
@@ -70,6 +81,7 @@ class LoginViewController: UIViewController {
                 if let parseJSON = json {
                 
                     let resultValue:String = parseJSON["status"] as! String;
+                    self.dismiss(animated: false, completion: nil)
                     
                     // If there is an error, display an alert message and return
                     if (resultValue == "Error"){

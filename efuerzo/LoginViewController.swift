@@ -14,9 +14,36 @@ class LoginViewController: UIViewController {
     // Initialise storyboard outlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    // Once the view loads, by default call dismiss keyboard to hide keyboard once the screen is tapped
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        self.dismissKeyboard()
+        self.makeButtonRounded()
+    }
+    
+    // Function to round the corner of the login button
+    func makeButtonRounded(){
+        loginButton.layer.cornerRadius = 5
+        loginButton.layer.borderWidth = 1
+        loginButton.layer.borderColor = UIColor.black.cgColor
+    }
     
     // Function once login button is pressed
     @IBAction func LoginButtonTapped(_ sender: Any) {
+        
+        // Alert to tell user to wait while JSON request processes
+        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
     
         let username = usernameTextField.text!
         let password = passwordTextField.text!
@@ -30,7 +57,7 @@ class LoginViewController: UIViewController {
         
         // If not empty, do a post request to the server with the details
         let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/userLogin.php");
-        let request = NSMutableURLRequest(url:myUrl as! URL)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         
         request.httpMethod = "POST";
         let postString = "username=\(username)&password=\(password)";
@@ -40,7 +67,10 @@ class LoginViewController: UIViewController {
             data, response, error in
 
             if error != nil {
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
+                DispatchQueue.main.async{
+                    self.displayAlertMessage(userTitle: "Error", userMessage: "The internet connection appears to be offline", alertAction: "Try again")
+                }
                 return
             }
             
@@ -51,6 +81,7 @@ class LoginViewController: UIViewController {
                 if let parseJSON = json {
                 
                     let resultValue:String = parseJSON["status"] as! String;
+                    self.dismiss(animated: false, completion: nil)
                     
                     // If there is an error, display an alert message and return
                     if (resultValue == "Error"){
@@ -78,10 +109,10 @@ class LoginViewController: UIViewController {
                             return
                         }
                     }
-                
+
                     // If successful, initiate session and satore all the fields into an array
                     if (resultValue == "Success"){
-                        
+
                         let storedUserID: String = parseJSON["user_id"] as! String;
                         let storedUsername: String = parseJSON["username"] as! String;
                         let storedFirstname: String = parseJSON["firstname"] as! String;
@@ -89,8 +120,10 @@ class LoginViewController: UIViewController {
                         let storedUniName: String = parseJSON["uni_name"] as! String;
                         let storedUniCourse: String = parseJSON["uni_course"] as! String;
                         let storedEmail: String = parseJSON["email"] as! String;
+                        let storedVerificationCode: String = parseJSON["verification_code"] as! String;
+                        let theQuote: String = parseJSON["quote"] as! String
                         
-                        let array = [storedUserID, storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail];
+                        let array = [storedUserID, storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail, storedVerificationCode, theQuote]
                         
                         UserDefaults.standard.set(array, forKey: "UserDetailsArray");
                         UserDefaults.standard.set(true, forKey: "isUserLoggedIn");
@@ -107,6 +140,13 @@ class LoginViewController: UIViewController {
                     }
                 }
             } catch let error as NSError {
+                let dataSet = String(data: data!, encoding: .utf8)
+                
+                print("Trying again")
+                if (dataSet?.isEmpty)!{
+                    self.LoginButtonTapped(self)
+                }
+
                 err = error
                 print(err!);
             }
@@ -114,20 +154,7 @@ class LoginViewController: UIViewController {
         task.resume();
     }
 
-    // Once the view loads, by default call dismiss keyboard to hide keyboard once the screen is tapped
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
-        self.dismissKeyboard()
-        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
-        Reach().monitorReachabilityChanges()
-    }
-    
-    func networkStatusChanged(_ notification: Notification) {
-        let int_check = (notification as NSNotification).userInfo
-        print(int_check! as! [String: NSObject])
-    }
-    
+
     // Function to display an alert message parameters for the title, message and action type
     func displayAlertMessage(userTitle: String, userMessage:String, alertAction:String){
         let theAlert = UIAlertController(title: userTitle, message: userMessage, preferredStyle: UIAlertControllerStyle.alert)

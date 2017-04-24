@@ -13,7 +13,7 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
     // On view load, do these functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.welcomeMessageLabel.text  = "Welcome " + UserDetails[1] + "!"
+        self.welcomeMessageLabel.text  = "Welcome " + UserDetails[2] + "!"
     }
     
     // Initialising the outlets in the view
@@ -25,16 +25,9 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
     
     // Creating the arrays to populate the table
     let walkthrough = ["How to use this app", "Add your own timetable"]
-    let walkthroughDetails = ["Learn how to use this application in detail", "Add your own timetable if you're from Aston"]
-    
-    let prefArray1  = ["Add Subjects", "Add Instructors", "Add Locations", "Days of the week", "Notification Settings"]
-    let prefArrat1Details = ["Manage the subjects that make your timetable", "Manage the different lecturers or tutors that teach your subjects", "Manage the different locations at which you take your classes", "How many days of the week will the timetable run for", "Manage the notifications that you will receive from this app"]
-    
-    let prefArray2  = ["Manage Account", "Change your password", "Contact Us", "Privacy Policy", "About Esfuerzo"]
-    let prefArray2Details = ["Manage the details that are associated with your account", "Change the password associated with this account", "Any questions or want a feature impleemnted then let us know", "We take security very seriously. See our Privacy Policy", "The inspiration behind the app"]
-    
+    let prefArray1  = ["Add Subjects", "Add Instructors", "Add Locations"]
+    let prefArray2  = ["Manage Account", "Change your password", "Contact Us", "About Esfuerzo"]
     let prefArray3  = ["Like us on Facebook", "Follow us on Twitter"]
-    let prefArray3Details = ["Like and follow our Facebook page for updates", "Follow us on Twitter to find out more"]
     
     // Log out of the application once the logout button has been tapped
     @IBAction func LogoutButtonTapped(_ sender: Any) {
@@ -68,23 +61,15 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
         
         if (indexPath.section == 0){
             cell.textLabel?.text = walkthrough[indexPath.row]
-            cell.detailTextLabel?.text = walkthroughDetails[indexPath.row]
-            cell.detailTextLabel?.textColor = UIColor(red: 0.78, green: 0.78, blue: 0.78, alpha: 1.0)
             
         } else if (indexPath.section == 1){
             cell.textLabel?.text = prefArray1[indexPath.row]
-            cell.detailTextLabel?.text = prefArrat1Details[indexPath.row]
-            cell.detailTextLabel?.textColor = UIColor(red: 0.78, green: 0.78, blue: 0.78, alpha: 1.0)
             
         } else if (indexPath.section == 2){
             cell.textLabel?.text = prefArray2[indexPath.row]
-            cell.detailTextLabel?.text = prefArray2Details[indexPath.row]
-            cell.detailTextLabel?.textColor = UIColor(red: 0.78, green: 0.78, blue: 0.78, alpha: 1.0)
         
         } else {
             cell.textLabel?.text = prefArray3[indexPath.row]
-            cell.detailTextLabel?.text = prefArray3Details[indexPath.row]
-            cell.detailTextLabel?.textColor = UIColor(red: 0.78, green: 0.78, blue: 0.78, alpha: 1.0)
         }
         return cell
     }
@@ -117,7 +102,7 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
                 case 1:
                     segueIdentifier = "addOwnTimetable"
                 default:
-                    segueIdentifier = "aboutEsfuerzoView"
+                    segueIdentifier = "appWalkthroughView"
                 
             }
             self.performSegue(withIdentifier: segueIdentifier, sender: self)
@@ -131,12 +116,8 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
                     segueIdentifier = "addInstructorView"
                 case 2:
                     segueIdentifier = "addLocationsView"
-                case 3:
-                    segueIdentifier = "daysOfWeekView"
-                case 4:
-                    segueIdentifier = "NotifSettingsView"
                 default:
-                    segueIdentifier = "aboutEsfuerzoView"
+                    segueIdentifier = "addSubjectView"
             }
             self.performSegue(withIdentifier: segueIdentifier, sender: self)
             
@@ -150,9 +131,7 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
             case 2:
                 segueIdentifier = "makeSuggestView"
             case 3:
-                segueIdentifier = "privacyPolicyView"
-            case 4:
-                segueIdentifier = "aboutEsfuerzoView"
+                segueIdentifier = "aboutEsfuerzo"
             default:
                 segueIdentifier = "aboutEsfuerzoView"
             }

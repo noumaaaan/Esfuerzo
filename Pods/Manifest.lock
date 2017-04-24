@@ -1,0 +1,25 @@
+PODS:
+  - JTAppleCalendar (7.0.0)
+  - M13Checkbox (3.1.3)
+
+DEPENDENCIES:
+  - JTAppleCalendar (from `https://github.com/patchthecode/JTAppleCalendar.git`, branch `master`)
+  - M13Checkbox
+
+EXTERNAL SOURCES:
+  JTAppleCalendar:
+    :branch: master
+    :git: https://github.com/patchthecode/JTAppleCalendar.git
+
+CHECKOUT OPTIONS:
+  JTAppleCalendar:
+    :commit: cf52a57253b975c13ccdb199a20a156ae0ca4493
+    :git: https://github.com/patchthecode/JTAppleCalendar.git
+
+SPEC CHECKSUMS:
+  JTAppleCalendar: 68e582027f35f1256b576e63688ae199bbcb1c1e
+  M13Checkbox: c132a7e0eb964731855eff67b883a0b21b7c0977
+
+PODFILE CHECKSUM: 1b0daf214847143baeec701857a58d82ff66f4c3
+
+COCOAPODS: 1.2.0

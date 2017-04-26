@@ -33,17 +33,6 @@ class LoginViewController: UIViewController {
     
     // Function once login button is pressed
     @IBAction func LoginButtonTapped(_ sender: Any) {
-        
-        // Alert to tell user to wait while JSON request processes
-        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
-        
-        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        loadingIndicator.startAnimating();
-        
-        alert.view.addSubview(loadingIndicator)
-        present(alert, animated: true, completion: nil)
     
         let username = usernameTextField.text!
         let password = passwordTextField.text!
@@ -81,7 +70,6 @@ class LoginViewController: UIViewController {
                 if let parseJSON = json {
                 
                     let resultValue:String = parseJSON["status"] as! String;
-                    self.dismiss(animated: false, completion: nil)
                     
                     // If there is an error, display an alert message and return
                     if (resultValue == "Error"){
@@ -123,7 +111,10 @@ class LoginViewController: UIViewController {
                         let storedVerificationCode: String = parseJSON["verification_code"] as! String;
                         let theQuote: String = parseJSON["quote"] as! String
                         
-                        let array = [storedUserID, storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail, storedVerificationCode, theQuote]
+                        let startWeek: String = parseJSON["monday"] as! String
+                        let endWeek: String = parseJSON["sunday"] as! String
+                        
+                        let array = [storedUserID, storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail, storedVerificationCode, theQuote, startWeek, endWeek]
                         
                         UserDefaults.standard.set(array, forKey: "UserDetailsArray");
                         UserDefaults.standard.set(true, forKey: "isUserLoggedIn");

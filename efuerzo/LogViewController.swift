@@ -17,6 +17,7 @@ class LogViewController: UIViewController, UITableViewDataSource, UITableViewDel
     // Instantiate variables to be used within this class
     let UserDetails = UserDefaults.standard.stringArray(forKey: "UserDetailsArray") ?? [String]()
     var subjectsLogDict: [String:AnyObject]?
+    var arr = [String]()
     
     // Run this function everytime that the view loads
     override func viewDidLoad() {
@@ -72,10 +73,29 @@ class LogViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LogTableViewCell
         
         if let array = self.subjectsLogDict?[String(indexPath.row + 1)] as? [String] {
-            print(array)
+            
             cell.subjectNameLabel.text = array[1]
+            cell.logIDLabel.text = "ID: " + array[0]
+            cell.totalHoursLabel.text = array[2] //  required hours
+            cell.hoursWorkedLabel.text = array[3] // total hours worked which will be updated value
+            
+//            if (array[2] > array[3]){
+//                cell.backgroundColor = UIColor.red
+//            } else {
+//                cell.backgroundColor = UIColor.green
+//            }
+            
+            arr = array
         }
         return cell
+    }
+    
+    // Prepare for segue by sending the array only if the segue is connecting to the edit deadline controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editLog" {
+            let DVC = segue.destination as! EditSubjectLogViewController
+            DVC.arr = arr
+        }
     }
     
     /*

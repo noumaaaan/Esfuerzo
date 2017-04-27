@@ -14,6 +14,7 @@ class LogTableViewCell: UITableViewCell {
     @IBOutlet weak var subjectNameLabel: UILabel!
     @IBOutlet weak var hoursWorkedLabel: UILabel!
     @IBOutlet weak var totalHoursLabel: UILabel!
+    @IBOutlet weak var logIDLabel: UILabel!
     
     
     override func awakeFromNib() {

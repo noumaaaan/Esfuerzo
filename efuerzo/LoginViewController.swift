@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                 if let parseJSON = json {
-                
+                    
                     let resultValue:String = parseJSON["status"] as! String;
                     
                     // If there is an error, display an alert message and return
@@ -101,26 +101,28 @@ class LoginViewController: UIViewController {
                     // If successful, initiate session and satore all the fields into an array
                     if (resultValue == "Success"){
 
-                        let storedUserID: String = parseJSON["user_id"] as! String;
-                        let storedUsername: String = parseJSON["username"] as! String;
-                        let storedFirstname: String = parseJSON["firstname"] as! String;
-                        let storedSurname: String = parseJSON["surname"] as! String;
-                        let storedUniName: String = parseJSON["uni_name"] as! String;
-                        let storedUniCourse: String = parseJSON["uni_course"] as! String;
+                        let storedUserID: String = parseJSON["user_id"] as! String
+                        let storedUsername: String = parseJSON["username"] as! String
+                        let storedFirstname: String = parseJSON["firstname"] as! String
+                        let storedSurname: String = parseJSON["surname"] as! String
+                        let storedUniName: String = parseJSON["uni_name"] as! String
+                        let storedUniCourse: String = parseJSON["uni_course"] as! String
                         let storedEmail: String = parseJSON["email"] as! String;
-                        let storedVerificationCode: String = parseJSON["verification_code"] as! String;
+                        let storedVerificationCode: String = parseJSON["verification_code"] as! String
                         let theQuote: String = parseJSON["quote"] as! String
                         
                         let startWeek: String = parseJSON["monday"] as! String
                         let endWeek: String = parseJSON["sunday"] as! String
                         
-                        let array = [storedUserID, storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail, storedVerificationCode, theQuote, startWeek, endWeek]
+                        let logsUpdate: String = parseJSON["logs_update"] as! String
+                        
+                        let array = [storedUserID, storedUsername, storedFirstname, storedSurname, storedUniName, storedUniCourse, storedEmail, storedVerificationCode, theQuote, startWeek, endWeek, logsUpdate]
                         
                         UserDefaults.standard.set(array, forKey: "UserDetailsArray");
                         UserDefaults.standard.set(true, forKey: "isUserLoggedIn");
                         UserDefaults.standard.synchronize();
                         
-                        print("Successfully logged in with:")
+                        print("User Details:")
                         print(array)
                         
                         DispatchQueue.main.async{

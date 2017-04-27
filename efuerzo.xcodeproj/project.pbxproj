@@ -34,6 +34,7 @@
 		2A90CE121EAE89D400D8DD88 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A90CE111EAE89D400D8DD88 /* LogViewController.swift */; };
 		2A90CE141EAE8A0100D8DD88 /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A90CE131EAE8A0100D8DD88 /* LogTableViewCell.swift */; };
 		2A90CE161EAF14BA00D8DD88 /* CreateSubjectLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A90CE151EAF14BA00D8DD88 /* CreateSubjectLogViewController.swift */; };
+		2A90CE181EB035ED00D8DD88 /* EditSubjectLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A90CE171EB035ED00D8DD88 /* EditSubjectLogViewController.swift */; };
 		2ACCC2891E74A1E10093BA65 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCC2881E74A1E10093BA65 /* CellView.swift */; };
 		2AD7E8831EA5364300AE2CFD /* editDeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD7E8821EA5364300AE2CFD /* editDeadlinesViewController.swift */; };
 		2AE225B41E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */; };
@@ -99,6 +100,7 @@
 		2A90CE111EAE89D400D8DD88 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		2A90CE131EAE8A0100D8DD88 /* LogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
 		2A90CE151EAF14BA00D8DD88 /* CreateSubjectLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSubjectLogViewController.swift; sourceTree = "<group>"; };
+		2A90CE171EB035ED00D8DD88 /* EditSubjectLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSubjectLogViewController.swift; sourceTree = "<group>"; };
 		2ACCC2881E74A1E10093BA65 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		2AD7E8821EA5364300AE2CFD /* editDeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editDeadlinesViewController.swift; sourceTree = "<group>"; };
 		2AE225B31E9BBE2B003EDC26 /* AddNewDeadlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewDeadlineViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				2A90CE111EAE89D400D8DD88 /* LogViewController.swift */,
+				2A90CE171EB035ED00D8DD88 /* EditSubjectLogViewController.swift */,
 				2A90CE151EAF14BA00D8DD88 /* CreateSubjectLogViewController.swift */,
 				2A90CE131EAE8A0100D8DD88 /* LogTableViewCell.swift */,
 			);
@@ -508,6 +511,7 @@
 				2A7970751E8D53A90061E5A6 /* LocationsViewController.swift in Sources */,
 				2A90CE141EAE8A0100D8DD88 /* LogTableViewCell.swift in Sources */,
 				2A787AAD1E42A9C000B82E6E /* AppDelegate.swift in Sources */,
+				2A90CE181EB035ED00D8DD88 /* EditSubjectLogViewController.swift in Sources */,
 				2A2BF0661E8489D100CA6732 /* ViewControllerTableViewCell.swift in Sources */,
 				2A90CE161EAF14BA00D8DD88 /* CreateSubjectLogViewController.swift in Sources */,
 				2A55BFD71E5257A900555670 /* ManageAccountViewController.swift in Sources */,

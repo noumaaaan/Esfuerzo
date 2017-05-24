@@ -7,48 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08382E7D26A28A9FCC682CE8773E92FD /* JTAppleCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC996E71751B7D96098B11335F23098 /* JTAppleCalendar-dummy.m */; };
-		0984342BAD3A4814046D08F51D4D08ED /* JTAppleCalendarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714414F1CE29B9094BE251A1D3BD1EF4 /* JTAppleCalendarDelegateProtocol.swift */; };
-		291AEF2D4987DE157A7C780266F708DB /* JTAppleCalendarLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685E5E3EB1AA4C683B06B5555D0F75F /* JTAppleCalendarLayoutProtocol.swift */; };
-		291C97F67117E2252975C1401CA96BBD /* GlobalFunctionsAndExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C16524C2EA5314A632F4AADD9B15BE /* GlobalFunctionsAndExtensions.swift */; };
-		3062913423894A25D94A9B884543FCEA /* JTCalendarProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A5D590AA7075276C220E1F8F90A3A /* JTCalendarProtocols.swift */; };
-		3AFA54C6DC0961AD0F4CC8A4F1AF915E /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17C97120680F1D4FC43B72E5FF3999 /* M13CheckboxDisclosurePathGenerator.swift */; };
-		3D976DD35C822B9B6971ED06121B4A44 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870E03142A419BE02121894892D312A4 /* M13CheckboxFlatController.swift */; };
-		3E2FFD3C073383B859F71C2B1411FA89 /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827E6ABFD438CE64168619E8F7404AB /* M13Checkbox+IB.swift */; };
-		40897730B01BE8C60FB61A02DD7A1F6A /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278E12B5ABCF087F1EF212AA8DD02E3 /* M13CheckboxStrokeController.swift */; };
-		445378EF15B25DB3370FF77B2F6F42D7 /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9277C92428A3A29DB6E29E8B63E0CFAD /* M13Checkbox.swift */; };
-		68E9C0160033DF98EFD56F10537B4AE0 /* JTAppleCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C177A469894190891ED1C42D1F26DE /* JTAppleCalendarView.swift */; };
-		6B7F6283CE6F6418FD195E43D2216FBF /* M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67183F61910E857D99C75D122B2A39A9 /* M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6DF9319823D54C2D6E2B8B2A4CDC732B /* CalendarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227C61AB4BC1A935B0995848282E0EB /* CalendarEnums.swift */; };
-		6F504911668EF63A65494DB9EBFF0C72 /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2F3C59B35CA4FBD5F35D7F3F2BD398 /* JTAppleCalendarLayout.swift */; };
-		76D3E2602CFAE6474D2DFA89F5328A24 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEDD8923135738B8529D69B8479B8BF /* M13CheckboxPathGenerator.swift */; };
-		80CD994ABA1A2B01AD1838A4D4BB794C /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0063EFB9155304EC733FF8B0F8CBE85F /* M13CheckboxFillController.swift */; };
-		80E34254247C5B1984E2FB9EC58774E4 /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A5CE6C63908AE9BEE34FED91E02BB /* M13CheckboxDotController.swift */; };
-		85CB53B9E438E280DA1690CCFD778689 /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8E0EE0B636330F645ADAE057555D9F /* M13CheckboxRadioPathGenerator.swift */; };
+		0383A13C6B7C59A3D8EA592B545DABA0 /* JTAppleCalendarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8C0908895ADDB294430C0D6966BDA /* JTAppleCalendarDelegateProtocol.swift */; };
+		18904C96207EA9E40B4E71F855201AD8 /* JTAppleCalendarVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E625B1CB2E49D5790577499443AF33CB /* JTAppleCalendarVariables.swift */; };
+		21A3A4A6EF95F8704DC18E4E5F509D07 /* JTAppleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925A1F90198F54E95A885EB6084A624A /* JTAppleCollectionReusableView.swift */; };
+		2856845AB8FCE3B1D319091061F593EF /* UserInteractionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91980593ED16E608186317CAEE2A8B20 /* UserInteractionFunctions.swift */; };
+		3AFA54C6DC0961AD0F4CC8A4F1AF915E /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F1746C515794F7CD9834838452123 /* M13CheckboxDisclosurePathGenerator.swift */; };
+		3D976DD35C822B9B6971ED06121B4A44 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B107FC5BD174DD078B3901FFF54208 /* M13CheckboxFlatController.swift */; };
+		3E2FFD3C073383B859F71C2B1411FA89 /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C9974AB7EC2E55FD3C0D80F638C14E /* M13Checkbox+IB.swift */; };
+		40897730B01BE8C60FB61A02DD7A1F6A /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5017424772F3D6CCDD79C7686F60E29F /* M13CheckboxStrokeController.swift */; };
+		42F0A3DBCAC670C336C5C988F6609D98 /* UICollectionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A56B5E39063B491E8139487D10E3F /* UICollectionViewDelegates.swift */; };
+		445378EF15B25DB3370FF77B2F6F42D7 /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B045D8EEDBD4A4C3070EC94C0982C0 /* M13Checkbox.swift */; };
+		53D7D34D0142A101314ABFA663AC9D08 /* JTAppleCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CB4A219D45108AAB00566B205DE6EC /* JTAppleCalendarView.swift */; };
+		6AFAEAA8F64C152BDEED3D719DF87883 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
+		6B7F6283CE6F6418FD195E43D2216FBF /* M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F525489020E76F1F6746483B30A8E4 /* M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DE7D8CE614DBA55D744EDE81C632AD8 /* CalendarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD50F4C22C0ED8DDA84677B084B2AF /* CalendarStructs.swift */; };
+		6E8E4422AA0E96DCBB9D329BDFFB881A /* GlobalFunctionsAndExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237A4A5CDC29DDC49CA52B217FBDAF5 /* GlobalFunctionsAndExtensions.swift */; };
+		76D3E2602CFAE6474D2DFA89F5328A24 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABFD95653DC61C4C67F292D830A210C /* M13CheckboxPathGenerator.swift */; };
+		7BE39092951B492E5954D8012747BFD0 /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6839D2A37EE6118BA8161FF76E56CB11 /* JTAppleCalendarLayout.swift */; };
+		80CD994ABA1A2B01AD1838A4D4BB794C /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB138251049E43C247C7B050F8E3719D /* M13CheckboxFillController.swift */; };
+		80E34254247C5B1984E2FB9EC58774E4 /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282B1BB1C9990E98067B948A7C06CCFF /* M13CheckboxDotController.swift */; };
+		85CB53B9E438E280DA1690CCFD778689 /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE802F36CD72EF2BFC8453F45FCDDC /* M13CheckboxRadioPathGenerator.swift */; };
 		86C713C329C0814CB0ECCC0FFD4EF091 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */; };
-		8ED3FB14D1852DD05FDF6E23E94A4657 /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CE992E132FD27CBFBC9F37B6137B88 /* M13CheckboxAddRemovePathGenerator.swift */; };
-		946C6CBFEA09D44A18C88E91699F7EE0 /* JTAppleCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74EBA5B4409B388B0084A1D15EA28795 /* JTAppleCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87329FA016F0D57803855BCE3E90EC82 /* JTCalendarProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095941CAEE288CB8E050A73B1E7F191B /* JTCalendarProtocols.swift */; };
+		8ED3FB14D1852DD05FDF6E23E94A4657 /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E2BEC54B1DADC60308E40731F61F84 /* M13CheckboxAddRemovePathGenerator.swift */; };
 		9A347698012FB7CC6E2574BF3BFA6DD0 /* Pods-efuerzo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD9F1EAE2390DD9155FBBA742179E484 /* Pods-efuerzo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A12F7F444841CB43AAB3D26C6FD51154 /* JTAppleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1792C3A776E66F36E049B0EDA4B7845 /* JTAppleCell.swift */; };
-		A67A319B3C48CF9105DF5DC401AE1858 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
-		AAE54CDA46FD620F4BC54BC583EA255C /* M13Checkbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E0CCE4A2E34EAF0DA968AFFB2D0323 /* M13Checkbox-dummy.m */; };
+		AAE54CDA46FD620F4BC54BC583EA255C /* M13Checkbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4781C75D863327E18ED0F68914FB916E /* M13Checkbox-dummy.m */; };
 		AC3809C0D72C84E9F1E59D6514CCE655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
-		BCB82BDDA7C30F0B0AFE479CC479B522 /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA8CF5252EA2FBBAA0C678C6AFFD82 /* M13CheckboxExpandController.swift */; };
-		C277B9EAC728D880FF1F15EE98C8B200 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0264A688503B60FAA951CA8DBD16CC6C /* M13CheckboxController.swift */; };
-		C2FAAAB9EFBF4E41159AFD798532FC44 /* UIScrollViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFE9F92AAB3964C71C3A45C5EFF5224 /* UIScrollViewDelegates.swift */; };
-		C6D0B50C214C9E7CC815F2773D702779 /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F6CCEDB8812233549DEE954AFE464 /* M13CheckboxAnimationGenerator.swift */; };
+		AD07BFC6787F19F9D7CADB48C114FDB7 /* JTAppleCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7412C02AFD8CCB9E13757E7AEEE10446 /* JTAppleCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCB82BDDA7C30F0B0AFE479CC479B522 /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222453A6438206771DCEA81D8DEA7D1E /* M13CheckboxExpandController.swift */; };
+		C277B9EAC728D880FF1F15EE98C8B200 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A1D1D9BC1CE76C11A7AA2F61B6B25 /* M13CheckboxController.swift */; };
+		C6D0B50C214C9E7CC815F2773D702779 /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815A26EE609693D05F9BA41C06C38FD /* M13CheckboxAnimationGenerator.swift */; };
 		C85C1170ADDE3E04A0E9C9B6385BE5BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */; };
-		C8D41C0D4E89BE8510BA40F04EFF4FA8 /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887BFE8244A1AAD45EBEE0CE4BD0115 /* M13CheckboxCheckPathGenerator.swift */; };
-		CCCA09A8687FE41B271A73F9236B92AE /* UserInteractionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F35B56035FF00A439008BF0251174 /* UserInteractionFunctions.swift */; };
-		D6039515F84B2167BBAC8D1CE12A5F4E /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB611344368846F40E2133943B4BA2F9 /* M13CheckboxGestureRecognizer.swift */; };
-		D6528D5235E75D675C66C856DBF8440F /* CalendarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8680F1C1901CC19879C32C1344A75 /* CalendarStructs.swift */; };
-		DF0C2D1658CE5249F8DD80736382F4C7 /* JTAppleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248AC73949DA4FAE0E331F46CC1A64E9 /* JTAppleCollectionReusableView.swift */; };
-		E317F3D2E4962363FF37471393F56C89 /* UICollectionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC279B7DB406995570F4513B80B40584 /* UICollectionViewDelegates.swift */; };
+		C8D41C0D4E89BE8510BA40F04EFF4FA8 /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26801E072D9F95F79F3C020E6E408BEE /* M13CheckboxCheckPathGenerator.swift */; };
+		D6039515F84B2167BBAC8D1CE12A5F4E /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC2361651E655DA4BE87F4E1CE2EB6B /* M13CheckboxGestureRecognizer.swift */; };
+		E10E15A8A65DB167DE5046915870021A /* JTAppleCalendarLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC34AC0CEDA1983C7AC15FFFA10A00F /* JTAppleCalendarLayoutProtocol.swift */; };
+		E1CF59B57CC636FECACC39325231B177 /* CalendarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508CD5C06A27ED284C347AAF4DCA347 /* CalendarEnums.swift */; };
+		E4E19B08166BF4E9E368134D68E9C7DE /* JTAppleCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F94A2ABF8DAE5A7C7BDAF33582F099F /* JTAppleCalendar-dummy.m */; };
 		E8D99FC5B7E0D632A390C03FA1BF2BCA /* Pods-efuerzo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B038DEE2B25766006C286F1F22FDBD19 /* Pods-efuerzo-dummy.m */; };
 		EC9653C8D82976560AFA25058051FC8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
-		F7A5B0214108C732898DD2C00BA6FE56 /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B741DB8F858EDE7FEB81CE81B435BD /* M13CheckboxBounceController.swift */; };
-		FA2B271AAF040F6C1B860C6C3DF0558F /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01A780E93EE79D19B0504935460758B /* M13CheckboxSpiralController.swift */; };
-		FFF489DE367C237C0E8F7E4442DA06D7 /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB16F846A7B2A8BC1CD5EF996D53069 /* M13CheckboxFadeController.swift */; };
+		F2BB49EF903A70B7B68565CCE233FB83 /* JTAppleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60543A047F4B8FEA6A7D87CC24539927 /* JTAppleCell.swift */; };
+		F7A5B0214108C732898DD2C00BA6FE56 /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6470C61F7BDEAC4487E39FB6F5F50 /* M13CheckboxBounceController.swift */; };
+		F963037A1450F74FAE911C248EED47CE /* UIScrollViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3A5E19EFE1475B2C0C782FD24D5FD /* UIScrollViewDelegates.swift */; };
+		FA2B271AAF040F6C1B860C6C3DF0558F /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B5A4F6B7BDB0675A163675A464759 /* M13CheckboxSpiralController.swift */; };
+		FFF489DE367C237C0E8F7E4442DA06D7 /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7564519D675FD5716997CB920264BD7 /* M13CheckboxFadeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,75 +64,84 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8CBC29EF0BA3DBE4A9D7BB1577F255DA;
+			remoteGlobalIDString = BFED2E29E95E065400F8846E0231A970;
 			remoteInfo = JTAppleCalendar;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		005F6CCEDB8812233549DEE954AFE464 /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAnimationGenerator.swift; path = Sources/M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
-		0063EFB9155304EC733FF8B0F8CBE85F /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFillController.swift; path = Sources/Managers/M13CheckboxFillController.swift; sourceTree = "<group>"; };
-		00CE992E132FD27CBFBC9F37B6137B88 /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAddRemovePathGenerator.swift; path = Sources/Paths/M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
-		0220F4DA7E9833B1168B5C3D90FFAFC2 /* M13Checkbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = M13Checkbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0264A688503B60FAA951CA8DBD16CC6C /* M13CheckboxController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxController.swift; path = Sources/M13CheckboxController.swift; sourceTree = "<group>"; };
-		1227C61AB4BC1A935B0995848282E0EB /* CalendarEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarEnums.swift; path = Sources/CalendarEnums.swift; sourceTree = "<group>"; };
-		1827E6ABFD438CE64168619E8F7404AB /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "M13Checkbox+IB.swift"; path = "Sources/M13Checkbox+IB.swift"; sourceTree = "<group>"; };
-		1AB59340A8F953E36DF182A828A6E564 /* JTAppleCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JTAppleCalendar.xcconfig; sourceTree = "<group>"; };
-		1BFE9F92AAB3964C71C3A45C5EFF5224 /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScrollViewDelegates.swift; path = Sources/UIScrollViewDelegates.swift; sourceTree = "<group>"; };
-		1E4B31BD929DDDB894D24CFF41D00DA4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		248AC73949DA4FAE0E331F46CC1A64E9 /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCollectionReusableView.swift; path = Sources/JTAppleCollectionReusableView.swift; sourceTree = "<group>"; };
-		2511B7D9F80A3B35E59D32ABB4C0DA6D /* M13Checkbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = M13Checkbox.modulemap; sourceTree = "<group>"; };
+		0220F4DA7E9833B1168B5C3D90FFAFC2 /* M13Checkbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = M13Checkbox.framework; path = M13Checkbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		056A56B5E39063B491E8139487D10E3F /* UICollectionViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICollectionViewDelegates.swift; path = Sources/UICollectionViewDelegates.swift; sourceTree = "<group>"; };
+		06C9974AB7EC2E55FD3C0D80F638C14E /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "M13Checkbox+IB.swift"; path = "Sources/M13Checkbox+IB.swift"; sourceTree = "<group>"; };
+		095941CAEE288CB8E050A73B1E7F191B /* JTCalendarProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTCalendarProtocols.swift; path = Sources/JTCalendarProtocols.swift; sourceTree = "<group>"; };
+		135080513ED1AC2753FB670F977E11F3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EFE802F36CD72EF2BFC8453F45FCDDC /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxRadioPathGenerator.swift; path = Sources/Paths/M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
+		222453A6438206771DCEA81D8DEA7D1E /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxExpandController.swift; path = Sources/Managers/M13CheckboxExpandController.swift; sourceTree = "<group>"; };
+		22E2BEC54B1DADC60308E40731F61F84 /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAddRemovePathGenerator.swift; path = Sources/Paths/M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
+		26801E072D9F95F79F3C020E6E408BEE /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxCheckPathGenerator.swift; path = Sources/Paths/M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
+		282B1BB1C9990E98067B948A7C06CCFF /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDotController.swift; path = Sources/Managers/M13CheckboxDotController.swift; sourceTree = "<group>"; };
 		2B44AB9270520A7BF2E270C54E1D07ED /* Pods-efuerzo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-efuerzo-frameworks.sh"; sourceTree = "<group>"; };
-		40048ADEC19CB001EC1F7DEA1FAADC82 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48C16524C2EA5314A632F4AADD9B15BE /* GlobalFunctionsAndExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobalFunctionsAndExtensions.swift; path = Sources/GlobalFunctionsAndExtensions.swift; sourceTree = "<group>"; };
-		4C6F35B56035FF00A439008BF0251174 /* UserInteractionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserInteractionFunctions.swift; path = Sources/UserInteractionFunctions.swift; sourceTree = "<group>"; };
+		40048ADEC19CB001EC1F7DEA1FAADC82 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JTAppleCalendar.framework; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4781C75D863327E18ED0F68914FB916E /* M13Checkbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13Checkbox-dummy.m"; sourceTree = "<group>"; };
+		47E8C0908895ADDB294430C0D6966BDA /* JTAppleCalendarDelegateProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarDelegateProtocol.swift; path = Sources/JTAppleCalendarDelegateProtocol.swift; sourceTree = "<group>"; };
+		4ABFD95653DC61C4C67F292D830A210C /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxPathGenerator.swift; path = Sources/Paths/M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
 		4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		5000A757818BFF0064C6627F41731901 /* M13Checkbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.xcconfig; sourceTree = "<group>"; };
-		5A7A5CE6C63908AE9BEE34FED91E02BB /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDotController.swift; path = Sources/Managers/M13CheckboxDotController.swift; sourceTree = "<group>"; };
-		67183F61910E857D99C75D122B2A39A9 /* M13Checkbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-umbrella.h"; sourceTree = "<group>"; };
+		4F94A2ABF8DAE5A7C7BDAF33582F099F /* JTAppleCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JTAppleCalendar-dummy.m"; sourceTree = "<group>"; };
+		5017424772F3D6CCDD79C7686F60E29F /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxStrokeController.swift; path = Sources/Managers/M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
+		5815A26EE609693D05F9BA41C06C38FD /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAnimationGenerator.swift; path = Sources/M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
+		5C6F1746C515794F7CD9834838452123 /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDisclosurePathGenerator.swift; path = Sources/Paths/M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
+		60543A047F4B8FEA6A7D87CC24539927 /* JTAppleCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCell.swift; path = Sources/JTAppleCell.swift; sourceTree = "<group>"; };
+		62B045D8EEDBD4A4C3070EC94C0982C0 /* M13Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13Checkbox.swift; path = Sources/M13Checkbox.swift; sourceTree = "<group>"; };
+		6839D2A37EE6118BA8161FF76E56CB11 /* JTAppleCalendarLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayout.swift; path = Sources/JTAppleCalendarLayout.swift; sourceTree = "<group>"; };
 		695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6D9E9BA936902A8F0E21AA4396255E43 /* Pods-efuerzo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-efuerzo-acknowledgements.plist"; sourceTree = "<group>"; };
-		714414F1CE29B9094BE251A1D3BD1EF4 /* JTAppleCalendarDelegateProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarDelegateProtocol.swift; path = Sources/JTAppleCalendarDelegateProtocol.swift; sourceTree = "<group>"; };
-		74EBA5B4409B388B0084A1D15EA28795 /* JTAppleCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-umbrella.h"; sourceTree = "<group>"; };
+		6E979795A9B08890D128C2D9479CF406 /* M13Checkbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = M13Checkbox.modulemap; sourceTree = "<group>"; };
+		7412C02AFD8CCB9E13757E7AEEE10446 /* JTAppleCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-umbrella.h"; sourceTree = "<group>"; };
+		76CD50F4C22C0ED8DDA84677B084B2AF /* CalendarStructs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarStructs.swift; path = Sources/CalendarStructs.swift; sourceTree = "<group>"; };
 		792165F2CA033667D6F57205316D40A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7D395335FE117B61461345C522BA8AB0 /* JTAppleCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JTAppleCalendar.modulemap; sourceTree = "<group>"; };
-		85D7A88FCE5F2FF20ECBF3159DCEE6C1 /* Pods-efuerzo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-efuerzo.modulemap"; sourceTree = "<group>"; };
-		86D8680F1C1901CC19879C32C1344A75 /* CalendarStructs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarStructs.swift; path = Sources/CalendarStructs.swift; sourceTree = "<group>"; };
-		870E03142A419BE02121894892D312A4 /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFlatController.swift; path = Sources/Managers/M13CheckboxFlatController.swift; sourceTree = "<group>"; };
-		8887BFE8244A1AAD45EBEE0CE4BD0115 /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxCheckPathGenerator.swift; path = Sources/Paths/M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
-		8AB16F846A7B2A8BC1CD5EF996D53069 /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFadeController.swift; path = Sources/Managers/M13CheckboxFadeController.swift; sourceTree = "<group>"; };
-		90E0CCE4A2E34EAF0DA968AFFB2D0323 /* M13Checkbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13Checkbox-dummy.m"; sourceTree = "<group>"; };
-		9277C92428A3A29DB6E29E8B63E0CFAD /* M13Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13Checkbox.swift; path = Sources/M13Checkbox.swift; sourceTree = "<group>"; };
-		9342F073D3D7FA72974952863F683E1A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98C177A469894190891ED1C42D1F26DE /* JTAppleCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarView.swift; path = Sources/JTAppleCalendarView.swift; sourceTree = "<group>"; };
-		9DC996E71751B7D96098B11335F23098 /* JTAppleCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JTAppleCalendar-dummy.m"; sourceTree = "<group>"; };
+		83238C5E104601DF1D670D3D49140EF7 /* M13Checkbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-prefix.pch"; sourceTree = "<group>"; };
+		8508CD5C06A27ED284C347AAF4DCA347 /* CalendarEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarEnums.swift; path = Sources/CalendarEnums.swift; sourceTree = "<group>"; };
+		85D7A88FCE5F2FF20ECBF3159DCEE6C1 /* Pods-efuerzo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-efuerzo.modulemap"; sourceTree = "<group>"; };
+		8DC34AC0CEDA1983C7AC15FFFA10A00F /* JTAppleCalendarLayoutProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayoutProtocol.swift; path = Sources/JTAppleCalendarLayoutProtocol.swift; sourceTree = "<group>"; };
+		91980593ED16E608186317CAEE2A8B20 /* UserInteractionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserInteractionFunctions.swift; path = Sources/UserInteractionFunctions.swift; sourceTree = "<group>"; };
+		925A1F90198F54E95A885EB6084A624A /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCollectionReusableView.swift; path = Sources/JTAppleCollectionReusableView.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97C3A5E19EFE1475B2C0C782FD24D5FD /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScrollViewDelegates.swift; path = Sources/UIScrollViewDelegates.swift; sourceTree = "<group>"; };
+		A4B39203814A872C266C13B2CDD6E807 /* JTAppleCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JTAppleCalendar.modulemap; sourceTree = "<group>"; };
+		AFB73A2C118C7ECE7BACCCB8E553640D /* JTAppleCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-prefix.pch"; sourceTree = "<group>"; };
+		B0018A2CFA4AC28B85DE4FBE373EBD1F /* M13Checkbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.xcconfig; sourceTree = "<group>"; };
 		B038DEE2B25766006C286F1F22FDBD19 /* Pods-efuerzo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-efuerzo-dummy.m"; sourceTree = "<group>"; };
-		B7B741DB8F858EDE7FEB81CE81B435BD /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxBounceController.swift; path = Sources/Managers/M13CheckboxBounceController.swift; sourceTree = "<group>"; };
-		B8FA8CF5252EA2FBBAA0C678C6AFFD82 /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxExpandController.swift; path = Sources/Managers/M13CheckboxExpandController.swift; sourceTree = "<group>"; };
-		BC6F27F755AD306D4A73F026C0A1386D /* JTAppleCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-prefix.pch"; sourceTree = "<group>"; };
-		BF5A5D590AA7075276C220E1F8F90A3A /* JTCalendarProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTCalendarProtocols.swift; path = Sources/JTCalendarProtocols.swift; sourceTree = "<group>"; };
+		B4B107FC5BD174DD078B3901FFF54208 /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFlatController.swift; path = Sources/Managers/M13CheckboxFlatController.swift; sourceTree = "<group>"; };
+		B5A6470C61F7BDEAC4487E39FB6F5F50 /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxBounceController.swift; path = Sources/Managers/M13CheckboxBounceController.swift; sourceTree = "<group>"; };
+		C4CB4A219D45108AAB00566B205DE6EC /* JTAppleCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarView.swift; path = Sources/JTAppleCalendarView.swift; sourceTree = "<group>"; };
 		C569EE9245322F1BC5145ED9E3DE4616 /* Pods-efuerzo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-efuerzo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CB611344368846F40E2133943B4BA2F9 /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxGestureRecognizer.swift; path = Sources/M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
-		D01A780E93EE79D19B0504935460758B /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxSpiralController.swift; path = Sources/Managers/M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
+		C7564519D675FD5716997CB920264BD7 /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFadeController.swift; path = Sources/Managers/M13CheckboxFadeController.swift; sourceTree = "<group>"; };
+		CE9B5A4F6B7BDB0675A163675A464759 /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxSpiralController.swift; path = Sources/Managers/M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
 		D04F10DA13D198EA300F0BC7418F2655 /* Pods-efuerzo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-efuerzo.release.xcconfig"; sourceTree = "<group>"; };
 		D097C4A02BC8628D806B3224DBAFD062 /* Pods-efuerzo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-efuerzo-resources.sh"; sourceTree = "<group>"; };
-		D1792C3A776E66F36E049B0EDA4B7845 /* JTAppleCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCell.swift; path = Sources/JTAppleCell.swift; sourceTree = "<group>"; };
-		D685E5E3EB1AA4C683B06B5555D0F75F /* JTAppleCalendarLayoutProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayoutProtocol.swift; path = Sources/JTAppleCalendarLayoutProtocol.swift; sourceTree = "<group>"; };
+		D1F525489020E76F1F6746483B30A8E4 /* M13Checkbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-umbrella.h"; sourceTree = "<group>"; };
+		D237A4A5CDC29DDC49CA52B217FBDAF5 /* GlobalFunctionsAndExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobalFunctionsAndExtensions.swift; path = Sources/GlobalFunctionsAndExtensions.swift; sourceTree = "<group>"; };
 		D728653CDD7FD7CCB8A338B27BFFB9D5 /* Pods-efuerzo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-efuerzo.debug.xcconfig"; sourceTree = "<group>"; };
-		D83A9B615E41E251A987FEF4F06F4662 /* Pods_efuerzo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_efuerzo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D98F3D12F670A3D0C51617BD347639CC /* M13Checkbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-prefix.pch"; sourceTree = "<group>"; };
-		DB8E0EE0B636330F645ADAE057555D9F /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxRadioPathGenerator.swift; path = Sources/Paths/M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
-		DEEDD8923135738B8529D69B8479B8BF /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxPathGenerator.swift; path = Sources/Paths/M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
-		E278E12B5ABCF087F1EF212AA8DD02E3 /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxStrokeController.swift; path = Sources/Managers/M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
+		D83A9B615E41E251A987FEF4F06F4662 /* Pods_efuerzo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_efuerzo.framework; path = "Pods-efuerzo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E39F105B5DEF4CF237B354F6C1B3882E /* JTAppleCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JTAppleCalendar.xcconfig; sourceTree = "<group>"; };
 		E410CCF819E951A05B542C79E82068E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA17C97120680F1D4FC43B72E5FF3999 /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDisclosurePathGenerator.swift; path = Sources/Paths/M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
-		EE2F3C59B35CA4FBD5F35D7F3F2BD398 /* JTAppleCalendarLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayout.swift; path = Sources/JTAppleCalendarLayout.swift; sourceTree = "<group>"; };
-		FC279B7DB406995570F4513B80B40584 /* UICollectionViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICollectionViewDelegates.swift; path = Sources/UICollectionViewDelegates.swift; sourceTree = "<group>"; };
+		E625B1CB2E49D5790577499443AF33CB /* JTAppleCalendarVariables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarVariables.swift; path = Sources/JTAppleCalendarVariables.swift; sourceTree = "<group>"; };
+		ECC2361651E655DA4BE87F4E1CE2EB6B /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxGestureRecognizer.swift; path = Sources/M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
+		EF6A1D1D9BC1CE76C11A7AA2F61B6B25 /* M13CheckboxController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxController.swift; path = Sources/M13CheckboxController.swift; sourceTree = "<group>"; };
+		EFCF9C613DE7C7781DC96292DD810C07 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB138251049E43C247C7B050F8E3719D /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFillController.swift; path = Sources/Managers/M13CheckboxFillController.swift; sourceTree = "<group>"; };
 		FD9F1EAE2390DD9155FBBA742179E484 /* Pods-efuerzo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-efuerzo-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		456A38528F491C16A318D4091CF2E1F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AFAEAA8F64C152BDEED3D719DF87883 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53797C5F84C3B718634123945FF8378E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,14 +160,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C12E6B3691126DC3D5C704E9E9AD4DB7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A67A319B3C48CF9105DF5DC401AE1858 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -167,32 +169,6 @@
 				2D185E38271E1279D6AC3E7A00CAF9BA /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		211DD218FAA3FBC83E6220E7BC2DFEF4 /* M13Checkbox */ = {
-			isa = PBXGroup;
-			children = (
-				9277C92428A3A29DB6E29E8B63E0CFAD /* M13Checkbox.swift */,
-				1827E6ABFD438CE64168619E8F7404AB /* M13Checkbox+IB.swift */,
-				00CE992E132FD27CBFBC9F37B6137B88 /* M13CheckboxAddRemovePathGenerator.swift */,
-				005F6CCEDB8812233549DEE954AFE464 /* M13CheckboxAnimationGenerator.swift */,
-				B7B741DB8F858EDE7FEB81CE81B435BD /* M13CheckboxBounceController.swift */,
-				8887BFE8244A1AAD45EBEE0CE4BD0115 /* M13CheckboxCheckPathGenerator.swift */,
-				0264A688503B60FAA951CA8DBD16CC6C /* M13CheckboxController.swift */,
-				EA17C97120680F1D4FC43B72E5FF3999 /* M13CheckboxDisclosurePathGenerator.swift */,
-				5A7A5CE6C63908AE9BEE34FED91E02BB /* M13CheckboxDotController.swift */,
-				B8FA8CF5252EA2FBBAA0C678C6AFFD82 /* M13CheckboxExpandController.swift */,
-				8AB16F846A7B2A8BC1CD5EF996D53069 /* M13CheckboxFadeController.swift */,
-				0063EFB9155304EC733FF8B0F8CBE85F /* M13CheckboxFillController.swift */,
-				870E03142A419BE02121894892D312A4 /* M13CheckboxFlatController.swift */,
-				CB611344368846F40E2133943B4BA2F9 /* M13CheckboxGestureRecognizer.swift */,
-				DEEDD8923135738B8529D69B8479B8BF /* M13CheckboxPathGenerator.swift */,
-				DB8E0EE0B636330F645ADAE057555D9F /* M13CheckboxRadioPathGenerator.swift */,
-				D01A780E93EE79D19B0504935460758B /* M13CheckboxSpiralController.swift */,
-				E278E12B5ABCF087F1EF212AA8DD02E3 /* M13CheckboxStrokeController.swift */,
-				DA578C83FFAFA25C90A8571CCADEE57D /* Support Files */,
-			);
-			path = M13Checkbox;
 			sourceTree = "<group>";
 		};
 		2D185E38271E1279D6AC3E7A00CAF9BA /* iOS */ = {
@@ -205,34 +181,41 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		3C01C29CDC2320508AA135D6F4A34599 /* JTAppleCalendar */ = {
+		2E5F3677D7C7FB93B35A296D52003395 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1227C61AB4BC1A935B0995848282E0EB /* CalendarEnums.swift */,
-				86D8680F1C1901CC19879C32C1344A75 /* CalendarStructs.swift */,
-				48C16524C2EA5314A632F4AADD9B15BE /* GlobalFunctionsAndExtensions.swift */,
-				714414F1CE29B9094BE251A1D3BD1EF4 /* JTAppleCalendarDelegateProtocol.swift */,
-				EE2F3C59B35CA4FBD5F35D7F3F2BD398 /* JTAppleCalendarLayout.swift */,
-				D685E5E3EB1AA4C683B06B5555D0F75F /* JTAppleCalendarLayoutProtocol.swift */,
-				98C177A469894190891ED1C42D1F26DE /* JTAppleCalendarView.swift */,
-				D1792C3A776E66F36E049B0EDA4B7845 /* JTAppleCell.swift */,
-				248AC73949DA4FAE0E331F46CC1A64E9 /* JTAppleCollectionReusableView.swift */,
-				BF5A5D590AA7075276C220E1F8F90A3A /* JTCalendarProtocols.swift */,
-				FC279B7DB406995570F4513B80B40584 /* UICollectionViewDelegates.swift */,
-				1BFE9F92AAB3964C71C3A45C5EFF5224 /* UIScrollViewDelegates.swift */,
-				4C6F35B56035FF00A439008BF0251174 /* UserInteractionFunctions.swift */,
-				B61C0414122BBCD2AB4DA4688BEC3404 /* Support Files */,
+				EFCF9C613DE7C7781DC96292DD810C07 /* Info.plist */,
+				A4B39203814A872C266C13B2CDD6E807 /* JTAppleCalendar.modulemap */,
+				E39F105B5DEF4CF237B354F6C1B3882E /* JTAppleCalendar.xcconfig */,
+				4F94A2ABF8DAE5A7C7BDAF33582F099F /* JTAppleCalendar-dummy.m */,
+				AFB73A2C118C7ECE7BACCCB8E553640D /* JTAppleCalendar-prefix.pch */,
+				7412C02AFD8CCB9E13757E7AEEE10446 /* JTAppleCalendar-umbrella.h */,
 			);
-			path = JTAppleCalendar;
+			name = "Support Files";
+			path = "../Target Support Files/JTAppleCalendar";
 			sourceTree = "<group>";
 		};
-		4BC2F8F655C34DA37B5ABEDFFBD103EA /* Pods */ = {
+		6E3F40169081BAE6EDAD8499C4B395E3 /* JTAppleCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				3C01C29CDC2320508AA135D6F4A34599 /* JTAppleCalendar */,
-				211DD218FAA3FBC83E6220E7BC2DFEF4 /* M13Checkbox */,
+				8508CD5C06A27ED284C347AAF4DCA347 /* CalendarEnums.swift */,
+				76CD50F4C22C0ED8DDA84677B084B2AF /* CalendarStructs.swift */,
+				D237A4A5CDC29DDC49CA52B217FBDAF5 /* GlobalFunctionsAndExtensions.swift */,
+				47E8C0908895ADDB294430C0D6966BDA /* JTAppleCalendarDelegateProtocol.swift */,
+				6839D2A37EE6118BA8161FF76E56CB11 /* JTAppleCalendarLayout.swift */,
+				8DC34AC0CEDA1983C7AC15FFFA10A00F /* JTAppleCalendarLayoutProtocol.swift */,
+				E625B1CB2E49D5790577499443AF33CB /* JTAppleCalendarVariables.swift */,
+				C4CB4A219D45108AAB00566B205DE6EC /* JTAppleCalendarView.swift */,
+				60543A047F4B8FEA6A7D87CC24539927 /* JTAppleCell.swift */,
+				925A1F90198F54E95A885EB6084A624A /* JTAppleCollectionReusableView.swift */,
+				095941CAEE288CB8E050A73B1E7F191B /* JTCalendarProtocols.swift */,
+				056A56B5E39063B491E8139487D10E3F /* UICollectionViewDelegates.swift */,
+				97C3A5E19EFE1475B2C0C782FD24D5FD /* UIScrollViewDelegates.swift */,
+				91980593ED16E608186317CAEE2A8B20 /* UserInteractionFunctions.swift */,
+				2E5F3677D7C7FB93B35A296D52003395 /* Support Files */,
 			);
-			name = Pods;
+			name = JTAppleCalendar;
+			path = JTAppleCalendar;
 			sourceTree = "<group>";
 		};
 		73704DAE40631A9E37DC83388004D16A /* Pods-efuerzo */ = {
@@ -258,7 +241,8 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				4BC2F8F655C34DA37B5ABEDFFBD103EA /* Pods */,
+				9F760C7D59D145B30D034CE0CD3A85AA /* Pods */,
+				E309EE4DD4975F46BD92213F8C5D13FB /* Products */,
 				7F8DE82EB1685712EB5030E58CDADECF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -266,38 +250,59 @@
 		7F8DE82EB1685712EB5030E58CDADECF /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E309EE4DD4975F46BD92213F8C5D13FB /* Products */,
 				73704DAE40631A9E37DC83388004D16A /* Pods-efuerzo */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B61C0414122BBCD2AB4DA4688BEC3404 /* Support Files */ = {
+		920FCC47FAACCD660FDF81D6C91B43D7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1E4B31BD929DDDB894D24CFF41D00DA4 /* Info.plist */,
-				7D395335FE117B61461345C522BA8AB0 /* JTAppleCalendar.modulemap */,
-				1AB59340A8F953E36DF182A828A6E564 /* JTAppleCalendar.xcconfig */,
-				9DC996E71751B7D96098B11335F23098 /* JTAppleCalendar-dummy.m */,
-				BC6F27F755AD306D4A73F026C0A1386D /* JTAppleCalendar-prefix.pch */,
-				74EBA5B4409B388B0084A1D15EA28795 /* JTAppleCalendar-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/JTAppleCalendar";
-			sourceTree = "<group>";
-		};
-		DA578C83FFAFA25C90A8571CCADEE57D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9342F073D3D7FA72974952863F683E1A /* Info.plist */,
-				2511B7D9F80A3B35E59D32ABB4C0DA6D /* M13Checkbox.modulemap */,
-				5000A757818BFF0064C6627F41731901 /* M13Checkbox.xcconfig */,
-				90E0CCE4A2E34EAF0DA968AFFB2D0323 /* M13Checkbox-dummy.m */,
-				D98F3D12F670A3D0C51617BD347639CC /* M13Checkbox-prefix.pch */,
-				67183F61910E857D99C75D122B2A39A9 /* M13Checkbox-umbrella.h */,
+				135080513ED1AC2753FB670F977E11F3 /* Info.plist */,
+				6E979795A9B08890D128C2D9479CF406 /* M13Checkbox.modulemap */,
+				B0018A2CFA4AC28B85DE4FBE373EBD1F /* M13Checkbox.xcconfig */,
+				4781C75D863327E18ED0F68914FB916E /* M13Checkbox-dummy.m */,
+				83238C5E104601DF1D670D3D49140EF7 /* M13Checkbox-prefix.pch */,
+				D1F525489020E76F1F6746483B30A8E4 /* M13Checkbox-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/M13Checkbox";
+			sourceTree = "<group>";
+		};
+		9F760C7D59D145B30D034CE0CD3A85AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F40169081BAE6EDAD8499C4B395E3 /* JTAppleCalendar */,
+				A0800B4639532102BC3CC0AF05FF1BE2 /* M13Checkbox */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A0800B4639532102BC3CC0AF05FF1BE2 /* M13Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				62B045D8EEDBD4A4C3070EC94C0982C0 /* M13Checkbox.swift */,
+				06C9974AB7EC2E55FD3C0D80F638C14E /* M13Checkbox+IB.swift */,
+				22E2BEC54B1DADC60308E40731F61F84 /* M13CheckboxAddRemovePathGenerator.swift */,
+				5815A26EE609693D05F9BA41C06C38FD /* M13CheckboxAnimationGenerator.swift */,
+				B5A6470C61F7BDEAC4487E39FB6F5F50 /* M13CheckboxBounceController.swift */,
+				26801E072D9F95F79F3C020E6E408BEE /* M13CheckboxCheckPathGenerator.swift */,
+				EF6A1D1D9BC1CE76C11A7AA2F61B6B25 /* M13CheckboxController.swift */,
+				5C6F1746C515794F7CD9834838452123 /* M13CheckboxDisclosurePathGenerator.swift */,
+				282B1BB1C9990E98067B948A7C06CCFF /* M13CheckboxDotController.swift */,
+				222453A6438206771DCEA81D8DEA7D1E /* M13CheckboxExpandController.swift */,
+				C7564519D675FD5716997CB920264BD7 /* M13CheckboxFadeController.swift */,
+				FB138251049E43C247C7B050F8E3719D /* M13CheckboxFillController.swift */,
+				B4B107FC5BD174DD078B3901FFF54208 /* M13CheckboxFlatController.swift */,
+				ECC2361651E655DA4BE87F4E1CE2EB6B /* M13CheckboxGestureRecognizer.swift */,
+				4ABFD95653DC61C4C67F292D830A210C /* M13CheckboxPathGenerator.swift */,
+				1EFE802F36CD72EF2BFC8453F45FCDDC /* M13CheckboxRadioPathGenerator.swift */,
+				CE9B5A4F6B7BDB0675A163675A464759 /* M13CheckboxSpiralController.swift */,
+				5017424772F3D6CCDD79C7686F60E29F /* M13CheckboxStrokeController.swift */,
+				920FCC47FAACCD660FDF81D6C91B43D7 /* Support Files */,
+			);
+			name = M13Checkbox;
+			path = M13Checkbox;
 			sourceTree = "<group>";
 		};
 		E309EE4DD4975F46BD92213F8C5D13FB /* Products */ = {
@@ -329,11 +334,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3A9BB655F6AB7045ABBAB5086A5087A /* Headers */ = {
+		EB3B104AA552AE0C55DA5E3D426A375A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				946C6CBFEA09D44A18C88E91699F7EE0 /* JTAppleCalendar-umbrella.h in Headers */,
+				AD07BFC6787F19F9D7CADB48C114FDB7 /* JTAppleCalendar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,13 +381,13 @@
 			productReference = D83A9B615E41E251A987FEF4F06F4662 /* Pods_efuerzo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8CBC29EF0BA3DBE4A9D7BB1577F255DA /* JTAppleCalendar */ = {
+		BFED2E29E95E065400F8846E0231A970 /* JTAppleCalendar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E3D6C1C78D845903D32E1112B58907CF /* Build configuration list for PBXNativeTarget "JTAppleCalendar" */;
+			buildConfigurationList = 851CF7150444685C470082788BA7AD96 /* Build configuration list for PBXNativeTarget "JTAppleCalendar" */;
 			buildPhases = (
-				4AD1FBB0EC5B8B8C869A974DD61A4D96 /* Sources */,
-				C12E6B3691126DC3D5C704E9E9AD4DB7 /* Frameworks */,
-				C3A9BB655F6AB7045ABBAB5086A5087A /* Headers */,
+				5D5AC0418099BE9EFEA67AA7EF8A9423 /* Sources */,
+				456A38528F491C16A318D4091CF2E1F8 /* Frameworks */,
+				EB3B104AA552AE0C55DA5E3D426A375A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -414,7 +419,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8CBC29EF0BA3DBE4A9D7BB1577F255DA /* JTAppleCalendar */,
+				BFED2E29E95E065400F8846E0231A970 /* JTAppleCalendar */,
 				20A9DD9ABBF08BC57372A26C35327BF1 /* M13Checkbox */,
 				56286510DB81B92980C3C875C1C39E43 /* Pods-efuerzo */,
 			);
@@ -422,24 +427,25 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4AD1FBB0EC5B8B8C869A974DD61A4D96 /* Sources */ = {
+		5D5AC0418099BE9EFEA67AA7EF8A9423 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DF9319823D54C2D6E2B8B2A4CDC732B /* CalendarEnums.swift in Sources */,
-				D6528D5235E75D675C66C856DBF8440F /* CalendarStructs.swift in Sources */,
-				291C97F67117E2252975C1401CA96BBD /* GlobalFunctionsAndExtensions.swift in Sources */,
-				08382E7D26A28A9FCC682CE8773E92FD /* JTAppleCalendar-dummy.m in Sources */,
-				0984342BAD3A4814046D08F51D4D08ED /* JTAppleCalendarDelegateProtocol.swift in Sources */,
-				6F504911668EF63A65494DB9EBFF0C72 /* JTAppleCalendarLayout.swift in Sources */,
-				291AEF2D4987DE157A7C780266F708DB /* JTAppleCalendarLayoutProtocol.swift in Sources */,
-				68E9C0160033DF98EFD56F10537B4AE0 /* JTAppleCalendarView.swift in Sources */,
-				A12F7F444841CB43AAB3D26C6FD51154 /* JTAppleCell.swift in Sources */,
-				DF0C2D1658CE5249F8DD80736382F4C7 /* JTAppleCollectionReusableView.swift in Sources */,
-				3062913423894A25D94A9B884543FCEA /* JTCalendarProtocols.swift in Sources */,
-				E317F3D2E4962363FF37471393F56C89 /* UICollectionViewDelegates.swift in Sources */,
-				C2FAAAB9EFBF4E41159AFD798532FC44 /* UIScrollViewDelegates.swift in Sources */,
-				CCCA09A8687FE41B271A73F9236B92AE /* UserInteractionFunctions.swift in Sources */,
+				E1CF59B57CC636FECACC39325231B177 /* CalendarEnums.swift in Sources */,
+				6DE7D8CE614DBA55D744EDE81C632AD8 /* CalendarStructs.swift in Sources */,
+				6E8E4422AA0E96DCBB9D329BDFFB881A /* GlobalFunctionsAndExtensions.swift in Sources */,
+				E4E19B08166BF4E9E368134D68E9C7DE /* JTAppleCalendar-dummy.m in Sources */,
+				0383A13C6B7C59A3D8EA592B545DABA0 /* JTAppleCalendarDelegateProtocol.swift in Sources */,
+				7BE39092951B492E5954D8012747BFD0 /* JTAppleCalendarLayout.swift in Sources */,
+				E10E15A8A65DB167DE5046915870021A /* JTAppleCalendarLayoutProtocol.swift in Sources */,
+				18904C96207EA9E40B4E71F855201AD8 /* JTAppleCalendarVariables.swift in Sources */,
+				53D7D34D0142A101314ABFA663AC9D08 /* JTAppleCalendarView.swift in Sources */,
+				F2BB49EF903A70B7B68565CCE233FB83 /* JTAppleCell.swift in Sources */,
+				21A3A4A6EF95F8704DC18E4E5F509D07 /* JTAppleCollectionReusableView.swift in Sources */,
+				87329FA016F0D57803855BCE3E90EC82 /* JTCalendarProtocols.swift in Sources */,
+				42F0A3DBCAC670C336C5C988F6609D98 /* UICollectionViewDelegates.swift in Sources */,
+				F963037A1450F74FAE911C248EED47CE /* UIScrollViewDelegates.swift in Sources */,
+				2856845AB8FCE3B1D319091061F593EF /* UserInteractionFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +495,7 @@
 		0B30EDEE11B68D772F21F128D4472A8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JTAppleCalendar;
-			target = 8CBC29EF0BA3DBE4A9D7BB1577F255DA /* JTAppleCalendar */;
+			target = BFED2E29E95E065400F8846E0231A970 /* JTAppleCalendar */;
 			targetProxy = B4A89680CAFDC6EC94A596AD8E82AC9F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -497,7 +503,7 @@
 /* Begin XCBuildConfiguration section */
 		0241C69DB86CFE9C95F781C0F7848B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5000A757818BFF0064C6627F41731901 /* M13Checkbox.xcconfig */;
+			baseConfigurationReference = B0018A2CFA4AC28B85DE4FBE373EBD1F /* M13Checkbox.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -518,6 +524,39 @@
 				MODULEMAP_FILE = "Target Support Files/M13Checkbox/M13Checkbox.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = M13Checkbox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		033F13E85F14D25192C9EE371213BFCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E39F105B5DEF4CF237B354F6C1B3882E /* JTAppleCalendar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JTAppleCalendar/JTAppleCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JTAppleCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JTAppleCalendar/JTAppleCalendar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JTAppleCalendar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -643,15 +682,15 @@
 			};
 			name = Release;
 		};
-		9F7D4718AD466C3D1CC524C5087CA01B /* Debug */ = {
+		AB3E968E2C4055AF09EC708FD2D70B14 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AB59340A8F953E36DF182A828A6E564 /* JTAppleCalendar.xcconfig */;
+			baseConfigurationReference = E39F105B5DEF4CF237B354F6C1B3882E /* JTAppleCalendar.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -664,21 +703,20 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JTAppleCalendar/JTAppleCalendar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = JTAppleCalendar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		B99F646D4B2652928D787694A7A909CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5000A757818BFF0064C6627F41731901 /* M13Checkbox.xcconfig */;
+			baseConfigurationReference = B0018A2CFA4AC28B85DE4FBE373EBD1F /* M13Checkbox.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -699,38 +737,6 @@
 				MODULEMAP_FILE = "Target Support Files/M13Checkbox/M13Checkbox.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = M13Checkbox;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E67FBCEAAFB755162E737C5FE4D9123B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AB59340A8F953E36DF182A828A6E564 /* JTAppleCalendar.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/JTAppleCalendar/JTAppleCalendar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JTAppleCalendar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JTAppleCalendar/JTAppleCalendar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = JTAppleCalendar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -801,20 +807,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		851CF7150444685C470082788BA7AD96 /* Build configuration list for PBXNativeTarget "JTAppleCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033F13E85F14D25192C9EE371213BFCE /* Debug */,
+				AB3E968E2C4055AF09EC708FD2D70B14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D781AB7FB4BF6BBBA054A7373E95118F /* Build configuration list for PBXNativeTarget "Pods-efuerzo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1FB5766547CB3F1FEBEBE30C9A729427 /* Debug */,
 				87FDDA864046404D23745767E5216467 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E3D6C1C78D845903D32E1112B58907CF /* Build configuration list for PBXNativeTarget "JTAppleCalendar" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9F7D4718AD466C3D1CC524C5087CA01B /* Debug */,
-				E67FBCEAAFB755162E737C5FE4D9123B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

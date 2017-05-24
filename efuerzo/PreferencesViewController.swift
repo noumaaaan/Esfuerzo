@@ -13,7 +13,6 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
     // On view load, do these functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.welcomeMessageLabel.text  = "Welcome " + UserDetails[2] + "!"
     }
     
     // Initialising the outlets in the view

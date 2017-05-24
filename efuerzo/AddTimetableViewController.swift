@@ -13,11 +13,8 @@ class AddTimetableViewController: UIViewController {
     // The saveed user details which is an array
     let UserDetails = UserDefaults.standard.stringArray(forKey: "UserDetailsArray") ?? [String]()
     
-    @IBOutlet weak var verificationCodeLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.verificationCodeLabel.text  = UserDetails[7]
     }
     
 
@@ -34,5 +31,5 @@ class AddTimetableViewController: UIViewController {
         }
     }
 
-
+//webcals://celcatweb.aston.ac.uk/livetimetable/ical/VK5DBAFV285649/schedule.ics
 }

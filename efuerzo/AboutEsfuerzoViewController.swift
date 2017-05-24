@@ -26,3 +26,4 @@ class AboutEsfuerzoViewController: UIViewController {
         UIApplication.shared.open(githubPage)
     }
 }
+ 

@@ -1,6 +1,6 @@
 {
   "name": "JTAppleCalendar",
-  "version": "7.0.0",
+  "version": "7.0.2",
   "summary": "The Unofficial Swift Apple Calendar Library. View. Control. for iOS & tvOS",
   "description": "A highly configurable Apple calendar control. Contains features like boundary dates, month and week view. Very light weight.",
   "homepage": "https://github.com/patchthecode/JTAppleCalendar",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/patchthecode/JTAppleCalendar.git",
-    "tag": "7.0.0"
+    "tag": "7.0.2"
   },
   "platforms": {
     "ios": "9.0",

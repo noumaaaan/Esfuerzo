@@ -17,7 +17,8 @@ class TimetableViewController: UIViewController {
     let darkPurple = UIColor(colorWithHexValue: 0x3A284C)
     let dimPurple = UIColor(colorWithHexValue: 0x455B77)
     let dateFormatter = DateFormatter()
-
+    let formatter = DateFormatter()
+    var todayDate = Date()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,12 +37,17 @@ class TimetableViewController: UIViewController {
         doubleTapGesture.numberOfTapsRequired = 2  // add double tap
         
         calendarView.addGestureRecognizer(doubleTapGesture)
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.calendarView.scrollToDate(Date())
             self.calendarView.selectDates([Date()])
         }
-
         
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone.current
+        todayDate = Date.createDateWith(year: calendar.component(.year, from: Date()) , month: calendar.component(.month, from: Date()), day: calendar.component(.day, from: Date()), hour: 0, minute: 0, second: 0, timeZone: TimeZone(abbreviation: "BST")!)!
+        
+        formatter.dateFormat = "yyyy-MM-dd"
     }
 
     func didDoubleTapCollectionView(gesture: UITapGestureRecognizer) {
@@ -75,7 +81,7 @@ class TimetableViewController: UIViewController {
 
     
     // Function to handle the text color of the calendar
-    func handleCellTextColor(view: JTAppleCell?, cellState: CellState) {
+    func handleCellTextColor(view: JTAppleCell?, cellState: CellState, todayDate: Date) {
         guard let myCustomCell = view as? CellView  else {
             return
         }
@@ -85,10 +91,18 @@ class TimetableViewController: UIViewController {
         } else {
             if cellState.dateBelongsTo == .thisMonth {
                 myCustomCell.dayLabel.textColor = white
+                
             } else {
                 myCustomCell.dayLabel.textColor = dimPurple
             }
         }
+        
+        if formatter.string(from: todayDate) == formatter.string(from: cellState.date) {
+            myCustomCell.dayLabel.textColor = UIColor.red
+        }
+        
+        
+        
     }
     
     // Function to handle the calendar selection
@@ -123,7 +137,7 @@ extension TimetableViewController: JTAppleCalendarViewDataSource, JTAppleCalenda
         formatter.dateFormat = "dd MM yyyy"
         
         let startDate = formatter.date(from: "01 09 2016")! // You can use date generated from a formatter
-        let endDate = formatter.date(from: "01 01 2020")!                                // You can also use dates created from this function
+        let endDate = formatter.date(from: "01 01 2019")!   // You can also use dates created from this function
         let calendar = Calendar.current                     // Make sure you set this up to your time zone. We'll just use default here
         let parameters = ConfigurationParameters(startDate: startDate,
                                                  endDate: endDate,
@@ -143,21 +157,53 @@ extension TimetableViewController: JTAppleCalendarViewDataSource, JTAppleCalenda
         // Setup Cell text
         myCustomCell.dayLabel.text = cellState.text
         
-        handleCellTextColor(view: myCustomCell, cellState: cellState)
+        handleCellTextColor(view: myCustomCell, cellState: cellState, todayDate: todayDate)
         handleCellSelection(view: myCustomCell, cellState: cellState)
         return myCustomCell
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelection(view: cell, cellState: cellState)
-        handleCellTextColor(view: cell, cellState: cellState)
+        handleCellTextColor(view: cell, cellState: cellState, todayDate: todayDate)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelection(view: cell, cellState: cellState)
-        handleCellTextColor(view: cell, cellState: cellState)
+        handleCellTextColor(view: cell, cellState: cellState, todayDate: todayDate)
     }
     
+
+    
+}
+
+extension Date {
+    /**
+     Creates Date from components.
+     - Parameter year: Year value.a
+     - Parameter month: Month value.
+     - Parameter day: Day value.
+     - Parameter hour: Hour value.
+     - Parameter minute: Minute value.
+     - Parameter second: Second value.
+     - Parameter timeZone: Time Zone value.
+     - Returns: A Date created from parameters or nil if there was a problem creating Date.
+     */
+    static func createDateWith(year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int, timeZone: TimeZone) -> Date? {
+        var components = DateComponents()
+        components.year = year
+        components.month = month
+        components.day = day
+        components.hour = hour
+        components.minute = minute
+        components.second = second
+        components.timeZone = timeZone
+        
+        let gregorian = Calendar(identifier: Calendar.Identifier.gregorian)
+        
+        let date = gregorian.date(from: components)
+        
+        return date
+    }
 }
 
 extension UIColor {
@@ -170,3 +216,4 @@ extension UIColor {
         )
     }
 }
+

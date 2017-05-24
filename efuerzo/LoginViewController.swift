@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class LoginViewController: UIViewController {
     
     
@@ -28,7 +29,7 @@ class LoginViewController: UIViewController {
     func makeButtonRounded(){
         loginButton.layer.cornerRadius = 5
         loginButton.layer.borderWidth = 1
-        loginButton.layer.borderColor = UIColor.black.cgColor
+        loginButton.layer.borderColor = UIColor(red:0/255.0, green:30/255.0, blue:59/255.0, alpha: 1.0).cgColor
     }
     
     // Function once login button is pressed
@@ -156,5 +157,6 @@ class LoginViewController: UIViewController {
         self.present(theAlert, animated: true, completion: nil)
     }
 }
+
 
 

@@ -34,6 +34,7 @@ class CurrentEventsViewController: UIViewController, UITableViewDataSource, UITa
     
     func checkIfThereisData(){
         if (dataDict?.count == 0){
+            checkLabel.textColor = UIColor.white
             checkLabel.text = "There are no events scheduled for today.";
         } else {
             checkLabel.text = "";

@@ -148,7 +148,6 @@ class LoginViewController: UIViewController {
         task.resume();
     }
 
-
     // Function to display an alert message parameters for the title, message and action type
     func displayAlertMessage(userTitle: String, userMessage:String, alertAction:String){
         let theAlert = UIAlertController(title: userTitle, message: userMessage, preferredStyle: UIAlertControllerStyle.alert)

@@ -18,6 +18,8 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var instructDict: [String:AnyObject]?
     var locationDict: [String:AnyObject]?
     
+    let timeDatePicker = UIDatePicker()
+    
     // Storyboard outlets
     @IBOutlet weak var selectCourseTextField: UITextField!
     @IBOutlet weak var selectInstructorTextField: UITextField!
@@ -47,12 +49,78 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         LocationPicker.dataSource = self
         LocationPicker.delegate = self
         selectLocationTextField?.inputView = LocationPicker
+        
+        createStartTimePicker()
+        createEndTimePicker()
     }
     
     let SubjectsPicker = UIPickerView()
     let InstructorPicker = UIPickerView()
     let LocationPicker = UIPickerView()
     
+    /*
+     * START:- DATE AND TIME PICKER FUNCTIONS
+     *
+     */
+    
+    // Function to create the time picker
+    func createStartTimePicker(){
+        let toolbar = UIToolbar() // Create the toolbar
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(finishStartTimePicker)) // Create the bar button item and call function
+        toolbar.setItems([doneButton], animated: false)
+        
+        timeDatePicker.datePickerMode = .time
+        timeDatePicker.locale = Locale(identifier: "en_GB") // Local time always
+
+        startTimeTextField.inputAccessoryView = toolbar // Assign the toolbar to the picker
+        startTimeTextField?.inputView = timeDatePicker // Assign the date picker to the textfield
+    }
+
+    func createEndTimePicker(){
+        let toolbar = UIToolbar() // Create the toolbar
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(finishEndTimePicker)) // Create the bar button item and call function
+        toolbar.setItems([doneButton], animated: false)
+        
+        timeDatePicker.datePickerMode = .time
+        timeDatePicker.locale = Locale(identifier: "en_GB") // Local time always
+        
+        endTimeTextField.inputAccessoryView = toolbar // Assign the toolbar to the picker
+        endTimeTextField?.inputView = timeDatePicker // Assign the date picker to the textfield
+    }
+    
+    // Function run when the user selects the time from the picker
+    func finishStartTimePicker(){
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateFormat = "HH:mm"
+        
+        startTimeTextField.text = dateFormatter.string(from: timeDatePicker.date)
+        
+        self.view.endEditing(true)
+    }
+    
+    // Function run when the user selects the time from the picker
+    func finishEndTimePicker(){
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateFormat = "HH:mm"
+        
+        endTimeTextField.text = dateFormatter.string(from: timeDatePicker.date)
+        
+        self.view.endEditing(true)
+    }
+    
+    /*
+     * END:- DATE AND TIME PICKER FUNCTIONS
+     *
+     */
+
     
     // Picker view (drop down selection) functions
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -117,6 +185,86 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
         self.view.endEditing(false)
     }
+    
+    // Function to add a timetable event
+    @IBAction func addTimeTableEvent(_ sender: Any) {
+    
+        let subjectField = selectCourseTextField.text!
+        let instructor = selectInstructorTextField.text!
+        let location = selectLocationTextField.text!
+        let startTime = startTimeTextField.text!
+        let endTime = endTimeTextField.text!
+        let user_id = userDetails[0]
+        
+        // If the fields are empty, display an alert and return
+        if (subjectField.isEmpty || instructor.isEmpty || location.isEmpty || startTime.isEmpty || endTime.isEmpty) {
+            print("Error: All of the fields must be completed")
+            displayAlertMessage(userTitle: "Empty", userMessage: "All of the fields must be completed", alertAction: "Return")
+            return;
+        }
+        
+        // Check that the end time is greater than start
+        if (endTime < startTime) {
+            print("Error: End cannot be before start")
+            displayAlertMessage(userTitle: "Error", userMessage: "The end time cannot be earlier than the start time", alertAction: "Return")
+            return;
+        }
+        
+        // If not empty, do a post request to the server with the details
+        let myUrl = NSURL(string: "https://www.noumanmehmood.com/scripts/addTimetableEvent.php");
+        let request = NSMutableURLRequest(url:myUrl! as URL)
+        
+        request.httpMethod = "POST";
+        let postString = "subjectField=\(subjectField)&instructor=\(instructor)&location=\(location)&startTime=\(startTime)&endTime=\(endTime)&user_id=\(user_id)";
+        request.httpBody = postString.data(using: String.Encoding.utf8);
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest){
+            data, response, error in
+            
+            if error != nil {
+                print("error=\(String(describing: error))")
+                return
+            }
+            
+            // Parse the results of the JSON result and naivigate to app if success
+            var err: NSError?
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                if let parseJSON = json {
+                    
+                    let resultValue:String = parseJSON["status"] as! String;
+                    let resultmess:String = parseJSON["message"] as! String;
+                    
+                    print(resultmess)
+                    // If successful, initiate session and satore all the fields into an array
+                    if (resultValue == "Success"){
+                        
+                        DispatchQueue.main.async{
+                            self.displayAlertMessage(userTitle: "Success", userMessage: "Successfully updated the database for this deadline", alertAction: "Return")
+                            return
+                        }
+                    }
+                }
+            } catch let error as NSError {
+                err = error
+                print(err!);
+            }
+        }
+        task.resume();
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
     // Function to retrieve the subjects
@@ -224,4 +372,13 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         task.resume();
     }
     
+    // Function to display an alert message parameters for the title, message and action type
+    func displayAlertMessage(userTitle: String, userMessage:String, alertAction:String){
+        let theAlert = UIAlertController(title: userTitle, message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: alertAction, style:UIAlertActionStyle.default, handler:nil)
+        theAlert.addAction(okAction)
+        self.present(theAlert, animated: true, completion: nil)
+    }
+    
 }
+

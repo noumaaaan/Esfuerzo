@@ -25,7 +25,7 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
     // Creating the arrays to populate the table
     let walkthrough = ["How to use this app", "Add your own timetable"]
     let prefArray1  = ["Add Subjects", "Add Instructors", "Add Locations"]
-    let prefArray2  = ["Manage Account", "Change your password", "Contact Us", "About Esfuerzo"]
+    let prefArray2  = ["Manage Account", "Change your password", "Contact Us", "Updates", "About Esfuerzo"]
     let prefArray3  = ["Like us on Facebook", "Follow us on Twitter"]
     
     // Log out of the application once the logout button has been tapped
@@ -130,7 +130,9 @@ class PreferencesViewController: UIViewController, UITableViewDataSource, UITabl
             case 2:
                 segueIdentifier = "makeSuggestView"
             case 3:
-                segueIdentifier = "aboutEsfuerzo"
+                segueIdentifier = "appUpdatesView"
+            case 4:
+                segueIdentifier = "aboutEsfuerzoView"
             default:
                 segueIdentifier = "aboutEsfuerzoView"
             }

@@ -40,7 +40,11 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
 
     // Run this function when the view appears
     override func viewDidAppear(_ animated: Bool) {
-        self.tableView.reloadData()
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
         switch (segmentedControl.selectedSegmentIndex) {
         case 0:
             deadlinesLabel.text = "Incomplete Deadlines"
@@ -55,7 +59,9 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
     
     // Function to switch between the segmented control
     @IBAction func switchDeadlinesTableView(_ sender: Any) {
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         switch (segmentedControl.selectedSegmentIndex) {
         case 0:
             deadlinesLabel.text = "Incomplete Deadlines"
@@ -195,15 +201,10 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
             let theAlert = UIAlertController(title: "Delete record?", message: "Are you sure you would like to delete this deadline?", preferredStyle: UIAlertControllerStyle.alert)
             
             theAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
-                
-                
-                
-                
 
                 switch (self.segmentedControl.selectedSegmentIndex) {
                 case 0:
                     if let array = self.IncompleteDeadlines?[String(indexPath.row + 1)] as? [String] {
-                        
                         let subjectAndType = array[0]
                         let title = array[1]
                         let dueTime = array[4]
@@ -228,7 +229,7 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
                             do {
                                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                                 if let parseJSON = json {
-                                    let resultValue:String = parseJSON["status"] as! String
+                                    let resultValue:String = parseJSON["status"] as! String;
                                     
                                     // If there is an error, display an alert message and return
                                     if (resultValue == "Empty"){
@@ -314,11 +315,12 @@ class DeadlinesViewController: UIViewController, UITableViewDataSource, UITableV
                                     if (resultValue == "Success"){
                                         DispatchQueue.main.async{
                                             self.displayAlertMessage(userTitle: "Success", userMessage: "Successfully removed the deadline from the table", alertAction: "Return")
-                                            self.viewDidAppear(true)
-                                            self.viewDidLoad()
+                                            return
                                         }
                                     }
                                     
+                                    self.viewDidAppear(true)
+                                    self.viewDidLoad()
                                     self.tableView.reloadData()
                                 }
                             } catch let error as NSError {

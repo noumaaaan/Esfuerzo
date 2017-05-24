@@ -222,7 +222,6 @@ class editDeadlinesViewController: UIViewController, UIPickerViewDelegate, UIPic
                         
                         DispatchQueue.main.async{
                             self.displayAlertMessage(userTitle: "Success", userMessage: "Successfully updated the database for this deadline", alertAction: "Return")
-                            _ = self.navigationController?.popViewController(animated: true) // Go to previous view
                             return
                         }
                     }

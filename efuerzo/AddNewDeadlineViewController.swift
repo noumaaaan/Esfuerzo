@@ -228,15 +228,16 @@ class AddNewDeadlineViewController: UIViewController, UIPickerViewDelegate, UIPi
                 if let parseJSON = json {
                     
                     let resultValue:String = parseJSON["status"] as! String;
+                    let messaging:String = parseJSON["message"] as! String;
+                    
+                    print(messaging)
                     
                     // If successful, initiate session and satore all the fields into an array
                     if (resultValue == "Success"){
                         
-                        let resultMessage:String = parseJSON["message"] as! String;
-                        print(resultMessage)
-                        
                         DispatchQueue.main.async{
                             self.displayAlertMessage(userTitle: "Success", userMessage: "Successfully updated the database for this deadline", alertAction: "Return")
+                            return
                         }
                     }
                 }
@@ -246,6 +247,7 @@ class AddNewDeadlineViewController: UIViewController, UIPickerViewDelegate, UIPi
             }
         }
         task.resume();
+
     }
     
     // Function to display an alert message parameters for the title, message and action type

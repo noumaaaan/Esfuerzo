@@ -2,8 +2,8 @@
 
 ### What is this repository for? ###
 
-This repository is to store the swift source code for an iOS application that allows users to create a timetable, track their assignments and stay on top of their studies. Available via the iOS appstore from March 2017
+This is an application that I developed in my final year at University from January - May 2017. I have rceently re-involved myself into the project to try and refine my skills, improve this application and potentially deploy to the appstore. 
+The application is designed for University students and allows users to create a timetable, track their assignments and stay on top of their studies. 
 
 ### Who can I talk to? ###
-
-If you've got any problems accessing the source code, contact Nouman (mehmoodn@aston.ac.uk).
+Email mail@noumanmehmood.com or visit www.noumanmehmood.com
